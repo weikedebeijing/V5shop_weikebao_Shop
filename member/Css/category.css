@@ -1,0 +1,68 @@
+@charset "utf-8"; 
+/* CSS Document */
+
+h2, h3 {font-size: 14px; font-weight:bold}
+
+/*===页码===*/
+.pagination { font-family: Tahoma; font-size: 12px; height: 24px;}
+.pagination .page-sub{ margin-left:5px; float:left; margin-top:-2px;}
+*html .pagination .page-sub{ margin-top:0;}
+.pagination a.submit{ background:url(../images/web08-icon.png) -51px -241px no-repeat; width:44px; height:25px; line-height:25px; text-align:center; margin-left:5px; border:0; padding:0; margin-top:-2px; color:#333;}
+*html .pagination a.submit{margin-top:0;}/*IE6*/
+.pagination a.submit:hover{background-position:-51px -331px;}
+.page-top{ float: right;}
+.page-num { float: left; line-height: 19px; padding: 0 10px;}
+.page-prev, .page-next, .page-start, .page-end, .page-break { background: url("../images/pagination.png") no-repeat scroll -9999px 0 transparent;}
+.pagination a, .page-prev, .page-cur, .page-start, .page-end { float: left; font-family: Tahoma,SimSun,Arial; height: 17px; line-height: 17px; margin: 0 5px 0 0;text-align: center;  vertical-align: middle; white-space: nowrap;}
+.page-start,.page-end { border: 1px solid #DBDBDB;color: #666666; padding: 0;}
+.pagination a.pageList{ border: 1px solid #DBDBDB;color: #666666; padding: 0 5px;}
+.pagination a:hover { border-color:#a10000}
+.page-start { background-position: 6px -22px; padding: 0; width: 17px;}
+.page-break { background-position: 2px -52px; float: left; height: 19px; margin-right: 3px; width: 24px;}
+a.page-next { background-position: -8px 4px; margin: 0; padding: 0; width: 17px; border:1px solid #ccc;}
+.page-prev span, .page-start span { display: none;}
+
+/*===左侧===*/
+.leftwidth1 { width:130px;}
+/*分类列表*/
+.category{margin-top:10px; margin-bottom:10px; border:1px solid #9c0f0f;}
+.category .title,.category .title span{ background:#d50202;}
+.category .title{ background-position:0 -398px; height:40px;line-height:40px; font-size:14px; color:#fff; font-weight:bold;padding:0 10px;}
+.category .title span{ display:block; float:left; background-position:-14px -842px; width:3px; height:15px; vertical-align:middle; margin:9px 8px 0 12px;}
+.category-meau1{padding:5px 10px;background-color:#f3f3f3;}
+.category-meau1 li{width:100px;line-height:30px;overflow:hidden;font-weight:bold;font-size:14px;}
+.category-meau2{margin-left:10px;}
+.category-meau2 li{width:100px;line-height:24px;font-weight:normal;font-size:12px;}
+
+
+
+/*===右侧===*/
+.rightwidth1 { width:780px}
+.rightwidth1 h2{border-bottom:1px solid #ccc;}
+
+/*=====商品详情页商品描述=====*/
+.classcontent{line-height:24px;text-indent:2em;}
+
+.mod_list-sp table{border:0;}
+.mod_list-sp table thead tr{background-color:#eee;height:40px;}
+.mod_list-sp table td{border-bottom:1px solid #ccc;}
+.mod_list-sp table tbody td div p{display:block;height:12px;width:50px;position:relative;z-index:3}
+.mod_list-sp table tbody td .c03 span{position:absolute;width:400px;height:50px;border:1px solid #ccf;color:#000;left:100%;margin-left:-1px;top:-20px;z-index:-2;background-color:#fff;padding:10px;}
+
+/*=====订单详细=====*/
+.order-detail1{overflow:hidden;border:1px solid #ccc;padding:10px;}
+
+/*=====个人资料详细=====*/
+.order-ziliao{border:1px solid #ccc;min-height:500px;margin-top:10px;}
+.order-ziliao h1{background-color:#f3f3f3;height:40px;line-height:40px;padding:0 5px;}
+.ziliao-form,.ziliao-form1{width:500px;min-height:300px;margin:20px;}
+.ziliao-form p{height:24px;}
+.ziliao-form span{height:24px;line-height:24px;}
+.baocun-btn{background-color:#E54747;color:#fff;font-size:14px;border:none;}
+
+.ziliao-form1{width:500px;min-height:300px;background-color:#f3f3f3;padding:20px;}
+.ziliao-form1 span{display:block;height:24px;line-height:24px;}
+
+
+
+

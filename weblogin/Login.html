@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <title>微商城</title>
+        <link rel="stylesheet" href="http://html.v5portal.com/mobile-wechat/css/base.css">
+        <link rel="stylesheet" href="http://html.v5portal.com/mobile-wechat/css/common.css">
+        <link rel="stylesheet" href="http://html.v5portal.com/mobile-wechat/css/v5.css">
+        <script src="jquery-1.8.1.min.js"></script>
+    </head>
+    <script language="javascript" src="http://www.css88.com/jqapi-1.9/js/jquery.min.js"
+        type="text/javascript"></script>
+    <script language="javascript" src="addjs.js" type="text/javascript"></script>
+</head>
+<body>
+    <input type="button" value="设置" onclick="SetAdults();" />
+
+</body>
+<script type="text/javascript">
+    function SetAdults() {
+        var xmlData="<OpenId><![CDATA[oDF3iY9P32sK_5GgYiRkjsCo45bk]]></OpenId><AppId><![CDATA[wxf 8b4f85f3a794e77]]></AppId>";
+        xmlData+="<TimeStamp>1393400471</TimeStamp><MsgType><![CDATA[request]]></MsgType><FeedBackId>7197417460812502768</FeedBackId><TransId>";
+        xmlData+="<![CDATA[1900000109201402143240185685]]></TransId><Reason><![CDATA[质量问题]]></Reason><Solution><![CDATA[换货]]>";
+        xmlData+="</Solution><ExtInfo><![CDATA[备注 12435321321]]></ExtInfo><AppSignature><![CDATA[d60293982cc7c97a5a9d3383af761db763c07c86]]></AppSignature><SignMethod><![CDATA[sha1]]>";
+        xmlData+="</SignMethod><PicInfo><item><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz/49ogibiahRNtOk37iaztwmdgFbyFS9FUrqfodiaUAmxr4hOP34C6R4nGgebMalKuY3H35riaZ5vtzJh25tp7vBUwWxw/0]]></PicUrl></item><item><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz/49ogibiahRNtOk37iaztwmdgFbyFS9FUrqfn3y72eHKRS AwVz1PyIcUSjBrDzXAibTiaAdrTGb4eBFbib9ibFaSeic3OIg/0]]></PicUrl></item><item><PicUrl><![CDATA[]]></PicUrl></item><item><PicUrl>";
+        xmlData += "<![CDATA[]]></PicUrl></item><item><PicUrl ><![CDATA[]]></PicUrl></item></PicInfo>";
+        $.ajax({
+            url: "Service.aspx",
+            type: "post",
+            data: "xml="+xmlData,
+            dataType:"xml",
+            sync: true,
+            success: function () {
+                alert("成功");
+            },
+            error: function (erroMsg) {
+                var str = erroMsg;
+            }
+
+        });
+    }
+</script>
+</html>

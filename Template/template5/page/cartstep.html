@@ -1,0 +1,61 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{shoptitle}</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/order.css" />
+    <script language="javascript" src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script language="javascript" src="js/order.js" type="text/javascript"></script>
+     <script language="javascript" src="js/common.js" type="text/javascript"></script>
+</head>
+<body topmargin="0" leftmargin="0" bottommargin="0" rightmargin="0">
+    <!--head begin-->
+    {web_skin_vc_通用头部导航}
+    <!--head end-->
+    <!--main begin-->
+    {web_skin_vc_购物流程}
+    <!--main end-->
+    <div id="pay">
+    </div>
+    <div class="popup" id="popup" style="display: none">
+    </div>
+    {web_skin_vc_通用底部版权}
+</body>
+</html>
+<script type="text/javascript">
+    function Submit_Order() {
+        if ($("#addressid").val() != undefined) {
+            $("#butSubmit").attr("disabled", "true");
+            $("#butSubmit").removeClass().addClass("settle-disable");
+            $.ajax({
+                type: "POST",
+                url: "../../cartend.aspx",
+                data: "login=yes&addressID=" + $("#addressid").val(),
+                success: function (msg) {
+                    $("#aftersubmittext").hide();
+                    if (msg.indexOf("errMessage:") != -1) {
+                        alert(msg.substr(11));
+                    }
+                    else {
+                        // alert(msg);
+                        gotoPay("<input type='hidden' ordernumber='" + msg + "'>");
+                    }
+                }
+            });
+
+        } else {
+            showBox("请先选择收货地址");
+        }
+    }
+    //    $("div[name='orderdetail']").click(function () {
+    //        var oid = $(this).attr("oid");
+    //        window.location.href = "../../orderdetail.aspx?oid=" + oid;
+    //    }
+    //    )
+</script>

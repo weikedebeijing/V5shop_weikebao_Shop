@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<V5Shop>
+	<Product>
+		<Name></Name>
+		<Number></Number>
+		<MarketPrice></MarketPrice>
+		<MemberPrice></MemberPrice>
+		<Src></Src>
+		<GUID></GUID>
+		<ShortContent></ShortContent>
+		<Content></Content>
+	</Product>
+</V5Shop>

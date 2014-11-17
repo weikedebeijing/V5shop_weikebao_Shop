@@ -1,0 +1,2 @@
+﻿var host = "http://" + window.location.host + "/" + window.location.pathname.split('/')[1];
+document.writeln("<script type=\"text/javascript\" src=\"http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js\"  data-appid=\"101055262\" data-redirecturi=\"" + host + "/oauth/QQLogin.aspx\"  charset=\"utf-8\"></script>");

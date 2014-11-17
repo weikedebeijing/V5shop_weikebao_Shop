@@ -1,0 +1,51 @@
+.loadimgPic {
+	WIDTH: 140px; POSITION: relative; HEIGHT: 190px; TEXT-ALIGN: center;
+}
+.fc {
+	BORDER-RIGHT: #777777 1px solid; BORDER-TOP: #777777 1px solid; FONT-SIZE: 12px; Z-INDEX: 9; BORDER-LEFT: #777777 1px solid; WIDTH: 320px; COLOR: #999999; BORDER-BOTTOM: #777777 1px solid; HEIGHT: 392px; BACKGROUND-COLOR: #e6eaf3
+}
+.fc .jJ {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 9px; HEIGHT: 200px
+}
+.fc .jJ IMG {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.fc .sd {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px 10px; COLOR: #333333; LINE-HEIGHT: 18px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.jJ01 {
+	MARGIN: 7px 0px 0px 19px
+}
+.jJ02 {
+	MARGIN: 17px 0px 0px 19px; COLOR: #a10000
+}
+.jJ03 {
+	MARGIN: 7px 0px 0px 19px
+}
+.jJ03 SPAN {
+	COLOR: #333333
+}
+.jJ04 {
+	MARGIN: 17px 0px 0px 19px
+}
+.jJ04 IMG {
+	MARGIN-RIGHT: 3px
+}
+.fc02 {
+	BORDER-RIGHT: #777777 1px solid; BORDER-TOP: #777777 1px solid; FONT-SIZE: 12px; Z-INDEX: 9; BORDER-LEFT: #777777 1px solid; WIDTH: 290px; COLOR: #999999; BORDER-BOTTOM: #777777 1px solid; HEIGHT: 483px; BACKGROUND-COLOR: #e6eaf3
+}
+.fc02 .jJ {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 9px; HEIGHT: 310px
+}
+.fc02 .jJ IMG {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.fc02 .sd {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px 10px; COLOR: #333333; LINE-HEIGHT: 18px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.ico {
+	Z-INDEX: 10; FLOAT: left; BACKGROUND-IMAGE: url(jt.gif); WIDTH: 12px; POSITION: absolute; TOP: 20px; HEIGHT: 25px
+}
+.fc03 {
+	BORDER-RIGHT: #777777 1px solid; BORDER-TOP: #777777 1px solid; FONT-SIZE: 12px; Z-INDEX: 9; BORDER-LEFT: #777777 1px solid; WIDTH: 200px; COLOR: #999999; PADDING-TOP: 25px; BORDER-BOTTOM: #777777 1px solid; HEIGHT: 60px; BACKGROUND-COLOR: #e6eaf3
+}

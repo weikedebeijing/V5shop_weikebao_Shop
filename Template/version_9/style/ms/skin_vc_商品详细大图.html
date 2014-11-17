@@ -1,0 +1,4 @@
+﻿<img src="{gettmpimg2({productdetail[DefaultImageData]})}" data-src="{gettmpimg2({productdetail[DefaultImageData]})}" onclick="javascript:imgview(this)" alt="商品">
+ <#loop productimage,productdetail.ID.ToString() 999#>
+<img data-src="{gettmpimg2({productimage.SourceImageData})}" style="display:none" />
+<#/loop#>

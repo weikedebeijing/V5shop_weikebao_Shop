@@ -1,0 +1,83 @@
+<section class="summary">
+    <h1 class="summary-name">{productdetail[Name]}</h1>
+    <#loop ProductDetailPrice,["+productdetail.ID.ToString()+"] 999#>
+    <ul class="summary-prices-ul">
+      <li class="p-price">
+        <span class="key">惊爆价：</span>
+        <div class="value"><span class="price">¥<b class="p-price-v" id="price"> {GetCustomerPrice( ProductDetailPrice.SalesPrice.ToString() ,productdetail.ID.ToString())}</b></span></div>
+      </li>
+      <#/loop#>
+        <li class="post">
+            <span class="key"><span class="c99">运费：</span></span>
+        <div class="value"><b class="cost">快递￥0.00</b></div>
+        </li>
+    </ul>
+  </section>
+<section class="s-buy"> 
+     <ul class="s-buy-ul">
+       <#loop productspec,["+productdetail.ID.ToString()+"] 999#>	
+    <li class="s-buy-li">
+    <div class="left">
+         {productspec[Name]}：</div>
+    <div class="right" name="specvals">
+        <#loop productspecval,["+productdetail.ID.ToString()+"], ["+productspec.SpecID.ToString()+"] 999#>	
+        <span class='select' name="Span{productspec__loop__id}"  id="{productspecval[SpecValID]}"  checked='false' onclick='change(this);'>{productspecval[Alias]}</span>
+        <#/loop#>
+    </div>
+     </li>
+           <#/loop#>
+<!--    <b>提示:</b>  <span id='resultSpan'></span>  -->
+       <li class="s-buy-li">
+     <div class="left">数量：</div>
+         <div class="right">
+         <span class="reduce">-</span>
+            <input  class="number" name="quantity" autocomplete="off" value="1" min="1" max="{productdetail[Stock]}" id="num" readonly="true">
+             <span class="add">+</span>
+             <span class="annotation" id="Stock">剩余{productdetail[Stock]}件</span>
+              <input id="hiddPDetailID" type="hidden" name="name" value="" />
+        </div>
+      </li>
+    </ul>
+</section>
+<section class="option">
+          <a class="btn cart" id="btnCart" href="javascript:void(0);">加入购物车</a> 
+    <a class="btn buy" id="btnFastBuy" href="javascript:void(0);">立即购买</a>
+    <a class="btn share" id="btnShare" href="javascript:void(0);">发送给朋友</a>
+</section>
+  <section class="p-attributeoff">
+      <a href="javascript:showProperty();" class="p-attributeoff-a"><span class="text">产品参数</span><span class="arrow">></span><span class="wifi"></span></a>       
+  </section>
+  <section class="p-a-c-list">
+  <ul class="list-attribute" id="productproperty" style="display:none;">
+  	   <#loop productproperty,["+productdetail.ID.ToString()+"] 999#>	
+      <li><label> {productproperty[Name]}</label><span>{productproperty[Value]}</span></li>
+	   <#/loop#>
+      </ul>
+  </section>
+
+
+<section class="p-detail" id="p-detail" >
+    <h1 class="d-title">图文详情</h1>
+    <div class="d-content" id="content">{productdetail[DetailMemo]}</div>
+  </section>
+<script type="text/javascript">  
+  var hdata='';
+   $(function () {
+   var trueid = 0;
+    <#loop trueproduct,["+cid+"] 999#>
+    productDatas['{trueproduct[ProductDetailID]}'] = {
+   
+			    productDetailID: '{trueproduct[ProductDetailID]}',
+			    SalesPrice:' {GetCustomerPrice( trueproduct.SalesPrice.ToString() ,cid)}',
+                Stock:'{trueproduct[Stock]}',
+		    };
+    trueid = {trueproduct[ProductDetailID]};
+    $("#hiddPDetailID").val(trueid);
+    <#/loop#>
+    {specificationValueData} 
+   });
+
+   function showProperty(){
+       $("#productproperty").toggle();
+   }
+</script>

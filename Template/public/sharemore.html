@@ -1,0 +1,27 @@
+﻿<div class="shareList" style="display: none;">
+    <ul class="small-block-grid-4" id="sharelist">
+        <li shareid="tsina"><i class="icon-sina"></i><span class="name">新浪微博</span></li>
+        <li shareid="qzone"><i class="icon-qqzone"></i><span class="name">QQ空间</span></li>
+        <li shareid="tqq"><i class="icon-txwb"></i><span class="name">腾讯微博</span></li>
+        <li class="no-line" shareid="xiaoyou"><i class="icon-friend"></i><span class="name">朋友网</span></li>
+        <li shareid="ydnote"><i class="icon-youdao"></i><span class="name">有道云笔记</span></li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#share-a").click(function () {
+            $(".shareList").slideToggle("slow");
+            $(".mask").toggle();
+        })
+
+    })
+
+    $("#sharelist li").click(function () {
+        var shareurl = "{shopUrl}index.aspx";
+        var title = "我的微店:{shoptitle}";
+        var shareid = $(this).attr("shareid");
+        window.location.href = "http://www.jiathis.com/send/?webid=" + shareid + "&url=" + shareurl + "&title=" + title + "&shortUrl=false&hideMore=false";
+    })
+
+</script>

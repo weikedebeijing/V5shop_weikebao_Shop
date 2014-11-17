@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <node name="淘宝" code="taobao" link="taobao.com"></node>
+  <node name="拍拍" code="paipai" link="paipai.com"></node>
+  <node name="其他" code="other" link="#"></node>
+</root> 

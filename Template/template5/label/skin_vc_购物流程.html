@@ -1,0 +1,97 @@
+﻿
+<div class="mainwidth mauto mt10 mb10">
+    <div id="content pt20">
+        <div class="wrapper">
+            <div class="shouhuo DivTitle">
+                <div>
+                    <div>
+                        <section class="cart-consignee">
+                          <#loop addressdefaultbyuid,["+user_id+"] 999#>
+                            <a href="/addresslist.aspx" class="a-address">
+                              <input type="hidden" id="addressid" value="{addressdefaultbyuid[id]}">
+                              <span class="name">收货人:{addressdefaultbyuid[Name]}&nbsp;&nbsp;{addressdefaultbyuid[Moblie]}&nbsp;&nbsp;<br />{addressdefaultbyuid[AddressInfo]}
+                              {addressdefaultbyuid[PostCode]}
+                              </span>
+                              <span class="address"><b class="arrow">&gt;</b></span>
+                            </a>
+                            <script type="text/javascript">
+                                //alert(1);
+                                $(function () {
+                                    $("#noaddress").hide();
+                                })
+                              </script>
+                           <#/loop#>
+                              <div id="noaddress"><a href="/editaddress.aspx?url=cartstep.aspx" class="a-address"><span class="address"><b class="arrow">新增收货地址&gt;</b></span>
+                            </a></div>
+                        </section>
+                    </div>
+                </div>
+                <div id="MainPayType">
+                    <div id="ShowPaymnetType">
+                        <section class="cart-info">
+                            <ul class="cart-info-ul">
+                                <li class="cart-info-li line">
+                                    <div class="label">
+                                        <label>
+                                            支付方式</label></div>
+                                    <div class="value" id="payType">
+                                        <!--<label class="value-pay current">货到付款</label><label class="value-pay">财付通</label>-->
+                                        <label class="value-pay current" id="Alipay_Wap">
+                                            支付宝</label>
+                                    </div>
+                                </li>
+                               <!-- <li class="cart-info-li line">
+                                    <div class="label">
+                                        <label>
+                                            优惠券</label></div>
+                                    <div class="value">
+                                        <label class="value-pay current">
+                                            1223515412</label><label class="value-pay">13564613</label></div>
+                                </li>-->
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <section class="cart-prolist">
+                <h2 class="title">
+                    商品列表</h2>
+                <ul class="cart-prolist-ul">
+
+                  <#loop cart,["+username+"],["+guid+"] 999#>
+     
+                    <li class="cart-prolist-li">
+                        <div class="pic">
+                            <a href="../../product.aspx?id={cart[ProductID]}">
+                                <img src="{cart[Src]}" width="120" height="120" alt="产品"></a>
+                        </div>
+                        <div class="info">
+                            <p class="info-name">
+                                {cart[Name]}<br/>{cart[PropertysText]}
+                            </p>
+                            <p class="info-price">
+                                <span class="count">共 {cart[count]} 件</span><span class="price"> ￥{cart[OrderPrice]}</span></p>
+                        </div>
+                    </li>
+     <#/loop#>
+
+                </ul>
+                  <ul class="cart-prolist-ul" id="newCartItemTotal">
+                  </ul>
+                <div class="total">
+                    您共需要为订单支付：<span class="total-price">{orderprice}</span></div>
+            </section>
+            <div class="submit">
+                <div class="clear">
+                </div>
+                <section class="s-btn">
+                    <button class="settle-account" onclick="Submit_Order()" id="butSubmit">
+                        去结算</button>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 

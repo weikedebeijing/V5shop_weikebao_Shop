@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Columns Question="我的姓名是？" QValue="1" />
+  <Columns Question="我的手机号码是？" QValue="2" />
+  <Columns Question="我父亲的名字是？" QValue="3" />
+  <Columns Question="我母亲的名字是？" QValue="4" />
+  <Columns Question="我小学班主任叫什么？" QValue="5" />
+  <Columns Question="我最喜欢的吃的是？" QValue="6" />
+  <Columns Question="你是谁？" QValue="7" />
+  <Columns Question="你想知道答案吗？" QValue="8" />
+  <Columns Question="我的生日是？" QValue="9" />
+</root>

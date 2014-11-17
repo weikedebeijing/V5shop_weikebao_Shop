@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"
+        charset="utf-8" data-callback="true"></script>
+    <script src="http://html.v5portal.com/distribution/foundation/js/vendor/jquery.js"></script>
+    <script type="text/javascript">
+        var bl = false;
+        var OpenID = "";
+        if (QC.Login.check()) {//如果已登录
+            QC.Login.getMe(function (openId, accessToken) {
+                OpenID = openId;
+                //                alert(["当前登录用户的", "openId为：" + openId, "accessToken为：" + accessToken].join("\n"));
+                $.ajax({
+                    url: "../member/authorise/QQLogin.aspx",
+                    type: "get",
+                    async: false,
+                    dataType: "text",
+                    data: { "Type": "IsLogin", "openId": openId },
+                    cache: false,
+                    success: function (res) {
+                        if (res == "true") {
+                            window.location.href = "../../index.aspx";
+                        } else if (res == "-1") {
+                            //跳转到会员冻结页面
+                            window.location.href = "../../member/ShopError.aspx?msg=您的会员帐号已被冻结......";
+                        } else {
+                            bl = true;
+                        }
+                    }
+                });
+                if (bl) {
+                    //从页面收集OpenAPI必要的参数。get_user_info不需要输入参数，因此paras中没有参数
+                    var paras = {};
+
+                    //用JS SDK调用OpenAPI
+                    QC.api("get_user_info", paras)
+                    //指定接口访问成功的接收函数，s为成功返回Response对象
+                    .success(function (s) {
+                        //成功回调，通过s.data获取OpenAPI的返回数据
+                        //	                    alert("获取用户信息成功！当前用户昵称为：" + s.data.nickname);
+                        $.ajax({
+                            url: "../member/authorise/QQLogin.aspx",
+                            type: "get",
+                            async: false,
+                            dataType: "text",
+                            data: { "Type": "UserInfo", "logourl": s.data.figureurl_qq_1, "gender": s.data.gender, "nickname": s.data.nickname, "openID": OpenID },
+                            cache: false,
+                            success: function (res) {
+                                if (res) {
+                                    window.location.href = "../../index.aspx";
+                                } else {
+                                }
+                            }
+                        })
+
+
+                    })
+                    //指定接口访问失败的接收函数，f为失败返回Response对象
+                    .error(function (f) {
+                        //失败回调
+                        alert("获取用户信息失败！");
+                    })
+                    //指定接口完成请求后的接收函数，c为完成请求返回Response对象
+                    .complete(function (c) {
+                        //完成请求回调
+                        //alert("获取用户信息完成！");
+                    });
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<div class="classtitle">
+    <div class="titlename">
+        <div class="chinese">
+            顾客评论({reviewcount})</div>
+        <div class="english">
+            CUSTOMER REVIEWS</div>
+        <div class="arrow">
+        </div>
+        <div class="arrow2">
+        </div>
+    </div>
+</div>
+<div class="classcontent">
+    <div class="RsetTabCon">
+        <div class="NewComment" style="margin: 0px auto;">
+            <div class="NewCommentOne NewCommentTwo mb10" style="height: 147px;">
+                <h3>
+                    <em>所有打分及评论均来自已购买本产品的用户</em> <span class="sprites" style="width: 14px; height: 14px;
+                        background-position: -2853px 0pt; margin: 5px 0pt 0pt 7px; padding: 0pt; display: inline;">
+                    </span><span>商品评价（共 <strong>{reviewcount}</strong> 名用户） </span>
+                </h3>
+                <div class="plGoodBad">
+                    <ul>
+                        <li class="goodPing">
+                            <p class="ac maincolor">
+                                好评率</p>
+                            <p class="goodPLv maincolor mt10">
+                                {ms:goodpercent}%</p>
+                        </li>
+                        <li class="haozhonghuai">
+                            <dl>
+                                <dd>
+                                    好评 <span><strong style="width: {ms:goodpercent}%;">&nbsp;</strong> </span>{ms:goodpercent}%
+                                </dd>
+                                <dd>
+                                    中评 <span class="boxZP"><strong style="width: {ms:middleReview}%;">&nbsp;</strong>
+                                    </span>{ms:middleReview}%
+                                </dd>
+                                <dd>
+                                    差评 <span class="boxCP"><strong style="width: {ms:badreview}%;">&nbsp;</strong> </span>
+                                    {ms:badreview}%
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="meGouMai ac">
+                            <p class="ac">
+                                购买过该商品的用户才能进行评论
+                            </p>
+                            <a class="goumaiButton track mb10" name="item-mycomment" href="" id="sendreview"
+                                title="我要评论"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <iframe id="reviewFrame"   frameborder="0" width="100%" scrolling="no"></iframe>
+            <a id="review"></a>
+            <br />
+            <br />
+            <div class="Commenton NewCommentTwo mb10">
+                <h3>
+                    <span>评论</span></h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td valign="top" class="col01">
+                                <span class="mt5 fb">评分：</span>
+                            </td>
+                            <td valign="top">
+                                <input type="radio" id="start01" value="1" name="start" class="valign"><label for="start01"
+                                    class="start01"></label>
+                                <input type="radio" id="start02" value="2"  name="start" class="valign"><label for="start02"
+                                    class="start02"></label>
+                                <input type="radio" id="start03" value="3" name="start" class="valign"><label for="start03"
+                                    class="start03"></label>
+                                <input type="radio" id="start04" value="4" name="start" class="valign"><label for="start04"
+                                    class="start04"></label>
+                                <input type="radio" id="start05" value="5" name="start" checked="checked"  class="valign"><label for="start05"
+                                    class="start05"></label><br>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="col01 fb">
+                                标题：
+                            </td>
+                            <td>
+                                <input type="text" class="w300 form-input" name="title" id="title" value="" />
+                                <br>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="col01 fb">
+                                心得：
+                            </td>
+                            <td>
+                                <textarea doin="txtContent" onkeyup="GBook_SumCount(this);" name="txtReview" rows="5"
+                                    id="txtReview" class="w500"></textarea>
+                                <span class="tips">你还可以输入 <em id="GBook_TextCount">200</em> 个字 </span>
+                                <br>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col01 fb">
+                            </td>
+                            <td>
+                                <input type="button" name="Submit2" onclick="StyleReview({cid})" class="btn-comment">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+        $("#sendreview").attr("href", document.URL + "#review");
+        $("#product_1").show();
+        $('#reviewFrame').attr("src", '[$syspath]template/version_9/page/reviewcontent.aspx?id={cid}');
+    });
+
+</script>

@@ -1,0 +1,496 @@
+﻿<#loop productdetail,["+cid+"],* 1#>
+<div class="detail-key">
+    <#if hasSpec == "1"#>
+    <dl class="detail-prop detail-prop-color clearfix">
+        <dt><b id="tipsTitle">请选择：</b> <em class="maincolor" id="tipsContent">
+        <#loop productspec,["+cid+"] 999#> 
+        {productspec[name]} 
+        <#/loop#> 
+        </em></dt>
+    </dl>
+    <#loop productspec,["+cid+"] 999#> 
+    <#if {productspec[showtype]} != "0"#>
+    <dl class="detail-prop detail-prop-color clearfix">
+        <dt><b>{productspec[name]}：</b> </dt>
+        <dd>
+            <ul class="J_SaleProp clearfix">
+                <#loop productspecvalue,["+cid+"],["+productspec_member["specid"].ToString()+"] 999#>
+                <#cs#> string SpecValue=getSpecValueData(productspecvalue_member["value"].ToString(),productspecvalue_member["oldvalue"].ToString());<#/cs#>
+                <li class="{productspecvalue[specvalueid]}" title="{SpecValue}" specificationvalueid="{productspecvalue[specvalueid]}">
+                    <a title="{SpecValue}" hidefocus="true" href="javascript:void(0);">
+                        <img title="{SpecValue}" src="{gettmpimg({productspecvalue[src]},50,50)}" height="50" width="50" alt="{SpecValue}" />
+                    </a><span title="点击取消选择"></span></li>
+                <#/loop#>
+            </ul>
+        </dd>
+    </dl>
+    <#else#>
+    <dl class="detail-prop detail-prop-size clearfix">
+        <dt><b>{productspec[name]}：</b></dt>
+        <dd>
+            <ul class="J_SaleProp clearfix">
+                <#loop productspecvalue,["+cid+"],["+productspec_member["specid"].ToString()+"] 999#>
+                 <#cs#> string SpecValue=getSpecValueData(productspecvalue_member["value"].ToString(),productspecvalue_member["oldvalue"].ToString());<#/cs#>
+                <li class="{productspecvalue[specvalueid]}" title="{SpecValue}" specificationvalueid="{productspecvalue[specvalueid]}">
+                    <a title="{SpecValue}" hidefocus="true" href="javascript:void(0);">{SpecValue}</a>
+                    <span title="点击取消选择"></span></li>
+                <#/loop#>
+                
+            </ul>
+        </dd>
+    </dl>
+    <#/if#> 
+    <#/loop#> 
+    <#/if#>
+    <dl class="detail-prop detail-prop-amount clearfix">
+        <dt><b>采购数量：</b> </dt>
+        <dd>
+            <!--<select id="cart_goods_num" name="goods[num]">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>-->
+           <input type="button" value="-" id="JianNum"/> <input type="text" style=" width:30px; height:20px; text-align:center; vertical-align: middle" id="cart_goods_num" name="goods[num]" value='{productdetail[buynum]}'/>
+            <input type="button" value="+"  id="AddNum"/>
+            {productdetail[Unit]}<span id="sku_tips" class="notify sku-notify"></span>
+        </dd>
+    </dl>
+    <div class="detail-action clearfix">
+        <script language='javascript' type='text/javascript' src='[$syspath]js_product.aspx?p={pagenow}'></script>
+      
+        <div class="layer-box01 alert-cart"  id="mini-set-product" style="display: none; overflow: hidden; padding-bottom: 10px; right:-5px; top: 0; width: 430px;">
+            <form method="post" action="[$syspath]cart.aspx">
+            <input type="hidden" value="Purchase" name="act" />
+            <input type="hidden" value="{cid}" name="id" />
+            
+            <h2 style="color: #333333;    font-size: 12px;    font-weight: bold;    margin: 5px 0px;">
+                请输入采购数量</h2>
+            <div class="cont">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="web08-table01">
+                    <tr>
+                        <#loop productspec,["+cid+"] 999#>
+                        <th align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;">
+                            {productspec[name]}
+                        </th>
+                        <#/loop#>
+                        <th align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;">
+                            采购价
+                        </th>
+                        <th align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;">
+                            库存
+                        </th>
+                        <th align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;">
+                            输入采购数量
+                        </th>
+                    </tr>
+                    <#cs#>int i = 1;<#/cs#> 
+                    <#loop trueproductuser,["+cid+"],["+base.LoginID+"] 999#>
+                    <tr productid="{trueproductuser[id]}" class="">
+                        <#loop trueproductspec,["+trueproductuser_member["id"].ToString()+"] 999#>
+                          <#cs#> string SpecValue=getSpecValueData(trueproductspec_member["specvalue"].ToString(),trueproductspec_member["oldvalue"].ToString());<#/cs#>
+               
+                        <td align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;padding: 5px;">
+                            {SpecValue}
+                        </td>
+                        <#/loop#>
+                        <td align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;padding: 5px;">
+                            ￥<!--{trueproductuser[price]}￥没有加上去-->{trueproductuser[WholeSalePrice]}
+
+                        </td>
+                        <td align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;padding: 5px;">
+                            {trueproductuser[store]}
+                        </td>
+                        <td align="center" style="background-color: #FFFFFF;  border: 1px solid #E4E4E4;padding: 5px;">
+                            <input type="text" class="form-input w100" style="text-align:center;" name="PurchaseCount" value="0" onblur="return Contrast(this,{trueproductuser[store]},{i})"
+                                id="Count_{i}" />
+                            <input type="hidden" value="{trueproductuser[id]}" id="TrueProductVals" name="TrueProductVals" />
+                        </td>
+                    </tr>
+                    <#cs#>i++;<#/cs#> 
+                    <#/loop#>
+                </table>
+            </div>
+            <div class="div-btn" style="margin: 20px 25px;  text-align: left;">
+                <input type="submit" id="PurchaseBuy" class="btn" onclick="return upperCaseAll({StarCount},{i});"
+                    onmousemove="this.className='btn-mouseover'" onmouseout="this.className='btn'"
+                    value=" " style=" background: url('images/web08-icon.png') no-repeat scroll 0 -442px  transparent; border: 0 none; cursor: pointer; float: right; height: 31px; width: 119px;" />
+                    </div>
+            </form>
+        </div> 
+    </div>
+    <input id="cookie" value="{CookieLoginID}" type="hidden" />
+    <input id="productid" value="{cid}" type="hidden" />
+    <input id="cartPCount" value="{cartPCount}" type="hidden" />
+</div>
+<script type="text/javascript">
+ $(document).ready(function () {
+    var selectedProductId = null;
+    $productSn = $("#productSn");
+
+    $price = $("#price");
+    $wholePrice=$("#wholePrice");
+
+    $marketPrice = $("#mktprice");
+    $buyInfo = $(".detail-key");
+    $tipsTitle = $("#tipsTitle");
+    $tipsContent = $("#tipsContent");
+    $specificationValue = $(".detail-key .J_SaleProp li");
+    $number = $("#cart_goods_num");
+    $buynow = $("#btn_cart_product");
+    $addcart = $("#btn_buy_product");
+    $ShowCart = $("#btn_set_product");
+    $sku_tips = $("#sku_tips");
+    var trueid = 0;
+    var productDatas = {};
+    <#loop trueproduct,["+cid+"] 999#>
+    productDatas['{trueproduct[id]}'] = {
+			    productSn: '{trueproduct[Barcode]}',
+			    price:'{trueproduct[Price]}',
+                wholePrice:'{trueproduct[WholeSalePrice]}',
+			    marketPrice: '{trueproduct[MarketPrice]}',
+                Store:'{trueproduct[Store]}',
+                buynum:'{trueproduct[StarCount]}'
+		    };
+    trueid = {trueproduct[id]};
+    <#/loop#>
+
+    if ("{hasSpec}" == "1") {
+    var specificationValueDatas = {};
+    {specificationValueData}
+    //var specificationValueSelecteds = new Array();            
+    $specificationValue.click(function () {
+        var $this = $(this);				
+        if ($this.hasClass("selected")) {
+	        $this.removeClass("selected");
+        } else {
+	        $this.addClass("selected");
+        }
+        $this.siblings("li").removeClass("selected");            				
+        var $specificationValueSelected = $(".detail-key .J_SaleProp li.selected");				
+        var specificationValueSelecteds = new Array();
+        selectedProductId = null;
+        var tipsContentText = "";
+        $specificationValueSelected.each(function(i) {
+	        var $this = $(this);
+	        tipsContentText += $this.attr("title") + " ";
+	        specificationValueSelecteds.push($this.attr("specificationValueId"));
+        });
+        if (tipsContentText != "") {
+	        $tipsTitle.text("已选择: ");
+	        $tipsContent.text(tipsContentText);
+        }
+        else{
+            $sku_tips.text("");
+            $tipsTitle.text("请选择: ");
+	        $tipsContent.text("{specname}");
+        }
+        $.each(specificationValueDatas, function(i) {
+                if (specificationValueDatas[i].toString() == specificationValueSelecteds.toString()) {
+			        $productSn = $productSn.text(productDatas[i].productSn);
+                    $.ajax({
+                       type: "POST",
+                       url: "[$syspath]cart.aspx",
+                       dataType:'text',
+                       data: "id={cid}&trueId=" + i + "&price=" + productDatas[i].price + "&wholeprice="+ productDatas[i].wholePrice +"&act=getprice",                       
+                       success: function(data){
+                           var array = data.split(",");
+                           $price = $price.text(array[0]);
+                           $wholePrice=$wholePrice.text(array[1]);
+                       }
+                    });
+			        $marketPrice = $marketPrice.text(productDatas[i].marketPrice);
+                    if (productDatas[i].Store>0) {
+                        $sku_tips.text("库存有货，立即发出");
+                    } else {
+                        $sku_tips.text("暂无库存");
+                    }
+                    selectedProductId = i;
+		        }
+	    });
+    });
+
+    //加入购物车
+    $addcart.click(function () {
+        if ($("#cookie").val() =="") {
+           location.href ="http://"+location.host+ "/membership/login.aspx";
+        }
+        else
+        {
+            var $this = $(this);
+            if (selectedProductId != null) {
+                if (productDatas[selectedProductId].Store < 1) {//高级库存时判断商品的库存量
+                    $buyInfo.addClass("highlight");
+                    $tipsTitle.text('系统提示:');
+                    $tipsContent.text('该款式已无货，无法购买！');
+                    return false;
+                }
+                //高级库存时判断购买量是否超出库存
+                if (parseInt($number.val()) > parseInt(productDatas[selectedProductId].Store)) {
+                
+                    $buyInfo.addClass("highlight");
+                    $tipsTitle.text('系统提示:');
+                    $tipsContent.text("您购买了" + $number.val() + "件的本商品，已超出本款式的库存" + productDatas[selectedProductId].Store + "件！");
+                    return false;
+                }
+//                if (parseInt($number.val()) < parseInt(productDatas[selectedProductId].buynum)) {//判断最少购买数量
+//                    $buyInfo.addClass("highlight");
+//                    $tipsTitle.text('系统提示:');
+//                    $tipsContent.text("对不起！该商品的最少购买数量为" + productDatas[selectedProductId].buynum + "件！");
+//           
+//                    return false;
+//                }
+                if (!0) {               
+                    $.ajax({
+                       type: "POST",
+                       url: "[$syspath]cart.aspx",
+                       data: "id={cid}&trueId=" + selectedProductId + "&count=" + $number.val() + "&act=addcart",
+                       success: function(data){
+                        if (data == "1") {
+                            location.href = "[$syspath]cart.aspx";
+                        }
+                        else
+                        {
+                            $buyInfo.addClass("highlight");
+                            $tipsTitle.text('系统提示:');
+                            $tipsContent.text(data);
+                            return false;
+                        }
+                       }
+                    });
+                }
+            } else {
+                $tipsTitle.text('系统提示:');
+                $tipsContent.text('请选择商品规格信息!');
+                return false;
+            }
+        }        
+    });
+    
+    //立即购买
+    $buynow.click(function () {
+        var $this = $(this);
+        if (selectedProductId != null) {
+            if (productDatas[selectedProductId].Store < 1) {//高级库存时判断商品的库存量
+                $buyInfo.addClass("highlight");
+                $tipsTitle.text('系统提示:');
+                $tipsContent.text('该款式已无货，无法购买！');
+                return false;
+            }
+            //高级库存时判断购买量是否超出库存
+            if (parseInt($number.val()) > parseInt(productDatas[selectedProductId].Store)) {
+                $buyInfo.addClass("highlight");
+                $tipsTitle.text('系统提示:');
+                $tipsContent.text("您购买了" + $number.val() + "件的本商品，已超出本款式的库存" + productDatas[selectedProductId].Store + "件！");
+                return false;
+            }
+//            if (parseInt($number.val()) < parseInt(productDatas[selectedProductId].buynum)) {//判断最少购买数量
+//                $buyInfo.addClass("highlight");
+//                $tipsTitle.text('系统提示:');
+//                $tipsContent.text("对不起！该商品的最少购买数量为" + productDatas[selectedProductId].buynum + "件！"); 
+//                return false;
+//            }
+            $.ajax({
+                type: "POST",
+                url: "[$syspath]cart.aspx",
+                data: "id={cid}&trueId=" + selectedProductId + "&count=" + $number.val() + "&act=fastbuy",
+                success: function(data){
+                    if (data == "1") {
+                        location.href = "[$syspath]cart.aspx";
+                    }
+                    else
+                    {
+                        $buyInfo.addClass("highlight");
+                        $tipsTitle.text('系统提示:');
+                        $tipsContent.text(data);
+                        return false;
+                    }
+                }
+            });
+        } else {
+            $buyInfo.addClass("highlight");
+            $tipsTitle.text('系统提示:');
+            $tipsContent.text('请选择商品规格信息!');
+            return false;
+        }
+    });
+    }
+    else
+    {
+        //加入购物车
+        $addcart.click(function () {
+            if ($("#cookie").val() =="") {
+               location.href ="http://"+location.host+ "/membership/login.aspx";
+            }
+            else
+            {
+                var $this = $(this);
+//                if (parseInt($number.val()) < parseInt(productDatas[trueid].buynum)) {//判断最少购买数量
+//                    //$buyInfo.addClass("highlight");
+//                    //$tipsTitle.text('系统提示:');
+//                    //$tipsContent.text("对不起！该商品的最少购买数量为" + productDatas[trueid].buynum + "件！");
+//                    
+//                    art.dialog({
+//                            time:3000,
+//                            lock:true,
+//                            title:'提示消息',
+//                            content:'该商品的最少购买数量为: <b> '+productDatas[trueid].buynum+' </b>件'
+//                                 });
+//                    return false;
+//                }
+
+                if (parseInt($number.val()) > parseInt(productDatas[trueid].Store)) {
+//                $buyInfo.addClass("highlight");
+//                $tipsTitle.text('系统提示:');
+//                $tipsContent.text("您购买了" + $number.val() + "件的本商品，已超出本款式的库存" + productDatas[trueid].Store + "件！");
+                art.dialog({
+                            time:5000,
+                            lock:true,
+                            title:'提示消息',
+                            content:'您购买了: <b> '+$number.val()+' </b>件的本商品,已超出本款式的库存 <b>'+productDatas[trueid].Store+'</b>件！'
+                                 });
+                return false;
+            }
+                if (!0) {               
+                    $.ajax({
+                        type: "POST",
+                        url: "[$syspath]cart.aspx",
+                        data: "id={cid}&trueId=" + trueid + "&count=" + $number.val() + "&act=addcart",
+                        success: function(data){
+                            if (data == "1") {
+                            location.href = "[$syspath]cart.aspx";
+                            }
+                            else
+                            {
+                                $buyInfo.addClass("highlight");
+                                $tipsTitle.text('系统提示:');
+                                $tipsContent.text(data);
+                                return false;
+                            }
+                        }
+                    });
+                }
+            }
+        });
+
+        //立即购买
+        $buynow.click(function () {
+            var $this = $(this);
+//            if (parseInt($number.val()) < parseInt(productDatas[trueid].buynum)) {//判断最少购买数量
+//                $buyInfo.addClass("highlight");
+//                $tipsTitle.text('系统提示:');
+//                $tipsContent.text("对不起！该商品的最少购买数量为" + productDatas[trueid].buynum + "件！");
+//                return false;
+//            }
+            $.ajax({
+                type: "POST",
+                url: "[$syspath]cart.aspx",
+                data: "id={cid}&trueId=" + trueid + "&count=" + $number.val() + "&act=fastbuy",
+                success: function(data){
+                    if (data == "1") {
+                        location.href = "[$syspath]cart.aspx";
+                    }
+                    else
+                    {
+                        $buyInfo.addClass("highlight");
+                        $tipsTitle.text('系统提示:');
+                        $tipsContent.text(data);
+                        return false;
+                    }
+                }
+            });
+        });        
+    }
+    //批量采购
+    $ShowCart.click(function(){
+            if ($("#cookie").val() !="") {                
+              var dialog = art.dialog({
+                title:"批量采购",
+                lock:true,
+                opacity: 0.1,
+                background: '#F3F3F3', 
+                content: $("#mini-set-product").html(),
+                id: 'D345'
+            });
+        }
+        else
+        {
+            art.confirm("你尚未登录，需要登录吗？",
+                function () {
+                     location.href ="http://"+location.host+ "/membership/login.aspx";
+                }, function () {
+                    return true;
+            });
+          
+        }
+    });
+})
+//zhangsq
+$("#AddNum").click(function () {
+           var results=$("#cart_goods_num").val();
+           results=parseInt(results)+parseInt(1);
+           $("#cart_goods_num").val(results);
+           return true;
+});
+
+$("#JianNum").click(function () {
+           var result=$("#cart_goods_num").val();
+           result=parseInt(result)-parseInt(1);
+           if(parseInt(result)>0)
+           {
+           $("#cart_goods_num").val(result);
+           }           
+           return true;
+});
+
+//设为代销
+function SetDistribution() {
+    if ($("#cookie").val() !="") {
+        $.ajax({
+            type: "POST",
+            url: path + "category.aspx",
+            cache: false,
+            data: "act=setdistribution&productId=" + $("#productid").val(),
+            success: function (data) {
+                if (data == "1") {
+                        art.dialog({
+                            time:3000,
+                            lock:true,
+                            title:'提示消息',
+                            content:'成功设为代销商品！'
+                                 });
+                } else if(data=="2"){
+                        art.dialog({
+                            time:3000,
+                            lock:true,
+                            title:'提示消息',
+                            content: '您已代销过此商品！'
+                                 });
+                }else{
+                art.dialog({
+                            time:3000,
+                            lock:true,
+                            title:'提示消息',
+                            content: '设为代销商品失败！'
+                                 });
+                }
+            }
+        });
+    }
+    else
+    {
+        location.href ="http://"+location.host+ "/membership/login.aspx";
+    }   
+}
+function Close()
+{
+   $("#mini-set-product").hide();
+}
+</script>
+<#/loop#> 

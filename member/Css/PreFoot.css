@@ -1,0 +1,195 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.h50{height:50px;}
+
+/*foundation*/
+.fixed {
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99; }
+  .sub-nav dt,
+  .sub-nav dd,
+  .sub-nav li {
+    float: left;
+    display: inline;
+    margin-left: 1rem;
+    margin-bottom: 0.625rem;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.875rem;
+    color: #999999; }
+
+/*--footer--*/
+footer{display:none;margin:20px 0 0 0;padding:8px 0 8px 0;background:#fff;border-top:1px solid #d7d7d7;text-align:center;}
+footer .explain{display:inline-block;height:18px;line-height:18px;font-size:14px;color:#9c9c9c;vertical-align:middle;}
+footer .logo-cop{width:auto;height:16px;vertical-align:middle;}
+/*--footer navigation bar--*/
+.fixed.bottom{bottom:-1px; top:auto;}
+/*--nav bottom--
+.sub-nav.nav-b4{height:50px;margin:0;padding:0;background:#111;
+filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.sub-nav.nav-b4 dd{margin:0 0 0 0;width:25%;text-align:center;}
+.sub-nav.nav-b4 dd a{display:block;height:50px;padding:0 0 0 0;font-size:10px;overflow:hidden;}
+.sub-nav.nav-b4 dd.active a{color:#fff;background:#000;border-radius:0;}
+.sub-nav.nav-b4 dd a:hover{background:#000;}.sub-nav.nav-b4 dd a .icon-share,
+.sub-nav.nav-b4 dd a .icon-store,
+.sub-nav.nav-b4 dd a .icon-distribusion,
+.sub-nav.nav-b4 dd a .icon-commision,
+.sub-nav.nav-b4 dd a .icon-member{display:block;margin:6px auto 2px auto;width:20px;height:20px;background:url("http://html.v5portal.com/distribution/images/distribution2.png") no-repeat;background-size:300px 1000px;}
+.sub-nav.nav-b4 dd a .icon-share{background-position:-193px -425px;}
+.sub-nav.nav-b4 dd a .icon-store{background-position:0 -357px;}
+.sub-nav.nav-b4 dd a .icon-distribusion{background-position:-40px -357px;}
+.sub-nav.nav-b4 dd a .icon-commision{background-position:-80px -357px;}
+.sub-nav.nav-b4 dd a .icon-member{background-position:-120px -357px;}
+.sub-nav.nav-b4 dd.active a .icon-share{background-position:-193px -455px;}
+.sub-nav.nav-b4 dd.active a .icon-store{background-position:0 -387px;}
+.sub-nav.nav-b4 dd.active a .icon-distribusion{background-position:-40px -387px;}
+.sub-nav.nav-b4 dd.active a .icon-commision{background-position:-80px -387px;}
+.sub-nav.nav-b4 dd.active a .icon-member{background-position:-120px -387px;}
+
+.sub-nav.nav-b3{height:50px;margin:0;padding:0;background:#111;
+filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.sub-nav.nav-b3 dd{margin:0 0 0 0;width:33.3333%;text-align:center;}
+.sub-nav.nav-b3 dd a{display:block;height:50px;padding:0 0 0 0;font-size:10px;overflow:hidden;color:#b5b5b5;}
+.sub-nav.nav-b3 dd.active a{color:#fff;background:#000;border-radius:0;}
+.sub-nav.nav-b3 dd a:hover{background:#000;}
+.sub-nav.nav-b3 dd a .icon-store,
+.sub-nav.nav-b3 dd a .icon-distribusion,
+.sub-nav.nav-b3 dd a .icon-commision,
+.sub-nav.nav-b3 dd a .icon-member{display:block;margin:6px auto 2px auto;width:20px;height:20px;background:url("../images/distribution2.png") no-repeat;background-size:300px 1000px;}
+.sub-nav.nav-b3 dd a .icon-store{background-position:0 -357px;}
+.sub-nav.nav-b3 dd a .icon-distribusion{background-position:-40px -357px;}
+.sub-nav.nav-b3 dd a .icon-commision{background-position:-80px -357px;}
+.sub-nav.nav-b3 dd a .icon-member{background-position:-120px -357px;}
+.sub-nav.nav-b3 dd.active a .icon-store{background-position:0 -387px;}
+.sub-nav.nav-b3 dd.active a .icon-distribusion{background-position:-40px -387px;}
+.sub-nav.nav-b3 dd.active a .icon-commision{background-position:-80px -387px;}
+.sub-nav.nav-b3 dd.active a .icon-member{background-position:-120px -387px;}*/
+
+/*--nav bottom--
+.sub-nav.nav-b4{height:50px;margin:0;padding:0;background:#111;
+filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.sub-nav.nav-b4 dd{margin:0 0 0 0;width:25%;text-align:center;}
+.sub-nav.nav-b4 dd a{display:block;height:50px;padding:0 0 0 0;font-size:10px;overflow:hidden;}
+.sub-nav.nav-b4 dd.active a{color:#fff;background:#000;border-radius:0;}
+.sub-nav.nav-b4 dd a:hover{background:#000;}
+.sub-nav.nav-b4 dd a .icon-share,
+.sub-nav.nav-b4 dd a .icon-store,
+.sub-nav.nav-b4 dd a .icon-distribusion,
+.sub-nav.nav-b4 dd a .icon-commision,
+.sub-nav.nav-b4 dd a .icon-member{display:block;margin:6px auto 2px auto;width:20px;height:20px;background:url("../images/distribution2.png") no-repeat;background-size:300px 1000px;}
+.sub-nav.nav-b4 dd a .icon-share{background-position:-193px -425px;}
+.sub-nav.nav-b4 dd a .icon-store{background-position:0 -357px;}
+.sub-nav.nav-b4 dd a .icon-distribusion{background-position:-40px -357px;}
+.sub-nav.nav-b4 dd a .icon-commision{background-position:-80px -357px;}
+.sub-nav.nav-b4 dd a .icon-member{background-position:-120px -357px;}
+.sub-nav.nav-b4 dd.active a .icon-share{background-position:-193px -455px;}
+.sub-nav.nav-b4 dd.active a .icon-store{background-position:0 -387px;}
+.sub-nav.nav-b4 dd.active a .icon-distribusion{background-position:-40px -387px;}
+.sub-nav.nav-b4 dd.active a .icon-commision{background-position:-80px -387px;}
+.sub-nav.nav-b4 dd.active a .icon-member{background-position:-120px -387px;}
+
+.sub-nav.nav-b3{height:50px;margin:0;padding:0;background:#111;
+filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.sub-nav.nav-b3 dd{margin:0 0 0 0;width:33.3333%;text-align:center;}
+.sub-nav.nav-b3 dd a{display:block;height:50px;padding:0 0 0 0;font-size:10px;overflow:hidden;}
+.sub-nav.nav-b3 dd.active a{color:#fff;background:#000;border-radius:0;}
+.sub-nav.nav-b3 dd a:hover{background:#000;}
+.sub-nav.nav-b3 dd a .icon-store,
+.sub-nav.nav-b3 dd a .icon-distribusion,
+.sub-nav.nav-b3 dd a .icon-commision,
+.sub-nav.nav-b3 dd a .icon-member{display:block;margin:6px auto 2px auto;width:20px;height:20px;background:url("../images/distribution2.png") no-repeat;background-size:300px 1000px;}
+.sub-nav.nav-b3 dd a .icon-store{background-position:0 -357px;}
+.sub-nav.nav-b3 dd a .icon-distribusion{background-position:-40px -357px;}
+.sub-nav.nav-b3 dd a .icon-commision{background-position:-80px -357px;}
+.sub-nav.nav-b3 dd a .icon-member{background-position:-120px -357px;}
+.sub-nav.nav-b3 dd.active a .icon-store{background-position:0 -387px;}
+.sub-nav.nav-b3 dd.active a .icon-distribusion{background-position:-40px -387px;}
+.sub-nav.nav-b3 dd.active a .icon-commision{background-position:-80px -387px;}
+.sub-nav.nav-b3 dd.active a .icon-member{background-position:-120px -387px;}*/
+
+/*--nav bottom--*/
+.sub-nav.nav-b4{height:45px;margin:0;padding:0;background:#fff;border-top:1px solid #bbb;}
+.sub-nav.nav-b4 dd{margin:0 0 0 0;width:33.33%;text-align:center;border-right:1px solid #bbb;
+					-moz-box-sizing:border-box;
+						-webkit-box-sizing:border-box;
+							-o-box-sizing:border-box;
+								box-sizing:border-box;
+}
+.sub-nav.nav-b4 dd.last{border-right:0;}
+.sub-nav.nav-b4 dd a{display:block;height:45px;line-height:50px;padding:0 0 0 0;font-size:16px;color:#333;overflow:hidden;}
+.sub-nav.nav-b4 dd.active a{color:#333;border-radius:0;background:#fff;}
+.sub-nav.nav-b4 dd a:hover{background:#efefef;}
+.sub-nav.nav-b4 dd a.more{position:relative;}
+.sub-nav.nav-b4 dd .arrow{position:absolute;right:5px;bottom:5px;width:10px;height:10px;background:url("../images/distribution2.png") no-repeat -161px -455px;background-size:300px 1000px;}
+.sub-nav.nav-b3{height:50px;margin:0;padding:0;background:#111;
+filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.sub-nav.nav-b3 dd{margin:0 0 0 0;width:33.3333%;text-align:center;}
+.sub-nav.nav-b3 dd a{display:block;height:50px;padding:0 0 0 0;font-size:10px;overflow:hidden;}
+.sub-nav.nav-b3 dd.active a{color:#fff;background:#000;border-radius:0;}
+.sub-nav.nav-b3 dd a:hover{background:#000;}
+.sub-nav.nav-b3 dd a .icon-store,
+.sub-nav.nav-b3 dd a .icon-distribusion,
+.sub-nav.nav-b3 dd a .icon-commision,
+.sub-nav.nav-b3 dd a .icon-member{display:block;margin:6px auto 2px auto;width:20px;height:20px;background:url("../images/distribution2.png") no-repeat;background-size:300px 1000px;}
+.sub-nav.nav-b3 dd a .icon-store{background-position:0 -357px;}
+.sub-nav.nav-b3 dd a .icon-distribusion{background-position:-40px -357px;}
+.sub-nav.nav-b3 dd a .icon-commision{background-position:-80px -357px;}
+.sub-nav.nav-b3 dd a .icon-member{background-position:-120px -357px;}
+.sub-nav.nav-b3 dd.active a .icon-store{background-position:0 -387px;}
+.sub-nav.nav-b3 dd.active a .icon-distribusion{background-position:-40px -387px;}
+.sub-nav.nav-b3 dd.active a .icon-commision{background-position:-80px -387px;}
+.sub-nav.nav-b3 dd.active a .icon-member{background-position:-120px -387px;}
+
+/*share*/
+.mask{display:none;position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,.8); z-index:1;}
+.sub-nav{overflow:visible;}
+.share{position:relative; display:none;}
+.shareList{display:none;height:160px;width:100%;padding:0px;border-bottom:0; background:rgba(255,255,255,0.95);background:#fff;}
+.shareList .small-block-grid-4{margin:0 0 0 0;}
+.shareList li{float:left;width:25%;border-bottom:1px solid #eee;border-top:1px solid #fff;border-right:1px solid #eee;padding:15px 0;
+				-webkit-box-sizing:border-box;
+					-moz-box-sizing:border-box;
+						-o-box-sizing:border-box;
+							box-sizing:border-box;
+}
+.shareList li.no-line{border-right:0;}
+.shareList .icon-wechat,
+.shareList .icon-wcf,
+.shareList .icon-sina,
+.shareList .icon-qq,
+.shareList .icon-yxbj,
+.shareList .icon-qqzone,
+.shareList .icon-renren,
+.shareList .icon-txwb,
+.shareList .icon-shwb,
+.shareList .icon-pocket,
+.shareList .icon-email,
+.shareList .icon-info,
+.shareList .icon-collect,
+.shareList .icon-friend,
+.shareList .icon-youdao{background:url("http://html.v5portal.com/distribution/images/distribution2.png") no-repeat;background-size:450px 1500px;display:block;margin:auto;width:31px;height:30px;}
+.shareList .icon-wechat{background-position:0 -1295px;}
+.shareList .icon-wcf{background-position:-44px -1298px;}
+.shareList .icon-sina{background-position:-89px -1297px;}
+.shareList .icon-qq{background-position:-136px -1295px;}
+.shareList .icon-yxbj{background-position:-182px -1294px;}
+.shareList .icon-qqzone{background-position:-221px -1296px;}
+.shareList .icon-renren{background-position:-268px -1295px;}
+.shareList .icon-txwb{background-position:-313px -1296px;}
+.shareList .icon-shwb{background-position:-362px -1296px;}
+.shareList .icon-pocket{background-position:0 -1357px;}
+.shareList .icon-email{background-position:-44px -1358px;}
+.shareList .icon-info{background-position:-90px -1357px;}
+.shareList .icon-collect{background-position:-136px -1354px;}
+.shareList .icon-friend{background-position:-181px -1354px;}
+.shareList .icon-youdao{background-position:-226px -1354px;}
+.shareList .name{display:block;text-align:center;color:#666;font-size:12px;}
+
+
+/*contant us*/
+.contFloat{position:fixed;left:10px;width:18px;padding:10px 5px;line-height:15px;border-radius:5px;background:rgba(0,0,0,0.9);bottom:70px;text-align:center;color:#fff;z-index:999;}
+.contFloat a{color:#fff;}
+.contFloat .icon-contHuman{display:block;margin:0 auto 5px auto;width:20px;height:20px;background:url("../images/distribution2.png") -155px -820px;background-size:300px 1000px;}

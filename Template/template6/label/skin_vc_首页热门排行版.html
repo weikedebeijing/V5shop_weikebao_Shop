@@ -1,0 +1,28 @@
+﻿<ul class="list-box">
+    <#loop SaleProduct,10 999#> 
+        <#if SaleProduct__loop__id == 1#>
+        <li class="current">
+        <#else#>
+        <li>
+        <#/if#>
+            <div class="id">
+                {SaleProduct__loop__id}</div>
+            <div class="pic">
+                <a href="[$syspath]product.aspx?id={SaleProduct[id]}">
+                    <img src="{gettmpimg({SaleProduct[SrcDetail]},52,52)}" /></a></div>
+            <div class="title">
+                <a href="[$syspath]product.aspx?id={SaleProduct[id]}">{SaleProduct[Name]}</a></div>
+            <div class="price">
+                热销 <b>{SaleProduct[BuyCount]}</b> 件</div>
+          <!--  <div class="sales">
+                建议零售价:{SaleProduct[Price]}</div>
+             <div class="sales">
+                经销价:{SaleProduct[WholeSalePrice]}</div>-->
+        </li>
+    <#/loop#>
+</ul>
+<script type="text/javascript">
+    $('.list-box li').mouseover(function () {
+        $(this).addClass("current").siblings().removeClass("current");
+    }); 
+</script>

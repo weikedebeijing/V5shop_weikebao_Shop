@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*===左侧===*/
+.left{ width:240px; float:left;}
+/*登录*/
+.login-tit{height:26px; background:url(../images/web08-icon.png) 0 -529px repeat-x; color:#fff; font-size:12px; line-height:26px; padding-left:10px; border-top:1px solid #d1d1d1; border-left:1px solid #d1d1d1; border-right:1px solid #d1d1d;}
+.login-form{ background:#fafafa; border-left:1px solid #d1d1d1; border-bottom:1px solid #d1d1d1; border-right:1px solid #d1d1d1; padding:30px 20px;}
+.login-form p{ padding:0; height:28px; line-height:28px;}
+.login-form label{ color:#333;}
+.login-form .tips{ margin-left:48px; height:17px; line-height:15px;}
+.login-form .btn-div{margin-left:48px;}
+*html .login-form .btn-div02 a{ color:#fff;}/*兼容IE6*/
+/*公告*/
+.mainevents .content h2 a,.mainsort .content dt a:hover,.mainproducts .more a,.classtitle .titlelink li.more a { color:#a10000}
+.mainevents .content h2 a:hover,.mainsort .content dt a,.mainproducts .more a:hover,.classtitle .titlelink li.more a:hover { color:#000}
+.mainevents .content li,.mainspike .content .price { background-image:url(../images/index/icon.gif); background-repeat:no-repeat}
+.mainevents .title { height:22px}
+.mainevents .title li { float:left}
+.mainevents .title li a { width:120px; background:#DDD; text-align:center; color:#000; line-height:22px; display:block}
+.mainevents .title li a:hover { font-size:14px; font-weight:bold}
+.mainevents .title li.current a { background:#a10000; font-size:14px; color:#FFF; font-weight:bold}
+.mainevents .content {border:2px #a10000 solid; padding:5px; height:130px; background:#fff}
+.mainevents .content li { line-height:24px; border-bottom:1px #999 dotted; padding-left:28px;  background-position:12px 9px}
+.mainevents .content h2 { line-height:24px; text-align:right; color:#a10000; font-weight:bold}
+/*邮件*/
+.mainmail { background:url(../images/index/bg_mail.gif); height:75px}
+.mainmail dt { height:40px; padding-left:25px; line-height:40px; color:#ccc; font-size:14px}
+.mainmail dt b { color:#fff}
+.mainmail dd { padding:6px 0 0 6px; position:relative }
+.mainmail dd input.mailkey { position:absolute; top:6px; left:170px}
+*html .mainmail dd input.mailkey {top:7px;}/*兼容IE6*/
+*+html .mainmail dd input.mailkey {top:7px;}/*兼容IE7*/
+/*产品*/
+.mainproducts { position:relative;}
+.mainproducts .title { height:32px; border-bottom:3px #c40000 solid; overflow:didden; background:url(../images/index/bg_attribute.gif) 0 0 no-repeat; position:relative}
+.mainproducts .title h2,.mainproducts .title h3,.mainproducts .title h4 { width:193px; height:32px; position:absolute}
+.mainproducts .title h2 { top:0; left:0}
+.mainproducts .title h3 { top:0; left:181px}
+.mainproducts .title h4 { top:0; left:361px}
+.mainproducts .more { position:absolute; top:0; right:0; width:200px; line-height:32px; text-align:right; font-weight:bold}
+*html .mainproducts .more{right:40px;}/*兼容IE6*/
+.mainproducts .title a { width:143px; line-height:32px; font-size:14px; font-weight:bolder; color:#fff; display:block; padding-left:50px}
+.mainproducts .title a:hover,.mainproducts .title .current a { background:url(../images/index/bg_attribute.gif) 0 -32px no-repeat}
+.mainproducts .classpro {position:relative; overflow:hidden}
+.mainproducts .classpro ul {top:0; left:0; width:1000px}
+.mainproducts .classpro li { float:left; width:245px; margin:16px 0;}
+.mainproducts .classpro li a{width:200px; display:block}
+.mainproducts .classpro li a.pic { padding:1px; border:1px #ccc solid; line-height:20px;}
+.mainproducts .classpro li a.pic:hover { border:1px #a10000 solid}
+.mainproducts .classpro li a.pic img{ width:200px; height:200px;}
+.mainproducts .classpro li a.name{ margin-top:5px; line-height:20px;}
+.mainproducts .classpro li p{ padding:2px 0; color:#a10000;}
+.mainproducts .classpro li p span.c02{ font-weight:bold;}
+
+/*===右侧===*/
+.right{ width:703px; float:right;}

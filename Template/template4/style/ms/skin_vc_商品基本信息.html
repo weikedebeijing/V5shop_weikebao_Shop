@@ -1,0 +1,93 @@
+<div class="buy_area">
+    <div id="testtt" style="display: none"></div>
+    <div class="fn_wrap">
+        <h1 class="fn" id="itemName">{productdetail[Name]}</h1>
+    </div>
+    <#loop ProductDetailPrice,["+productdetail.ID.ToString()+"] 999#>
+    <div class="price_wrap">
+        <span class="tit" id="priceTitle">惊爆价：</span>
+          <span class="price" id="price" price="¥311.00">¥{GetCustomerPrice( ProductDetailPrice.SalesPrice.ToString() ,productdetail.ID.ToString())}</span>
+        <del class="old_price"><em id="priceMarket" style="">¥{ProductDetailPrice[OldPrice]}</em></del>
+        <span class="flag" id="priceDis" style="display: none"></span>
+    </div>
+    <#/loop#>
+    <div class="buy_tip" id="statusNotice" style="display: none;">
+        <i class="icon_warn"></i>
+        <span id="statusNote"></span>
+    </div>
+    <div class="s-buy" id="skuCont">
+        <ul class="s-buy-ul">
+            <#loop productspec,["+productdetail.ID.ToString()+"] 999#>	
+    <li class="s-buy-li">
+        <div class="left">
+            {productspec[Name]}：
+        </div>
+        <div class="right" name="specvals">
+            <#loop productspecval,["+productdetail.ID.ToString()+"], ["+productspec.SpecID.ToString()+"] 999#>	
+        <span class='select' name="Span{productspec__loop__id}" id="{productspecval[SpecValID]}" checked='false' onclick='change(this);'>{productspecval[Alias]}</span>
+            <#/loop#>
+        </div>
+    </li>
+            <#/loop#>
+            <!--    <b>提示:</b>  <span id='resultSpan'></span>  -->
+            <li class="s-buy-li">
+                <div class="left">数量：</div>
+                <div class="right">
+                    <span class="reduce">-</span>
+                    <input class="number" name="quantity" autocomplete="off" value="1" min="1" max="{productdetail[Stock]}" id="num" readonly="true">
+                    <span class="add">+</span>
+                    <span class="annotation" id="Stock">剩余{productdetail[Stock]}件</span>
+                    <input id="hiddPDetailID" type="hidden" name="name" value="" />
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn_wrap btn_wrap_static btn_wrap_nocart">
+        <a class="btn btn_cart" id="btnCart" href="javascript:void(0);"><i></i></a>
+        <a class="btn btn_buy" id="btnFastBuy" href="javascript:void(0);">立即购买</a>
+    </div>
+</div>
+
+<div class="mod_tab_wrap">
+    <div class="mod_tab" id="detailTab">
+        <span onclick="showProperty(this)" class="cur">商品介绍</span>
+        <span onclick="showProperty(this)">商品参数</span>
+    </div>
+</div>
+<section class="p-a-c-list">
+    <ul class="list-attribute" id="productproperty" style="display: none;">
+        <#loop productproperty,["+productdetail.ID.ToString()+"] 999#>	
+      <li>
+          <label>{productproperty[Name]}</label><span>{productproperty[Value]}</span></li>
+        <#/loop#>
+    </ul>
+</section>
+
+<section class="p-detail" id="p-detail">
+    <h1 class="d-title">图文详情</h1>
+    <div class="d-content" id="content">{productdetail[DetailMemo]}</div>
+</section>
+<script type="text/javascript">  
+    var hdata='';
+    $(function () {
+        var trueid = 0;
+        <#loop trueproduct,["+cid+"] 999#>
+        productDatas['{trueproduct[ProductDetailID]}'] = {
+            productDetailID: '{trueproduct[ProductDetailID]}',
+            SalesPrice:' {GetCustomerPrice( trueproduct.SalesPrice.ToString() ,cid)}',
+            Stock:'{trueproduct[Stock]}',
+        };
+        trueid = {trueproduct[ProductDetailID]};
+        $("#hiddPDetailID").val(trueid);
+        <#/loop#>
+        {specificationValueData} 
+    });
+
+    function showProperty(sobj){
+        $("#detailTab span").removeClass("cur");
+        $(sobj).addClass("cur");
+        $("#productproperty").toggle();
+        $("#p-detail").toggle();
+    }
+</script>

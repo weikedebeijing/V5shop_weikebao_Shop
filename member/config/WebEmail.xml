@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <node name="163邮箱" domain="163.com" link="http://mail.163.com"></node>
+  <node name="126邮箱" domain="126.com" link="http://mail.126.com"></node>
+  <node name="263邮箱" domain="126.com" link="http://www.263.net"></node>
+  <node name="QQ邮箱" domain="qq.com" link="http://mail.qq.com"></node>
+  <node name="Gmail邮箱" domain="gmail.com" link="http://www.gmail.com"></node>
+  <node name="新浪邮箱" domain="sina.com.cn" link="http://mail.sina.com.cn"></node>
+	<node name="威博邮箱" domain="web08.net" link="http://mail.web08.net"></node>
+  <node name="招商易邮箱" domain="zhaoshangyi.sinacorp.cn" link="http://mail.zhaoshangyi.sinacorp.cn"></node>
+  <node name="通路邮箱" domain="tonglukuaijian.com" link="http://mail.tonglukuaijian.com"></node>
+  <node name="hotmail邮箱" domain="hotmail.com" link="http://www.hotmail.com"></node>
+  <node name="搜狐邮箱" domain="sohu.com" link="http://mail.sohu.com"></node>
+  <node name="139手机邮箱" domain="10086.cn" link="http://mail.10086.cn"></node>
+  <node name="189邮箱" domain="189.cn" link="http://mail.189.cn"></node>
+  <node name="TOM邮箱" domain="tom.com" link="http://mail.tom.com"></node>
+  <node name="亿邮邮箱" domain="eyou.cn" link="http://www.eyou.com"></node>
+  <node name="21CN邮箱" domain="189.cn" link="http://mail.21cn.com"></node>
+  <node name="188财富邮箱" domain="188.com" link="http://www.188.com"></node>
+  <node name="网易yeah邮箱" domain="yeah.net" link="http://www.yeah.net"></node>
+  <node name="foxmail邮箱" domain="foxmail.com" link="http://www.foxmail.com"></node>
+  <node name="联通手机邮箱" domain="wo.com.cn" link="http://mail.wo.com.cn"></node>
+  <node name="outlook邮箱" domain="outlook.com" link="http://www.outlook.com"></node>
+  <node name="雅虎邮箱" domain="yahoo.com.cn" link="http://mail.cn.yahoo.com"></node>
+  <node name="雅虎邮箱" domain="yahoo.cn" link="http://mail.cn.yahoo.com"></node>
+  <node name="163VIP邮箱" domain="vip.163.com" link="http://vip.163.com"></node>
+  <node name="新浪VIP邮箱" domain="vip.sina.com.cn" link="http://vip.sina.com.cn"></node>
+  <node name="搜狐VIP邮箱" domain="vip.sohu.com" link="http://vip.sohu.com"></node>
+  <node name="TOMVIP邮箱" domain="vip.tom.com" link="http://vip.tom.com"></node>
+  <node name="中华邮箱" domain="china.com" link="http://mail.china.com"></node>
+  <node name="搜狗邮箱" domain="sogou.com" link="http://mail.sogou.com"></node>
+  <node name="和讯邮箱" domain="hexun.com" link="http://mail.hexun.com"></node>
+  <node name="腾讯企业邮箱" domain="exmail.qq.com" link="http://exmail.qq.com"></node>
+  <node name="网易企业邮箱" domain="ym.163.com/" link="http://ym.163.com"></node>  
+</root>

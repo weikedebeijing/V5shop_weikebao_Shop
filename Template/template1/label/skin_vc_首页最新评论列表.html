@@ -1,0 +1,10 @@
+﻿<#loop NewProductReview,4 999#>
+<li>
+    <dl>
+        <dt><a href="[$syspath]product.aspx?id={NewProductReview[productid]}">
+            <img src="{gettmpimg({NewProductReview[SrcDetail]},88,88)}" /></a> </dt>
+        <dd>
+            <span class="start0{NewProductReview[StarCount]}" for="start0{NewProductReview[StarCount]}">
+            </span><span class="explain">{NewProductReview[Content]}</span></dd></dl>
+</li>
+<#/loop#> 

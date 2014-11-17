@@ -1,0 +1,87 @@
+﻿<div class="classtitle">
+    <div class="titlename">
+        <div class="chinese">
+            买家咨询({askcount})</div>
+        <div class="english">
+            CUSTOMER ADVICE</div>
+        <div class="arrow">
+        </div>
+        <div class="arrow2">
+        </div>
+    </div>
+</div>
+<div class="classcontent">
+    <div class="area3Head">
+        <span class="area3Sp01 float_l">
+            <div class="sprites" style="width: 14px; height: 14px; background-position: -3482px 0pt;
+                margin: 6px;">
+            </div>
+        </span><span class="area3Sp02 float_l">疑难提问</span> <span class="area3Sp03 mr10 ml10 float_l">
+            共 <strong id="quizcount">{askcount}</strong> 条 </span><span id="tiwen" class="buttonred mr30 float_r">
+                <a class="track" style="color: White;" id="sendask" name="item-tiwen">我要提问</a></span>
+    </div>
+    <div id="stylequestionslist">
+        <iframe id="askFrame"  frameborder="0" width="100%" scrolling="no"></iframe>
+    </div>
+    <a id="ask"></a>
+    <div class="consult-box">
+        <div class="mtitle">
+            <strong>购买咨询</strong> （小提示：选择问题类型后再提问，这样能保证我们及时、准确的为您解答！）
+        </div>
+        <div class="mcontent">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="col01">
+                            问题类型：
+                        </td>
+                        <td>
+                            <span class="type">
+                                <input id="consult-01" class="radio" type="radio" value="cmwt" name="MenuID" />
+                                <label for="consult-01">
+                                    尺码问题</label>
+                            </span><span class="type">
+                                <input id="consult-02" class="radio" type="radio" value="syff" name="MenuID" />
+                                <label for="consult-02">
+                                    使用方法</label>
+                            </span><span class="type">
+                                <input id="consult-03" class="radio" type="radio" value="spcz" name="MenuID" />
+                                <label for="consult-03">
+                                    商品材质</label>
+                            </span><span class="type">
+                                <input id="consult-04" class="radio" type="radio" checked="checked" value="qt" name="MenuID" />
+                                <label for="consult-04">
+                                    其他</label>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col01">
+                            内容：
+                        </td>
+                        <td>
+                            <textarea id="txtstylequestion" rows="5" name="txtstylequestion" onkeyup="Comment_SumCount(this);"></textarea>
+                            <span class="tips">你还可以输入 <em id="CommentText_SumCount">200</em> 个字 </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col01">
+                        </td>
+                        <td>
+                            <input class="btn-publish" type="button" title="提交咨询" onclick="StyleQuestion({cid})" name="Submit2">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+        $("#sendask").attr("href", document.URL + "#ask");
+        $("#product_2").show();
+        $('#askFrame').attr("src", '[$syspath]template/version_9/page/askcontent.aspx?id={cid}');
+    });
+
+</script>

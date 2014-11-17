@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+.cohelp { border-top:1px #ccc dashed; padding-top:10px; width:960px; margin:0 auto;}
+.foot1l { float:left; height:50px;}
+.foot1r { float:right; position:relative;margin-top:18px; height:30px;}
+.foot1r label{ color:#ff8888; font-size:12px; font-weight:bold; margin-right:5px; vertical-align:middle;}
+.foot1r input.email{ background:url(../images/cohelp/input-bg.png); width:350px; height:22px; color:#666; border:0; vertical-align:middle; padding-left:5px;}
+.foot1r input.mailkey { vertical-align:middle; margin:0; position:absolute; right:0px;}
+*html .foot1r input.mailkey{ top:2px; right:-1px;}
+*+html .foot1r input.mailkey { top:1px;}
+.foothelp { padding:10px 0 20px; margin-top:10px;overflow:hidden;width:950px;}
+.foothelp dl { width:190px; float:left;}
+.foothelp dl dt { color:#333; font-weight:bold; font-size:14px; height:20px; padding-left:20px;}
+.foothelp dl dt p { color:#333; font-weight:bold; height:20px}
+.foothelp dl dd { line-height:20px; padding-left:20px}
+.foothelp dl dd a { color:#555}.foothelp dl dd a:hover { color:#a10000; text-decoration:underline;}
+
+.cohelpTable{border:0; cellpadding:0; cellspacing:0; width:680px;}
+.cohelpTable td{ width:170px; height:20px; line-height:20px;}

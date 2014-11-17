@@ -1,0 +1,24 @@
+﻿  <#cs#>pagetotal = int.Parse(activesaleprosearch_member["totalnum"].ToString());<#/cs#>
+        <#if this.CookieLoginID == ""#>
+            <dl class="no-login">
+        <#else#>
+            <dl>
+        <#/if#>
+
+      <dt><a href="[$syspath]promotionproduct.aspx?id={acs:id}&typeId={activesaleprosearch[typeid]}&proId={activesaleprosearch[proId]}"><img width="186px" height="186px" src="{gettmpimg({activesaleprosearch[SrcList]},186,186)}" title="{acs:Name}" alt="{acs:Name}"></a></dt>
+      <dd>
+        <h3><a href="[$syspath]promotionproduct.aspx?id={acs:id}&typeId={activesaleprosearch[typeid]}&proId={activesaleprosearch[proId]}">{acs:Name}</a></h3>
+        <ul>
+          <li class="id">商品编号：{activesaleprosearch[ProNumber]}</li>
+          <li class="inventory">库存：{activesaleprosearch[ProNumber]} 件</li>
+          <li class="price">{activesaleprosearch[ProNumber]}</li>          
+          <li class="whole supersede-price">{activesaleprosearch[ProNumber]}</li>
+          <li class="whole gain-rate">{activesaleprosearch[ProNumber]}</li>
+          <li class="btn">
+          <a class="btn01" style="cursor:pointer;" id="A1" showDiv="{acs:id}"></a>
+          <a class="btn02" style="cursor:pointer;" name="Distribution" productId="{acs:id}"></a></li>
+        </ul>
+      </dd>
+    </dl>
+
+      

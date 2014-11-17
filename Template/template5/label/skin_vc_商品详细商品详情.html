@@ -1,0 +1,16 @@
+﻿<div class=" classcontent attribute">
+    <table width="100%" border="0" cellspacing="1" cellpadding="0">
+        <#loop propertysearch,["+cid+"] 999#>
+        <tr>
+            <td>{propertysearch[name]}：{propertysearch[value]}</td>
+        </tr>
+        <#/loop#>
+
+        <#loop selfpropertysearch,["+cid+"] 999#>
+        <tr>
+        <td>{selfpropertysearch[name]}：{selfpropertysearch[value]}</td>
+        </tr>
+        <#/loop#>
+    </table>
+</div>
+{web:ms=readmalls┆输出格式$out_None┆商品排列数$2┆标签宽度$100%┆引用样式$skin_vc_商品详细内容}

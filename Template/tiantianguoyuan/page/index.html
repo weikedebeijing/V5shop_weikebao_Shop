@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/tiantianguoyuan/css/common.css">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/tiantianguoyuan/css/index.css">
+     <link href="../../../member/Css/PreFoot.css" rel="stylesheet" />
+    <script language="javascript" src="../Template/{path}/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../Template/{path}/js/jscommon.js" language="javascript" charset="gb2312"></script>
+    <title>{shoptitle}</title>
+     <script src="../../../member/js/WeiXinShare.js"></script>
+      <script>
+          $(function () {
+              var title = "{OpenTitle}" + "{shoptitle}";
+              var desc = "{OpenDesc1}<br />{OpenDesc2}";
+              var url = $(this).attr("URL");
+             var img_url = "{logo}";
+             GetData(url, title, desc, img_url);
+             $(".share").click(function () {//分享加载icon三角形
+                 $(this).parent().find(".arrow").removeClass("arrow");
+                 $(this).parent().find("dd").removeClass("active");
+
+                 $(this).find("a").find("span").addClass("arrow");
+                 $(this).addClass("active");
+             });
+
+             $(".sub-nav dd").click(function () {
+                 if ($(this).attr("class").indexOf("share") < 0) {
+                     $(this).parent().find("dd").removeClass("active");
+                     $(this).parent().find(".arrow").removeClass("arrow");
+                     $(this).addClass("active");
+                 }
+             });
+          });
+        </script>
+</head>
+<body>
+  
+    <header class="wx_hd" id="shop-header">
+        <nav>
+            <h2>{shoptitle}</h2>
+            <a href="index.aspx" class="btn_back" data-tag="go-back" style="display: none;">返回</a>
+            <a href="category.aspx" class="btn_category" data-tag="category">分类</a>
+        </nav>
+    </header>
+      <!--mask begin-->
+    <div class="mask"></div>
+    <!--mask end-->
+    <#PUBLIC attention#>
+    <section class="box" id="banner">
+        {web_skin_vc_首页轮播图}
+    </section>
+    <div class="logodiv">
+        <span class="logo">
+            <img src="{logo}"><i class="star"></i></span>
+    </div>
+    <div class="pfhlkd_mode0  pfhlkd_mf10001004">
+        <div class="bd pfhlkd_bd_10">
+            <h2 class="mod_tit">新品推荐</h2>
+            <div class="wx_itemlist" data-lazyload="true">
+                <div class="mod_pic_1">
+                    <#loop categoryproduct,["+shopID+"],[A] 999#>
+                    <div class="hproduct">
+                        <p class="cover">
+                            <a href="product.aspx?id={categoryproduct[ID]}">
+                                <img class="pp_init_img" src="{categoryproduct[DefaultImageData]}"></a>
+                        </p>
+                        <p class="prices">
+                            <strong><em>￥{GetCustomerPrice(categoryproduct.SalesPrice.ToString(),categoryproduct.ID.ToString())}</em><del>￥{categoryproduct[OldPrice]}</del></strong>
+                        </p>
+                        <p class="fn"><a href="product.aspx?id={categoryproduct[ID]}">{categoryproduct[ProductName]}</a></p>
+                    </div>
+                    <#/loop#>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pfhlkd_mode0  pfhlkd_mf10001004">
+        <div class="bd pfhlkd_bd_10">
+            <h2 class="mod_tit">精选推荐</h2>
+            <div class="wx_itemlist" data-lazyload="true">
+                <div class="mod_pic_1">
+                    <#loop categoryproduct,["+shopID+"],[B] 999#>
+                    <div class="hproduct">
+                        <p class="cover">
+                            <a href="product.aspx?id={categoryproduct[ID]}">
+                                <img class="pp_init_img" src="{categoryproduct[DefaultImageData]}"></a>
+                        </p>
+                        <p class="prices">
+                            <strong><em>￥{GetCustomerPrice(categoryproduct.SalesPrice.ToString(),categoryproduct.ID.ToString())}</em><del>￥{categoryproduct[OldPrice]}</del></strong>
+                        </p>
+                        <p class="fn"><a href="product.aspx?id={categoryproduct[ID]}">{categoryproduct[ProductName]}</a></p>
+                    </div>
+                    <#/loop#>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pfhlkd_mode0  pfhlkd_mf10001004">
+        <div class="bd pfhlkd_bd_10">
+            <h2 class="mod_tit">特惠商品</h2>
+            <div class="wx_itemlist" data-lazyload="true">
+                <div class="mod_pic_1">
+                    <#loop categoryproduct,["+shopID+"],[C] 999#>
+                    <div class="hproduct">
+                        <p class="cover">
+                            <a href="product.aspx?id={categoryproduct[ID]}">
+                                <img class="pp_init_img" src="{categoryproduct[DefaultImageData]}"></a>
+                        </p>
+                        <p class="prices">
+                            <strong><em>￥{GetCustomerPrice(categoryproduct.SalesPrice.ToString(),categoryproduct.ID.ToString())}</em><del>￥{categoryproduct[OldPrice]}</del></strong>
+                        </p>
+                        <p class="fn"><a href="product.aspx?id={categoryproduct[ID]}">{categoryproduct[ProductName]}</a></p>
+                    </div>
+                    <#/loop#>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {web_skin_vc_通用底部版权}
+    
+    <a href="javascript:void(0);" class="WX_backtop J_backTop J_ytag "
+        id="gotopbtn">返回顶部</a>
+    <script type="text/javascript">
+        //注册当点击返回顶部的时候，回到网页顶部  
+        $('#gotopbtn').click(function () {
+            $('body').scrollTop(0);
+            test();
+        });
+        //注册当页面发生滚动事件的时候，判断他有没有滚动条，如果有滚动条就显示“返回”，如果没有就不返回  
+        window.onscroll = test;
+        function test() {
+            if ($('body').scrollTop() == 0) {
+                $('#gotopbtn').removeClass("WX_backtop_active");
+            } else {
+                $('#gotopbtn').addClass("WX_backtop_active");
+            }
+        }
+        $('#menu').click(function () {
+            $('#menulist').toggle();
+        });
+
+
+
+    </script>
+    <div class="h50"></div>
+
+     <div class="fixed bottom">
+     <#PUBLIC sharemore#>
+        <#PUBLIC bottomMenu#>
+           </div>
+    <#PUBLIC shareplug#>
+</body>
+</html>

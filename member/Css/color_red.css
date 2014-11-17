@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+A:link {text-decoration: none; color: #555;}       
+A:visited {text-decoration: none; color: #555;}      
+A:active {text-decoration: none; color: #555;}      
+A:hover {text-decoration: none; color:#a20000;}
+.maincolor { color:#a20000}
+.menut { background-position:0 0; color: #FFFFFF;}
+.menut a,.menu a:hover {color: #FFFFFF;}
+.menut .extra {color: #FFCCCC}
+.rightlabel { background-position:0 0; border:1px #C8C8C8 solid}
+.rightlabel dt { color:#000}
+.my_cont { border: 2px solid #DCDCDC; background:url(/images/red/member_index_red.gif) bottom repeat-x #fff}
+.my_cont2 { border: 2px solid #DCDCDC;}
+.my_pic .head_pic { background: #a20000; }.my_pic .head_pic a { color:#fff}
+.my_txt { border-left:1px #dcdcdc solid; background:#FFF3F3}
+.my_txt .name b { color:#A20000;}
+.my_txt .txt2, .my_txt .txt3 { background: #F8F8F8; border: 1px solid #DCDCDC; }
+.admin_recomtitle {border-bottom: 3px solid #8E0000; }
+.admin_recomtitle li a { background-position:0 -54px}
+.admin_recomtitle li a span {  color:#333; background-position:100% -54px}
+.admin_recomtitle li a:hover,.admin_recomtitle li.current a { background-position:0 0}
+.admin_recomtitle li a:hover span,.admin_recomtitle li.current a span {  color:#FFF; background-position:100% 0}
+.admin_recomlistbar { border-top: 1px solid #C9CACA; background:url("/images/red/member_index2_red.gif") top repeat-x #fff}
+.v1_recohottitle a,.goodsname a { color:#000}.v1_recohottitle a:hover,.goodsname a:hover { color:#a20000}
+.v1_recohotprice1 span { color:#a20000}
+#order-number a:link, #order-number a:visited, #order-number a:hover { color: #A10000;}
+.key a { background-position:0 0}
+.key a span { color:#FFF; background-position:100% 0}
+.key a:hover { background-position:0 -27px}
+.key a:hover span { color:#FFF; background-position:100% -27px}
+.key2 a { background-position:0 -81px}
+.key2 a span { color:#FFF; background-position:100% -81px}
+.key2 a:hover { background-position:0 -99px}
+.key2 a:hover span { color:#FFF; background-position:100% -99px}
+.addr-list a { color: #A20000;}

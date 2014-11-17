@@ -1,0 +1,12 @@
+﻿  <#cs#>pagetotal = int.Parse(activesalesearch_member["totalnum"].ToString());<#/cs#>
+         
+<li>
+          <a href="[$syspath]promotion.aspx?id={acs:id}">
+            <p class="pic"><img  src="{activesalesearch[ImageUrl]}" width="455" height="148" title="{acs:name}" alt="{acs:name}" /></p>
+            <div class="status-bar">
+              <p class="date">{getshortDatetime({activesalesearch[StartTime]})}-{getshortDatetime({activesalesearch[EndTime]})}</p>
+              <p class="title">{acs:name}</p>
+            </div>
+          </a>
+        </li>
+ 

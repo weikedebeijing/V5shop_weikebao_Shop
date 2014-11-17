@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*--footer--*/
+footer{margin:20px 0 0 0;padding:8px 0 8px 0;background:#fff;border-top:1px solid #d7d7d7;text-align:center;}
+footer .explain{display:inline-block;height:18px;line-height:18px;font-size:14px;color:#9c9c9c;vertical-align:middle;}
+footer .logo-cop{width:auto;height:16px;vertical-align:middle;}
+/*--footer navigation bar--*/
+.fixed.bottom{bottom:0; top:auto;}

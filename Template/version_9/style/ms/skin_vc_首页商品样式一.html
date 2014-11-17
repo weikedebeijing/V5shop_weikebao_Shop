@@ -1,0 +1,12 @@
+﻿<#if this.CookieLoginID == ""#>
+<li class="no-login">
+<#else#>
+<li>
+<#/if#>
+    <a title="{ms:name}" target="_blank" href="{ms:mallurl}" class="pic"><img src="{gettmpimg({productsearch[SrcDetail]},200,200)}" width="200px" height="200px"></a>
+    <a class="name" href="{ms:mallurl}">{ms:name}</a>
+    <p class="mt5 c02 fb">{ms:Price}</p>
+    <p class="supersede-price">{ms:SupersedePrice}</p>
+    <p class="supersede-price">{ms:WholeSalePrice}</p>
+    <p class="gain-rate">{ms:GainRate}</p>
+</li>

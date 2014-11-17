@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*===头部===*/
+.head{ width:960px; margin:0 auto; border-bottom:5px solid #711313; box-shadow:0px 1px 0px #ccc; -webkit-box-shadow:0px 1px 0px #ccc; -moz-box-shadow:0px 1px 0px #ccc; -khtml-box-shadow:0px 1px 0px #ccc;}
+.head .back{ display:block; width:230px; text-align:right; margin-bottom:5px; margin-top:3px;}
+.head .telephone{display:block; width:230px; text-align:right;}
+
+/*===版权===*/
+.copyright{ color:#fff; width:960px; margin:0 auto;}
+
+/*===提示===*/
+.tips01-icon,.tips01,.tips01-err{ display:block;}
+.tips01-icon{ background:url(../images/register/yes.gif) no-repeat; width:15px; height:15px; display:inline-block; margin-left:5px; vertical-align:middle;}
+.tips01{ background:url(../images/register/regist-icon.png) -3px -2px; border:1px solid #36689B; color:#434343; display:inline-block; padding:2px 2px 2px 25px; line-height:17px; vertical-align:middle; margin-left:10px;}
+.tips01-err{background: url(../images/register/shurubg0316.jpg) no-repeat 0 50% #FFF6F7; border: 1px solid #CC9998; color: #A10000; padding:2px; padding-left:22px; line-height:17px; vertical-align:middle; margin-left:10px; display:inline-block; }
+
+/*====引导===*/
+.guide{ position:relative; height:350px;}
+.guide .title{ margin-bottom:10px; line-height:30px; height:30px; background:url(../images/register/regist-icon.png) 0 -280px no-repeat;}
+*html .guide .title{background:url(../images/register/regist-icon.gif) 0 -280px no-repeat;}/*兼容IE6*/
+.guide .name-china{ color:#a10000; font-weight:bold;}
+.guide .name-english{color:#a10000; font-size:12px; font-weight:bold; margin-left:10px;}
+.guide .dotted{ border-bottom:1px dotted #cccccc; color:#333; font-weight:bold; margin-bottom:10px; height:30px;}
+.guide .left,.guide .right{ width:400px; height:220px; border:1px solid #e6e6e6; box-shadow:3px 3px 1px rgba(200, 200, 200, 0.2); -moz-box-shadow:3px 3px 1px rgba(200, 200, 200, 0.2); -khtml-box-shadow:3px 3px 1px rgba(200, 200, 200, 0.2); -webkit-box-shadow:3px 3px 1px rgba(200, 200, 200, 0.2); padding:15px 30px;}
+.guide .left{ background:url(../images/register/Distribution.png) right bottom no-repeat #f9f9f9; position:absolute; left:0; top:42px;}
+.guide .right{ background:url(../images/register/Distribution02.png) right bottom no-repeat #f9f9f9; position:absolute; left:490px; top:42px;}
+.guide .left-ul,.guide .right-ul{ margin:0; padding:0}
+.guide .left-ul li,.guide .right-ul li{ padding:0 5px; line-height:26px;}
+.guide .left-ul li .btn-dtbt01,.guide .left-ul li .btn-dtbt01:hover,.guide .right-ul li .btn-dtbt02,.guide .right-ul li .btn-dtbt02:hover{ background:url(../images/register/regist-btn.png) no-repeat;}
+.guide .left-ul li .btn-dtbt01{ background-position:0 -80px; display:block; height:31px; width:147px; text-align:center; font-weight:bold; color:#fff; font-size:14px; margin-top:60px;}
+.guide .left-ul li .btn-dtbt01:hover{ background-position:0 -150px; display:block; height:31px; width:147px; text-align:center; font-weight:bold; color:#fff; font-size:14px;}
+.guide .right-ul li .btn-dtbt02{ background-position:0 -115px; display:block; height:31px; width:147px; text-align:center; font-weight:bold; color:#fff; font-size:14px; margin-top:35px;}
+.guide .right-ul li .btn-dtbt02:hover{ background-position:0 -185px; display:block; height:31px; width:147px; text-align:center; font-weight:bold; color:#fff; font-size:14px;}
+
+/*====登录===*/
+.login{ border:1px solid #ccc; height:420px;}
+.login .left{ float:left; padding:20px 0px 20px 40px; width:410px;}
+.login .left .title{ font-size:30px; color:#a10000; font-weight:bold; height:50px; line-height:50px;}
+.login .login-form{ margin:0; padding:0;}
+.login .login-form li{ margin:0; padding:5px;}
+.login .login-form .label01{ font-size:16px}
+.login .login-form .status{ margin-left:50px; vertical-align:middle}
+.login .login-form .forget{ color:#054cc1; text-decoration:underline;}
+.login .login-form .label02{margin-right:30px;}
+.login .login-form li input.name,.login .login-form li input.ps{ width:215px; height:28px; line-height:28px; color:#999; margin-bottom:5px;}
+.login .login-form li .ml42{ margin-left:42px;}
+.login .login-form .login-btn,.login .login-form .login-btn-mouseover,.login .login-form .register-btn,.login .login-form .register-btn:hover{ background:url(../images/register/regist-btn.png) no-repeat;}
+.login .login-form .login-btn{ background-position:0 0; width:186px; height:31px; border:0; color:#fff; font-weight:bold; font-size:14px; margin-left:80px; margin-top:15px; cursor:pointer;}
+.login .login-form .login-btn-mouseover{ background-position:0 -223px; width:186px; height:31px; border:0; color:#fff; font-weight:bold; font-size:14px; margin-left:80px; margin-top:15px; cursor:pointer;}
+.login .login-form .register-btn{ background-position:0 -36px; display:block; width:187px; height:30px; color:#666; font-weight:bold; font-size:14px; text-align:center; line-height:30px; margin-left:80px; margin-top:15px;}
+.login .login-form .register-btn:hover{ background-position:0 -259px;}
+.login .mid{ float:left; width:1px; background:url(../images/register/regist-btn.png) -181px -330px no-repeat; height:400px;}
+.login .right{ float:left; padding:0; width:470px; overflow:hidden;}
+
+/*====设置认证信息===*/
+.maincolor { color:#a10000}
+.enrollhead { height:60px; border-bottom:2px #D8D8D8 solid}
+.enrollhead dt { float:left; padding-top:2px}
+.enrollhead dd { height:50px; float:right; line-height:50px}
+.enrollprogram{ margin-top:20px;}
+.enrollprogram dt,.enrollprogram dd { background-image:url(../images/register/bg_register_program.gif); background-repeat:no-repeat; height:35px}
+.enrollprogram dt { height:45px; background-position:0 0}
+.enrollprogram dd.step1 { background-position:0 -45px}
+.enrollprogram dd.step2 { background-position:0 -80px}
+.enrollprogram dd.step3 { background-position:0 -115px}
+.enrollprogram dd.step4 { background-position:0 -150px}
+.enrollprogram dd.step5 { background-position:0 -185px}
+.enrolllogin { width:530px; float:left; padding-top:40px; margin-left:40px}
+.enrollregister {position:relative; }
+.enrollregbind { padding-top:90px}
+.enrolllabel dt { color:#333; font-size:14px; font-weight:bold; padding-bottom:10px}.enrolllabel dt span { color:#a20000}
+.enrolllabel dd { color:#999; padding-bottom:30px}
+.enrollcontent input {color:#666; margin:0; vertical-align:middle; }
+.enrollcontent a { color:#a10000;}
+.enrollcontent a:hover { color:#f60;}
+.btn-center {width:103px; margin-left:150px;}
+.enrollcontent .code-img{ cursor:pointer; vertical-align:middle;}
+.enrolltitle {line-height:40px; font-size:23px; color:#666}
+.enrolltitle span { font-size:25px; color:#a10000; font-weight:bold; }
+.enrolltitle2 { height:55px; line-height:55px; font-size:14px; font-weight:bold; color:#000; border-top:1px #a10000 dotted; margin-top:30px}
+.enrollinput { height:48px}
+.enrollinput p { height:40px; line-height:40px; width:60px; float:left; font-size:14px; text-align:right; margin-right:10px}
+.enrollinput div,.enrollinput dl { height:40px; width:455px; float:left; text-align:left; position:relative}
+.enrollinput dt { height:40px; width:55px; float:left; text-align:left;}
+.enrollinput dd { height:33px; width:145px; float:left; padding:1px 0 0 5px}
+.enroll_txt input, .enroll_txt_2 input, .enroll_txt_3 input {}
+dl.enroll_txt input, dl.enroll_txt_2 input, dl.enroll_txt_3 input {}
+.enroll_txt input.w430, .enroll_txt_2 input.w430, .enroll_txt_3 input.w430 {}
+.enroll_txt label, .enroll_txt_2 label, .enroll_txt_3 label { font-size:14px; color:#DC5751; display:none; width:185px; left:200px; position:absolute; top:10px}
+.enroll_txt_3 label { display:block}
+.enroll_right {padding-left:80px}
+.enroll_button { height:60px; padding-left:70px; position:relative}
+.enroll_button div { height:36px; width:120px; position:absolute; top:0; left:195px}
+.enroll_button2 { height:70px; padding-left:70px; position:relative}
+.enroll_button div a,.enroll_button2 div a { text-decoration:underline}
+.enroll_button div a:hover,.enroll_button2 div a:hover { text-decoration:none}
+.enroll_others { padding-left:30px; width:340px; border-top:2px #d8d8d8 solid}
+.enroll_others,.enroll_others p { padding-top:10px}
+.enroll_others p img { margin:10px 5px 0 0;}
+.login_btn_5,.login_btn_5 span,.login_btn_6,.login_btn_6 span,.login_btn_7,.login_btn_7 span,.login_btn_8,.login_btn_8 span { background-image:url(../images/register/key_register.gif); background-repeat:no-repeat; height:31px; line-height:31px;  font-size:14px; font-weight:bold; color:#fff; display:block; float:left; text-decoration:none; cursor:pointer}
+.login_btn_6,.login_btn_6 span,.login_btn_7,.login_btn_7 span,.login_btn_8 span {height:21px; line-height:21px; font-size:12px}
+.login_btn_5 { background-position:0 0; padding-left:30px;} a.login_btn_5:hover { background-position:0 -31px}
+.login_btn_5 span { padding-right:30px; background-position:100% 0} a.login_btn_5:hover span { background-position:100% -31px}
+.login_btn_6 { padding-left:12px; background-position:0 -62px}
+.login_btn_6 span { padding-right:12px; background-position:100% -62px; font-weight:normal}
+.login_btn_7 { padding-left:12px; background-position:0 -83px}
+.login_btn_7 span { padding-right:12px; background-position:100% -83px; font-weight:normal}
+.login_btn_8 { padding-left:12px; background-position:0 -104px}
+.login_btn_8 span { padding-right:12px; background-position:100% -104px; font-weight:normal}
+.bg_pswback { width:430px; height:425px; background:url(../images/register/bg_pswback.gif) right top no-repeat; float:left}
+.bg_register_step4 { width:430px; height:425px; position:absolute; top:0px; left:570px}
+.bg_register_step4 { background:url(../images/register/bg_register_step4.gif) 40px 100px no-repeat}
+.register_login{background-color:#FAFAFA; border-left:1px solid #F2F2F2; width:210px; height:340px; line-height:150px; padding:30px; font-size:14px; text-align:left;}
+*html .register_login{ width:180px;}
+.regist1_cont{border:1px solid #ccc; float:left; width:958px;}
+.regist1_form{ float:left; margin:0 20px; width:640px;}
+.register_login .login-btn{background:url(../images/web08-icon.png) no-repeat; background-position:0 -271px; width:65px; height:25px; display:inline-block; line-height:25px; text-align:center;}
+.register_login .login-btn:hover{ background-position:0 -361px;}
+
+.storeinfo li { background:#E9E9E9; padding:5PX; width:690px; margin-bottom:1px}
+.storeinfo li .content { float:left; width:530px; float:left}
+.storeinfo li h2 { color:#000; font-weight:bold; line-height:24px; padding-left:20px}
+.storeinfo th,.storeinfo td { padding:3px}
+.storeinfo th { text-align:right; font-weight:normal}
+.storeinfo td input { height:22px; width:130px; line-height:22px; border:1px #ccc solid; padding:0; color:#999; font-family:Arial; background:url(../images/register/enroll_input.gif) 0 -17px}
+.storeinfo td input.w390 { width:390px}
+.storeinfo li .operate { float:right; width:85px; padding-top:20px}
+.storeinfo li.edit { background:#FFF; padding-bottom:20px}
+.storeinfo li.edit .operate { padding-top:145px}
+.enrollfoot { text-align:center; padding-top:10px; line-height:18px}
+.enrollregisterok { padding:70px 0 0 226px; background: url(../images/register/right.jpg) 20px 60px no-repeat; height:200px}
+.enrollregisterok dt { height:38px; line-height:38px; font-size:14px; font-weight:bold; color:#000}
+.enrollregisterok dd { padding:15px 0}
+
+/*====邮件认证===*/
+.confirm-email .step2_title{ font-size:18px; color:#333; font-weight:bold; border-bottom:1px dotted #ccc; padding:20px 0;}
+.confirm-email dl{}
+.confirm-email dt{ float:left; width:260px; padding:60px 0 30px 50px;}
+.confirm-email dd{ float:left; width:500px; padding:40px 30px}
+.confirm-email dd li{ padding:8px;}
+.confirm-email dd a.c03{ text-decoration:underline;}
+.confirm-email dd a.btn-see,.confirm-email dd a.btn-see:hover,.confirm-email dd a.btn-edit,.confirm-email dd a.btn-edit:hover{ background:url(../images/register/regist-btn.png) no-repeat;}
+.confirm-email dd a.btn-see{ background-position:0 0; width:186px; height:31px; line-height:31px; text-align:center; border:0; color:#fff; font-weight:bold; font-size:14px; margin-top:15px; cursor:pointer; display:block;}
+.confirm-email dd a.btn-see:hover{ background-position:0 -223px;}
+.confirm-email dd a.btn-edit{ background-position:0 -36px; display:block; width:187px; height:30px; color:#666; font-weight:bold; font-size:14px; text-align:center; line-height:30px; margin-top:15px;}
+.confirm-email dd a.btn-edit:hover{ background-position:0 -259px;}
+.submit-btn{ border-top:1px dotted #ccc; margin-top:30px; padding:20px 0;}
+*html ..submit-btn .ml255{ margin-left:120px;}
+*html ..submit-btn .ml455{ margin-left:220px;}
+
+/*店铺资料*/
+.storeinfor_form01 .form01{ margin-left:30px;}
+*html .storeinfor_form01 .form01{ margin-left:20px;}
+.storeinfor_form01 .form01 li{ padding:10px;}
+.storeinfor_form01 .form01 .current{background-color:#FAFAFA; border:1px solid #F2F2F2; }
+.storeinfor_form01 .form01 .tiphidden{background-color:#fff; border:1px solid #fff;}
+.storeinfor_form .add_store,.storeinfor_form .box01 .btn-sub,.storeinfor_form .box01 .btn-save,.storeinfor_form .box01 .btn-edit{background:url(../images/member_icon.png) no-repeat;}
+.storeinfor_form .title01{ border-bottom:1px solid #cccccc; padding-bottom:6px;}
+.storeinfor_form .box01{ border:1px solid #e6e6e6; background-color:#f9f9f9; padding:15px;}
+.storeinfor_form .box01 li{ padding:8px;}
+.storeinfor_form .box01 li .spanw70{ width:70px; display:inline-block;}
+.storeinfor_form .box01 li .span230{ width:242px; display:inline-block;}
+.storeinfor_form .box01 .linebottom{border-bottom:1px dotted #cccccc; margin:15px 0;}
+.storeinfor_form .box01 .btn-sub,.storeinfor_form .box01 .btn-save,.storeinfor_form .box01 .btn-edit{border:0; height:21px; cursor:pointer; color:#fff;}
+.storeinfor_form .box01 .btn-sub{ background-position:-66px -22px; width:70px;}
+.storeinfor_form .box01 .btn-save{background-position:-150px -22px; width:46px;}
+.storeinfor_form .box01 .btn-edit{background-position:-203px -22px; width:48px;}
+.storeinfor_form .add_store{background-position:-36px -20px; display:inline-block; width:13px; height:13px; line-height:13px; font-size:1px; margin-left:15px; margin-right:3px;}
+.storeinfor_form .add_btn{ cursor:pointer;}
+.storeinfor_form .add_btn:hover{ color:#d00202;}
+/*===修改邮箱===*/
+.email_edit{ width:550px; padding:0;}
+.email_edit .title{ color:#a10000; font-size:18px; font-weight:bold; border-bottom:1px solid #ccc; padding:2px;}
+.btn-div{width:550px; margin:auto; text-align:center; padding:0; margin:0;}
+.email_edit ul{ margin-top:20px;}
+.email_edit li{ padding-top:10px; font-size:18px; list-style-type:none;}
+.email_edit li .newemail{ width:210px;}
+.guide .left-ul li .btn-edit:hover,.email_edit li .btn-recall,.email_edit li .btn-recall:hover{ background:url(../images/register/regist-btn.png) no-repeat;}
+.btn-div .btn-edit{background:url(../images/register/regist-btn.png) no-repeat; background-position:0 -80px; display:inline-block; height:31px; line-height:31px; width:147px; text-align:center; font-weight:bold; color:#fff; font-size:14px; }
+.btn-div .btn-edit:hover{ background-position:0 -150px; }
+.email_edit li .btn-recall{ background-position:0 -293px; display:inline-block; height:32px; line-height:32px; width:150px; text-align:center; font-weight:bold; color:#333; font-size:14px; margin-left:5px; margin-top:21px;}
+.email_edit li .btn-recall:hover{ background-position:0 -327px;}
+.email_edit li.lh30{ line-height:30px;}
+
+/*===选择分销类目===*/
+.select_class{ border:1px solid #ccc; background:#fcfcfc; padding-top:50px;}
+.select_class .center{ width:750px; margin:auto;}
+.select_class dl{ float:left;}
+.select_class dl dt{ font-size:14px; font-weight:bold; color:#333; margin:0 0 10px 0;}
+.select_class .box{ background:#fff; border:1px solid #ccc; padding:10px; width:275px; height:390px; overflow:auto;}
+.select_class .add_div{ float:left; margin:180px 20px 0 20px; width:110px; height:200px; overflow:hidden;}
+.select_class .add_div .tips01{ margin-left:0;}
+.select_class .add_btn{ background:url(../images/register/regist-btn.png); display:block; width:110px; height:32px; line-height:32px; text-align:center;}
+.select_class .add_btn{ background-position:0 -363px; color:#333;}
+.select_class .add_btn:hover{ background-position:0 -397px; color:#a10000;}
+
+/*===找回密码===*/
+.back_pwd input,.back_pwd label,.back_pwd .code{ vertical-align:middle;}
+.back_pwd .code{ display:block; float:left; margin-left:10px;}
+.back_pwd ul{ margin-top:20px;}
+.back_pwd li{ padding:10px;}
+.back_pwd li.default{ border:1px solid #fafafa;}
+.back_pwd li.current{ border:1px solid #f2f2f2; background:#fafafa;}
+.back_pwd li.tiphidden{ border:1px solid #FAFAFA}
+.back_pwd li img{ vertical-align:middle; height:22px;}
+.back_pwd li .change-img{ vertical-align:middle;}
+.back_pwd label{ font-size:14px; color:#666; width:180px; text-align:right; display:inline-block;}
+.back_pwd .login_btn_5{width:58px; height:31px; border:0; cursor:pointer; margin-left:182px;}
+.back_pwd h2{ font-size:20px; color:#666; margin:10px 0 20px 0;}
+.back_pwd .form{ background:#fafafa; border:1px solid #ccc; padding:20px;}
+.back_pwd .problem{ font-size:14px; vertical-align:middle;}
+
+.stips01-icon,.stips01,.stips01-err{ display:block;}
+.stips01-icon{ background:url(../images/register/yes.gif) no-repeat; width:15px; height:15px; display:inline-block; margin-left:5px; vertical-align:middle;}
+.stips01{ background:url(../images/register/regist-icon.png) -3px -2px; border:1px solid #36689B; color:#434343; display:inline-block; padding:2px 2px 2px 25px; line-height:17px; vertical-align:middle; }
+.stips01-err{background: url(../images/register/shurubg0316.jpg) no-repeat 0 50% #FFF6F7; border: 1px solid #CC9998; color: #A10000; padding:2px; padding-left:22px; line-height:17px; vertical-align:middle; display:inline-block; }

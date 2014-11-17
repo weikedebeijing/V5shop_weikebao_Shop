@@ -1,0 +1,32 @@
+<div class="detail-meta">
+    <div class="clearfix" style="background: url(images/detail-drop-bg.png) repeat-x scroll 0pt 100% transparent;">
+        <div class="wrap">
+            <h2 class="detail-name">
+                {ms:name}
+            </h2>
+            <div class="detail-num">
+                商品编号：{ms:number}</div>
+        </div>
+    </div>
+    <div class="detail-price">
+        <ul class="clearfix">
+            <#if this.CookieLoginID == ""#>
+            <li class="compare-pr1"><a href="/membership/login.aspx?url=index.aspx">采购价登录可见</a></li>
+            <#else#>
+            <li class="compare-pr0">分销价：</li>
+            <li><strong id="price">{buyBtnPric}</strong> </li>
+            <li class="compare-pr0">经销价：</li>
+            <li><strong id="wholePrice">{wholeprice}</strong></li>
+            <#/if#>
+            <li class="compare-last ">同质商品建议零售价：<del id="mktprice">￥{ms:marketprice}</del> </li>
+        </ul>
+        <#if "{UserTypeId}" == "2"#>
+        <ul class="clearfix">
+            <li class="compare">起批数量：{ms:BuyNum}{ms:Unit}</li>
+        </ul>
+        <#/if#>
+    </div>
+</div>
+
+
+

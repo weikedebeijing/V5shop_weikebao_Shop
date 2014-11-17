@@ -1,0 +1,42 @@
+﻿<style>
+    .dl-table
+    {
+        background: #fff;
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+    }
+    .dl-table dt
+    {
+        font-weight: 700;
+        border-bottom: 1px solid #ddd;
+        height: 35px;
+        line-height: 35px;
+    }
+    .dl-table dd
+    {
+        border-bottom: 1px dotted #ddd;
+        height: 35px;
+        line-height: 35px;
+        background: url("/template/version_9/images/article/article_bg7.gif") no-repeat left 8px;
+        text-indent: 20px;
+    }
+    .dl-table .date
+    {
+        float: right;
+        color: #777;
+        padding: 0 10px;
+    }
+</style>
+<ul>
+    <li>
+        <dl class="dl-table">
+            <dt><span class="date">日期</span>数据包名称</dt>
+            <#loop attachmentlist#>
+            <dd>
+                <span class="date">{attachmentlist[date]}</span> <a href="[$syspath]{attachmentlist[src]}"
+                    target="_blank">{attachmentlist[name]}</a>
+            </dd>
+            <#/loop#>
+        </dl>
+    </li>
+</ul>

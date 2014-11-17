@@ -1,0 +1,66 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true"#>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="EnvDTE" #>
+<#@ import namespace="EnvDTE"#>
+<#@ output extension=".cs"#>
+
+<#
+CodeGenerationTools code = new CodeGenerationTools(this);
+MetadataLoader loader = new MetadataLoader(this);
+CodeRegion region = new CodeRegion(this, 1);
+MetadataTools ef = new MetadataTools(this);
+ 
+//string inputFile = @"F:\Works\Src\V5\V5.Service.Product\Data\ProductDbContext.edmx";
+//string inputFile = @"F:\Works\Src\V5\V5.Service.Customer\Data\CustomerDbContext.edmx";
+//string inputFile = @"F:\Works\Src\V5\V5.Service.Order\Data\OrderDbContext.edmx";
+//string inputFile = @"E:\Works\Src\V5\V5.Service.Security\Data\SecurityDbContext.edmx";
+//string inputFile = @"E:\Works\Src\V5\V5.Service.DRP\Data\DrpDbContext.edmx";
+//string inputFile=@"E:\Works\Src\V5\V5.Portal.WeiXin\Data\WeiXinDbContext.edmx";
+//string inputFile=@"E:\Works\Src\V5\V5.Service.Customer\Data\CustomerDbContext.edmx";
+//string inputFile = @"D:\工作\新版MCM\V5\V5\V5.Service.Security\Data\SecurityDbContext.edmx";
+ 
+string inputFile = @"../../V5.Service.Order\Data\OrderDbContext.edmx";
+string outFile = @"../../V5.MetaData/Order/Model/";
+
+MetadataWorkspace metadataWorkspace = null;
+bool allMetadataLoaded =loader.TryLoadAllMetadata(inputFile, out metadataWorkspace); 
+EdmItemCollection ItemCollection = (EdmItemCollection)metadataWorkspace.GetItemCollection(DataSpace.CSpace);
+EntityFrameworkTemplateFileManager fileManager = EntityFrameworkTemplateFileManager.Create(this);
+
+foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name)) 
+{	 
+	string filePascialName=entity.Name;//Pascial风格的类名称
+
+	fileManager.StartNewFile(outFile + filePascialName + ".cs");//输出的类文件名称，及开始输出文件
+#>
+
+using System;
+using V5.Framework.MetaData.Model;
+namespace V5.MetaData.Order.Model
+{
+    /// <summary>
+    /// <#=entity.Name #>
+    /// </summary>
+    public class <#=entity.Name #> : ModelBase<<#=entity.Name #>>
+    {
+        <#
+        //定义实体的私有属性
+        //循环实体的每一个属性
+        foreach (EdmProperty edmProperty in entity.Properties.Where(p => p.TypeUsage.EdmType is PrimitiveType && p.DeclaringType == entity))
+        {
+        #>
+	        public <#=code.Escape(edmProperty.TypeUsage)#> <#=edmProperty.Name#> { get; set; }
+        <#
+        }
+        #>                 
+    }
+}
+
+<#
+}
+#>
+
+<#
+// 文件生成
+fileManager.Process();
+#>

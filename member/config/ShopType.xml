@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <node name="淘宝" code="1"></node>
+  <node name="拍拍" code="2"></node>
+  <node name="店管家" code="3"></node>
+</root>

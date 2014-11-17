@@ -1,0 +1,489 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+img
+{
+    border: 0 none;
+}
+i, em
+{
+    font-style: normal;
+}
+ol, ul
+{
+    list-style: none;
+}
+input, img
+{
+    vertical-align: middle;
+}
+input, select
+{
+    font: inherit;
+    font-size: 100%;
+}
+a
+{
+    text-decoration: none;
+    color: #333;
+}
+body
+{
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 640px;
+    height: 100%;
+    background: #e1e1e1;
+    font-size: 14px;
+    font-family: "\5fae\8f6f\96c5\9ed1" , "Microsoft YaHei" ,Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    color: #666;
+    -webkit-text-size-adjust: 100%;
+}
+.hide
+{
+    display: none !important;
+}
+.WX_me_btn:before, .WX_me_btn:after, .WX_me_order:before, .WX_me_favour:before, .WX_bar_back a:after, .WX_backtop:after, .WX_cat_btn:before, .WX_cat_btn:after, .WX_cat_list a:before
+{
+    content: ' ';
+    background-image: url("../images/gb.png");
+    background-repeat: no-repeat;
+    background-size: 250px;
+}
+.WX_bar
+{
+    position: fixed;
+    z-index: 900;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    border-bottom: 1px solid #c3c3c3;
+    background-color: #FFF;
+}
+.WX_con
+{
+    padding-top: 50px;
+    background-color: #e1e1e1;
+}
+.lowAndroid .WX_bar, .lowIphone .WX_bar
+{
+    position: absolute;
+}
+.WX_nav
+{
+    float: left;
+    width: 64%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.WX_nav a
+{
+    float: left;
+    margin-top: 7px;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 36px;
+    border: 1px solid #e0e0e0;
+    border-right-width: 0;
+    background-color: #FFF;
+    text-align: center;
+    line-height: 34px;
+}
+.WX_nav a:first-child
+{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.WX_nav a:last-child
+{
+    border-right-width: 1px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.WX_nav a.on
+{
+    background-color: #5d5d5d;
+    border-color: #5d5d5d;
+    color: #FFF;
+}
+.WX_cat
+{
+    float: left;
+    width: 18%;
+    height: 100%;
+}
+.WX_cat_btn
+{
+    position: relative;
+    height: 100%;
+}
+.WX_cat_btn:before
+{
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    background-position: -35px 0;
+}
+.WX_cat_btn:after
+{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 42px;
+    margin-left: -6px;
+    width: 13px;
+    height: 8px;
+    background-position: -105px 0;
+}
+.WX_cat_btn:active
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.WX_cat_pop
+{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+.WX_cat_list
+{
+    padding: 10px 0;
+}
+.WX_cat_list a
+{
+    float: left;
+    padding: 10px 0;
+    width: 33%;
+    text-align: center;
+    line-height: 20px;
+}
+.WX_cat_list a:active
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.WX_cat_list a:before
+{
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+.WX_cat_sp:before
+{
+    background-position: 0 -30px;
+}
+.WX_cat_sm:before
+{
+    background-position: -50px -30px;
+}
+.WX_cat_jd:before
+{
+    background-position: -100px -30px;
+}
+.WX_cat_gh:before
+{
+    background-position: -150px -30px;
+}
+.WX_cat_jiu:before
+{
+    background-position: -200px -30px;
+}
+.WX_cat_on .WX_cat_btn:after
+{
+    display: block;
+}
+.WX_cat_on .WX_cat_pop
+{
+    display: block;
+}
+.WX_me
+{
+    float: right;
+    width: 18%;
+    height: 100%;
+}
+.WX_me_update:after
+{
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #F00;
+}
+.WX_me_btn
+{
+    position: relative;
+    height: 100%;
+}
+.WX_me_btn:before
+{
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    background-position: -70px 0;
+}
+.WX_me_btn:after
+{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 42px;
+    margin-left: -6px;
+    width: 13px;
+    height: 8px;
+    background-position: -105px 0;
+}
+.WX_me_btn:active
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.WX_me_pop
+{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    background-color: #f4f4f4;
+    color: #666;
+}
+.WX_me_item
+{
+    display: block;
+    position: relative;
+    padding: 0 20px 0 50px;
+    height: 50px;
+    border-bottom: 1px solid #EEE;
+    line-height: 50px;
+    color: #666;
+}
+.WX_me_item:last-child
+{
+    border-bottom: 0;
+}
+.WX_me_item:before
+{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+}
+.WX_me_area
+{
+    padding-left: 20px;
+}
+.WX_me_area_edit
+{
+    padding: 0 15px;
+    color: #4f87da;
+}
+.WX_me_order:before
+{
+    background-position: -150px 0;
+}
+.WX_me_favour:before
+{
+    background-position: -170px 0;
+}
+.WX_me_on .WX_me_btn:after
+{
+    display: block;
+}
+.WX_me_on .WX_me_pop
+{
+    display: block;
+}
+.WX_bar_tit
+{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+}
+.WX_bar_back
+{
+    width: 20%;
+    height: 100%;
+}
+.WX_bar_back a
+{
+    overflow: hidden;
+    display: block;
+    height: 100%;
+}
+.WX_bar_back a:after
+{
+    display: block;
+    margin: 10px 0 0 15px;
+    height: 30px;
+    width: 30px;
+}
+.WX_bar_back a:active
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.WX_backprev
+{
+    display: none;
+}
+.WX_backtop
+{
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    right: 10px;
+    bottom: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0,0,0,0.4);
+    text-indent: -999px;
+}
+.WX_backtop:after
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -11px;
+    width: 23px;
+    height: 15px;
+    background-position: -120px 0;
+}
+.WX_backtop_active
+{
+    display: block;
+}
+.WX_buytips
+{
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    padding: 15px;
+    width: 244px;
+    margin-top: -60px;
+    margin-left: -137px;
+    background-color: #333;
+    color: #FFF;
+}
+.WX_buytips_ft
+{
+    padding-top: 14px;
+    text-align: center;
+}
+.WX_buytips_btn
+{
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 5px;
+    width: 105px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+.WX_buytips_btn1
+{
+    border: 1px solid #1c6dc8;
+    background: #2a7ede;
+    color: #fff;
+}
+.WX_buytips_btn2
+{
+    border: 1px solid #DDD;
+    background: #f6f6f6;
+    color: #444;
+}
+.WX_area_tips
+{
+    padding: 5px 10px;
+    background: #fff6d4;
+}
+.WX_area_list dt, .WX_area_list dd
+{
+    position: relative;
+    padding: 0 20px;
+    height: 44px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #FFF;
+    line-height: 44px;
+}
+.WX_area_list dt
+{
+    border-top: 1px solid #e5e5e5;
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+.WX_area_list dd:last-child
+{
+    border-bottom: 0;
+}
+.WX_area_list dd:active
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.WX_loading
+{
+    background: url("../css/loading.gif") center center no-repeat;
+    -webkit-background-size: 16px 16px;
+    background-size: 16px 16px;
+}
+.WX_mask
+{
+    display: none;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+}
+.WX_mask2
+{
+    z-index: 800;
+}
+.fresher_tips
+{
+    position: fixed;
+    z-index: 901;
+    top: 8px;
+    left: 9%;
+    margin-left: -25px;
+    display: block;
+    background: url('../css/tips.png') no-repeat;
+    -webkit-background-size: 254px 84px;
+    background-size: 254px 84px;
+    width: 254px;
+    height: 84px;
+}
+/*  |xGv00|d0f2e25e0972f00c9729d568c0ee787a */

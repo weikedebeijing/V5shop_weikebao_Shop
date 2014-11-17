@@ -1,0 +1,8 @@
+﻿.pages { color: #999; text-decoration:none;}
+.pages input{ margin-top:-2px;}
+.pages input[type="text"]{ height:18px;}
+.pages a, .pages .cpb { cursor:pointer; text-decoration:none;float: left; padding: 0 6px; border: 1px solid #ddd;background: #ffff;margin:0 2px; font-size:12px; color:#000;}
+.pages a:hover {color:#000;border:1px solid #E61636; text-decoration:none;}
+.pages .cpb {padding: 2px 6px; text-decoration:none; color: #000;  border:0;float:left;}
+.pages a:link{text-decoration:none; }
+a{text-decoration:none; }

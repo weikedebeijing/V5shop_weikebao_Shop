@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<V5Shop>
+  <Part Key="MS" >
+    <Public Name="Product" StyleList="id,number,name,shortname,brandid,brandname,score,changescore,date,storage,unit,shortcontent,content,weight,goodpercent,badreview,marketprice,memberprice,hitcount,collectcount,buycount,reviewcount,starcount,categoryid,categoryname,ischanged,needprice,presentprice,buynum,srcdetail,srclist,memberprice,totalnum,IsNew,IsRecommond,IsSpecialOffer,IsHot,videourl,usernameview">
+      <Special Tag="{ms:cateurl}" To="[$syspath]list.aspx?id={ArrayName[categoryid]}" Field="categoryid"></Special>
+      <Special Tag="{ms:mallurl}" To="[$syspath]product.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{ms:brandurl}" To="[$syspath]brand.aspx?id={ArrayName[brandid]}" Field="brandid"></Special>
+      <Special Tag="{ms:buyurl}" To="[$syspath]cart.aspx?act=buy&amp;id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{ms:collecturl}" To="[$syspath]cart.aspx?act=collect&amp;id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{ms:typeimg}" To="{GetTypeImg(&quot;{ArrayName[IsNew]},{ArrayName[IsRecommond]},{ArrayName[IsSpecialOffer]},{ArrayName[IsHot]}&quot;)}" Field="IsNew]$[IsRecommond]$[IsSpecialOffer]$[IsHot"></Special>
+      <Special Tag="{ms:longname}" To="{ArrayName[name]}" Field="name"></Special>
+      <Special Tag="{ms:marketprice_d2}" To="{ArrayName[marketprice]}" Field="marketprice"></Special>
+      <Special Tag="{ms:memberprice_d2}" To="{ArrayName[memberprice]}" Field="memberprice"></Special>
+      <Special Tag="{ms:marketprice_D2}" To="{ArrayName[marketprice]}" Field="marketprice"></Special>
+      <Special Tag="{ms:memberprice_D2}" To="{ArrayName[memberprice]}" Field="memberprice"></Special>
+      <Special Tag="{ms:kftbutton}" To="{kftbutton}" Field="id"></Special>
+      <Special Tag="{ms:userlevelmemberprice}" To="{ArrayName[memberprice]}" Field="memberprice"></Special>
+      <Special Tag="{ms:starcountimg}" To="&lt;img src='images/products/star{ArrayName[starcount]}.gif'&gt;" Field="starcount"></Special>
+      <Special Tag="{ms:cateurl}" To="[$syspath]category.aspx?id={ArrayName[categoryid]}" Field="categoryid"></Special>
+      <Special Tag="{ms:value}" To="{ArrayName[value]}" Field="value"></Special>
+    </Public>
+    <Label Name="classmalls" Type="Special" ArrayName="productsearch" Public="Product"></Label>
+    <Label Name="classlist" Type="Special" ArrayName="productsearch" Public="Product"></Label>
+    <Label Name="classlistbrand" Type="Special" ArrayName="productsearch" Public="Product"></Label>
+    <Label Name="classlistact" Type="Special" ArrayName="productsearch" Public="Product"></Label>
+    <Label Name="classlistguide" Type="Special" ArrayName="productsearch" Public="Product"></Label>
+    <Label Name="mallself" Type="AutoList" ArrayName="selfpropertysearchnew" Public="Product"></Label>
+      
+    <Label Name="readmalls" Type="Detail" ArrayName="productdetail" Public="Product">
+      <Special Tag="{ms:lasttitle}" To="{lasttitle}" Field="name"></Special>
+      <Special Tag="{ms:lasturl}" To="{lasturl}" Field="id"></Special>
+      <Special Tag="{ms:nexttitle}" To="{nexttitle}" Field="name"></Special>
+      <Special Tag="{ms:nexturl}" To="{nexturl}" Field="id"></Special>
+    </Label>
+    <Label ArrayName="productactsearch" Type="List" StyleList="id" Name="mallact" Public="Product">
+      <Special Tag="{hs:starttoend}" To="&lt;img src='[$syspath]{ArrayName[srcdetail]}.gif'&gt;" Field="startdate"></Special>
+      <Special Tag="{hs:srcdetail}" To="&lt;img src='[$syspath]{ArrayName[srcdetail]}.gif'&gt;" Field="srcdetail"></Special>
+    </Label>
+    <Label ArrayName="guidepro" Type="AutoList"  Name="guidepro" Public="Product"></Label>
+    <Label ArrayName="articlemall" Type="AutoList"  Name="articlemall" Public="Product"></Label>
+    <Label ArrayName="productlink" Type="AutoList"  Name="mallpro" Public="Product"></Label>
+    <Label ArrayName="propertysearchnew" Type="AutoList" StyleList="name,value"  Name="mallproperty" Public="Product">
+      <Special Tag="{ms:propertyname}" To="{ArrayName[name]}" Field="name"></Special>
+      <Special Tag="{ms:propertyvalue}" To="{ArrayName[value]}" Field="value"></Special>
+    </Label>
+    <Label ArrayName="fittingsearch" Type="Simple"  Name="mallfit" Public="Product">
+      <Special Tag="{ms:fitname}" To="{ArrayName[name]}" Field="name"></Special>
+      <Special Tag="{ms:fitvalue}" To="{ArrayName[value]}" Field="value"></Special>
+    </Label>
+    <Label ArrayName="productreview" Type="AutoList"  Name="mallreview" StyleList="id,date,username,star,title,content,ip,remark,remarkdate,goodcount,badcount,usernameview">
+      <Special Tag="{ms:reviewdate}" To="{ArrayName[date]}" Field="date"></Special>
+      <Special Tag="{ms:reviewcontent}" To="{ArrayName[content]}" Field="content"></Special>
+	  <Special Tag="{ms:star}" To="&lt;img src='images/products/star{ArrayName[star]}.gif'&gt;" Field="star"></Special>
+	</Label>
+    <Label ArrayName="activityproduct" Type="AutoList"  Name="activitypro" Public="Product"></Label>
+    <Label ArrayName="productviewnext" Type="AutoList"  Name="mallviewnext" Public="Product"></Label>
+      <Label ArrayName="proreviewsearch" Type="AutoList"  Name="mallview" Public="Product"></Label>
+    <Label ArrayName="imgsearch" Type="AutoList"  Name="mallimg" StyleList="id,src,name,value">
+      <Special Tag="{ms:id}" To="{ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{ms:src}" To="{ArrayName[src]}" Field="src"></Special>
+      <Special Tag="{ms:imgtitle}" To="{ArrayName[title]}" Field="title"></Special>
+    </Label>
+
+    <Public Name="ProductCategory" StyleList="ID,Name,EnglishName,HeadID,Level,OrderID,Family,Title,Keywords,Description,TypeID,IsShow,SrcDetail,SrcList">
+      <Special Tag="{ms:cateurl}" To="[$syspath]category.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{ms:mallurl}" To="[$syspath]list.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{ms:listurl}" To="[$syspath]list.aspx?id={ArrayName[id]}" Field="id"></Special>
+        <Special Tag="{ms:catename}" To="{ArrayName[name]}" Field="name"></Special>
+        <Special Tag="{ms:catesrcdetail}" To="{ArrayName[srcdetail]}" Field="srcdetail"></Special>
+        <Special Tag="{ms:catedescription}" To="{ArrayName[description]}" Field="description"></Special>
+        <Special Tag="{ms:catesrclist}" To="{ArrayName[srclist]}" Field="srclist"></Special>
+    </Public>
+    <Label ArrayName="categorysearch" Type="Special"  Name="classcode" Public="ProductCategory"></Label>
+    <Label ArrayName="categorydetail" Type="AutoList"  Name="readclass" Public="ProductCategory"></Label>
+  </Part>
+  <Part Key="BS" >
+    <Public Name="ProductBrand" StyleList="ID,Name,Website,OrderID,Content,IsShow,Title,Keywords,Description,Pinyin,Company,SrcDetail,SrcList">
+      <Special Tag="{bs:brandurl}" To="[$syspath]brand.aspx?id={ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="brandsearch" Type="Special" Name="mallbrand" Public="ProductBrand"></Label>
+    <Label ArrayName="brandsearch" Type="Special" Name="brandlist" Public="ProductBrand"></Label>
+    <Label ArrayName="branddetail" Type="Detail" Name="readbrand" Public="ProductBrand"></Label>
+  </Part>
+  <Part Key="AS" >
+    <Public Name="Article" StyleList="ID,ShortContent,Content,Auther,Source,Hits,CategoryID,CategoryFamily,SrcList,IsShow,IsTop,IsComments,SearchKey,Date,Keywords,Description,Title,Type,ArticleReview,ArticlePropertyCode,OrderID,catename,Url,IsImageArticle,UserGroupAttachementID,ReviewCount">
+      <Special Tag="{as:articleurl}" To="[$syspath]article.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{as:longtitle}" To="{ArrayName[title]}" Field="title"></Special>
+      <Special Tag="{as:shortcontent}" To="{ArrayName[articlereview]}" Field="articlereview"></Special>
+      <Special Tag="{as:articlecateurl}" To="[$syspath]articlelist.aspx?id={ArrayName[categoryid]}" Field="categoryid"></Special>
+      <Special Tag="{as:articleattachmenturl}" To="{ArrayName[articleattachmenturl]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="articlesearch" Type="Special"  Name="article" Public="Article"></Label>
+    <Label ArrayName="articlesearch" Type="Special"  Name="articlelist" Public="Article"></Label>
+    <Label ArrayName="mallarticle" Type="AutoList"  Name="mallarticle" Public="Article"></Label>
+    <Label ArrayName="articleself" Type="AutoList"  Name="articleself" Public="Article"></Label>
+    <Label ArrayName="articledetail" Type="Detail"  Name="readarticle" Public="Article">
+      <Special Tag="{as:lasttitle}" To="{lasttitle}" Field="id"></Special>
+      <Special Tag="{as:lastarticleurl}" To="{lasturl}" Field="id"></Special>
+      <Special Tag="{as:nexttitle}" To="{nexttitle}" Field="id"></Special>
+      <Special Tag="{as:nextarticleurl}" To="{nexturl}" Field="id"></Special>
+    </Label>
+    <Label ArrayName="articlereviewsearch" Type="List"  Name="articlereview" Public=""></Label>
+
+    <Public Name="ArticleCategory" StyleList="ID,Name,EnglishName,OrderID,Level,HeadID,Family,SearchKey,Description">
+      <Special Tag="{as:articlecateurl}" To="[$syspath]articlelist.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{as:catename}" To="{ArrayName[name]}" Field="name"></Special>>
+    </Public>
+    <Label ArrayName="articlecategorysearch" Type="Special"  Name="articleclasscode" Public="ArticleCategory"></Label>
+    <Label ArrayName="articlecategorydetail" Type="Detail"  Name="readarticlecate" Public="ArticleCategory"></Label>
+  </Part>
+  <Part Key="DS" >
+    <Public Name="Guide" StyleList="ID,Name,SrcList,SrcDetail,Date,SearchKey,OrderID,Content">
+      <Special Tag="{ds:guideurl}" To="[$syspath]guide.aspx?id={ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="guidesearch" Type="CountList"  Name="mallguide" Public="Guide"></Label>
+    <Label ArrayName="guidesearch" Type="Page"  Name="guidelist" Public="Guide"></Label>
+    <Label ArrayName="guidedetail" Type="Detail"  Name="readguide" Public="Guide"></Label>
+  </Part>
+  <Part Key="NS" >
+    <Public Name="Notice" StyleList="ID,Title,Description,Content,Hits,IsDel,Date,SeoTitle,SeoKeywords,SeoDescription,OrderID,Author">
+      <Special Tag="{ns:noticeurl}" To="[$syspath]notice.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{ns:longtitle}" To="{ArrayName[title]}" Field="title"></Special>
+    </Public>
+    <Label ArrayName="noticesearch" Type="Special"  Name="classnotice" Public="Notice"></Label>
+    <Label ArrayName="noticesearch" Type="Special"  Name="noticelist" Public="Notice"></Label>
+    <Label ArrayName="noticedetail" Type="Detail"  Name="readnotice" Public="Notice"></Label>
+  </Part>
+  <Part Key="HS" >
+    <Public Name="Activity" StyleList="ID,Name,Content,StartDate,EndDate,SrcList,SrcDetail,IsBindProduct,IsAct,Count,SpecialDate,UserGroupName,Score,BonusGift,BonusCard,BonusScore,Date,IsFinish,OrderID">
+      <Special Tag="{hs:acturl}" To="[$syspath]act.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{hs:starttoend}" To="{ConvertDate({ArrayName[startdate]},||&quot;YY04.MM.DD&quot;||)}-{ConvertDate({ArrayName[enddate]},||&quot;YY04.MM.DD&quot;||)}" Field="StartDate]$[EndDate"></Special>
+    </Public>
+    <Label ArrayName="activitysearch" Type="CountList"  Name="activity" Public="Activity"></Label>
+    <Label ArrayName="activitysearch" Type="List"  Name="activitylist" Public="Activity"></Label>
+    <Label ArrayName="actdetail" Type="Detail"  Name="readactivity" Public="Activity"></Label>
+    <Label ArrayName="productactsearch" Type="AutoList"  Name="activitypro" Public="Activity"></Label>
+    <Label ArrayName="productactsearch" Type="AutoList"  Name="mallact" Public="Activity"></Label>
+  </Part>
+  <Part Key="PUB" >
+    <Public Name="ShippingAdvice" StyleList="ID,UserName,TrueName,OrderNumber,ExpressCompany,ExpressNumber,SendDate,Remark,IsShow,IsRead,IsDel">
+      <Special Tag="{pub:id}" To="{ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="shippingadvice" Type="Search"  Name="shippingadvice" Public="ShippingAdvice"></Label>
+      <Label ArrayName="" Type="" Name="" Public="ShippingAdvice"></Label>
+    <Label ArrayName="readads" Type="Special" Name="readads"></Label>
+      
+    <Public Name="Link" StyleList="Id,Name,Src,Href,ImgType,OrderID,Type,Description,Remark">
+      <Special Tag="{pub:articlecateurl}" To="[$syspath]articlecate.aspx?id={ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="imglinksearch" Type="List"  Name="imglink" Public="Link"></Label>
+    <Label ArrayName="wordlinksearch" Type="List"  Name="wordlink" Public="Link"></Label>
+
+    <Public Name="Poll" StyleList="Id,Title,StartDate,EndDate,IsRadio,Stat,Count">
+      <Special Tag="{pub:votecontent}" To="{ArrayName[votecontent]}" Field="id"></Special>
+      <Special Tag="{pub:votecontented}" To="{ArrayName[votecontented]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="votesearch" Type="List" Name="poll" Public="Poll"></Label>
+
+    <Public Name="SearchKey" StyleList="ID,Name,Count,IsShow,Type,IsDel,EncodeName">
+      <Special Tag="{pub:href}" To="[$syspath]list.aspx?wd={ArrayName[EncodeName]}" Field="name"></Special>
+    </Public>
+      <Label ArrayName="keysearch" Type="Special"  Name="productkey" Public="SearchKey"></Label>
+    <Label ArrayName="keysearch" Type="Special"  Name="articlekey" Public="SearchKey"></Label>
+
+    <Public Name="Info" StyleList="ID,Title,Content,OrderId,Category,ByName">
+      <Special Tag="{pub:infourl}" To="[$syspath]content.aspx?wd={ArrayName[byname]}" Field="byname"></Special>
+    </Public>
+    <Label ArrayName="infosearch" Type="List"  Name="infosearch" Public="Info"></Label>
+    <Label ArrayName="infodetail" Type="WordDetail"  Name="infodetail" Public="Info"></Label>
+
+    <Public Name="HelpCagegory" StyleList="ID,Name,OrderID,Level,HeadID,Family,Template,SearchKey,Description,SeoTitle,SeoKeywords,SeoDescription">
+      <Special Tag="{pub:helpcateurl}" To="[$syspath]helplist.aspx?id={ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="helpcategorysearch" Type="List"  Name="helpcate" Public="HelpCagegory">
+      <Special Tag="{pub:catename}" To="{ArrayName[name]}" Field="name"></Special>
+    </Label>
+    <Label ArrayName="helpcategorydetail" Type="Detail"  Name="readhelpcate" Public="HelpCagegory">
+      <Special Tag="{pub:catename}" To="{ArrayName[name]}" Field="name"></Special>
+    </Label>
+
+    <Public Name="Help" StyleList="ID,Title,Content,OrderID,Hits,CategoryID,Template,SearchKey,Description">
+      <Special Tag="{pub:helpurl}" To="[$syspath]help.aspx?id={ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="helpdetail" Type="Detail"  Name="readhelp" Public="Help"></Label>
+    <Label ArrayName="helpsearchbyid" Type="AutoList"  Name="helplist" Public="Help"></Label>
+
+    <Public Name="GBook" StyleList="ID,Date,UserName,Title,Content,MenuID,Email,Telephone,IP,Remark,RemarkDate,IsRemark,IsPass,IsHidden">
+      <Special Tag="{pub:id}" To="[$syspath]help.aspx?id={ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="gbooksearch" Type="List"  Name="gbook" Public="GBook"></Label>
+
+    <Label ArrayName="onlinesearch" Type="List" Name="onlinetool" StyleList="id,Name,ToolNumber,ToolType">
+      <Special Tag="{pub:onlinelink}" To="{GetOnlineCode(||&quot;{ArrayName[ToolType]}&quot;||,||&quot;{ArrayName[ToolNumber]}&quot;||)}" Field="ToolType]$[ToolNumber"></Special>
+      <Special Tag="{pub:onlineurl}" To="{GetOnlineLinkCode(||&quot;{ArrayName[ToolType]}&quot;||,||&quot;{ArrayName[ToolNumber]}&quot;||)}" Field="ToolType]$[ToolNumber"></Special>
+    </Label>
+     <Label ArrayName="onlinetoolfloat" Type="Special" Name="onlinetoolfloat"></Label>
+      <Label ArrayName="mallvedio" Type="Special" Name="mallvedio"></Label>
+
+    <Label ArrayName="kft" Type="PublicTag" Tag="{kft}" Name="kft"></Label>
+    <Label ArrayName="kftbutton" Type="PublicTag" Tag="{kftbutton}" Name="kftbutton"></Label>
+      <Label ArrayName="userlogin" Type="Special"  Name="userlogin"></Label>
+  </Part>
+  <Part Key="GS" >
+    <Public Name="GroupBuy" StyleList="ID,ProductID,Price,NeedPrice,Storage,Score,Content,StartDate,EndDate,MaxCount,IsSuccess,Date,SrcDetail,SrcList,Name,MarketPrice,IsShowPro,OrderID,BuyCount,HitCount,IsOrder">
+      <Special Tag="{gs:groupurl}" To="[$syspath]groupbuy.aspx?id={ArrayName[id]}" Field="id"></Special>
+      <Special Tag="{gs:joincount}" To="{ArrayName[buycount]}" Field="buycount"></Special>
+    </Public>
+    <Label ArrayName="groupbuysearch" Type="CountList"  Name="groupbuy" Public="GroupBuy"></Label>
+    <Label ArrayName="groupbuysearch" Type="Page"  Name="grouplist" Public="GroupBuy"></Label>
+    <Label ArrayName="groupbuydetail" Type="Detail"  Name="readgroup" Public="GroupBuy"></Label>
+  </Part>
+  <Part Key="YS" >
+    <Public Name="Coupon" StyleList="Id,Name,Src,NeedPrice,MinusPrice,StartDate,EndDate,Count,IsDel,OrderID">
+      <Special Tag="{ys:Id}" To="{ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="couponsearch" Type="CountList"  Name="mallcoupon" Public="Coupon" StyleList="Id,Name,Src,NeedPrice,MinusPrice,StartDate,EndDate,Count,IsDel,OrderID"></Label>
+    <Label ArrayName="couponsearch" Type="CountList"  Name="couponlist" Public="Coupon"></Label>
+  </Part>
+  <Part Key="SS" >
+    <Public Name="Snatch" StyleList="Id,Name,ProductID,FinalPrice,MinPrice,MaxPrice,FinalMaxPrice,StartDate,EndDate,Score,Description,SrcList,SrcDetail,IsDel,OrderID,MarketPrice,HitCount">
+      <Special Tag="{ss:snatchurl}" To="[$syspath]snatch.aspx?id={ArrayName[id]}" Field="id"></Special>
+    </Public>
+    <Label ArrayName="snatchsearch" Type="CountList"  Name="snatch" Public="Snatch"></Label>
+    <Label ArrayName="snatchsearch" Type="Page"  Name="snatchlist" Public="Snatch"></Label>
+    <Label ArrayName="snatchdetail" Type="Detail"  Name="readsnatch" Public="Snatch"></Label>
+
+    <Public Name="SnatchPrice" StyleList="Username,Price">
+      <Special Tag="{ss:username}" To="{ArrayName[username]}" Field="username"></Special>
+    </Public>
+    <Label ArrayName="snatchprice" Type="AutoList"  Name="snatchprice" Public="SnatchPrice"></Label>
+  </Part>
+</V5Shop>

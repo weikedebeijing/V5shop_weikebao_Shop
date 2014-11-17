@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<language>
+	<lang LangType="CN" LanguageName="简体中文" />
+	<lang LangType="EN" LanguageName="English" />
+	<lang LangType="JP" LanguageName="日文" />
+	<lang LangType="KR" LanguageName="棒子" />
+	<lang LangType="TW" LanguageName="繁体中文" />
+</language>

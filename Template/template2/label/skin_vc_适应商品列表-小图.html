@@ -1,0 +1,25 @@
+﻿<div class="list-small">
+    <dl>
+        <dt><a href="[$syspath]product.aspx?id={ms:id}">
+            <img width="160px" height="160px" src="{gettmpimg({productsearch[DefaultImageData]},160,160)}"
+                title="{ms:name}" alt="{ms:name}" onload="DrawImage(this,160,160)" style="display: block;
+                margin: 0 auto" onerror="errorload(this,'../../UploadFile/default.jpg',160,160)"></a></dt>
+        <dd>
+            <h3>
+                <a href="[$syspath]product.aspx?id={ms:id}">{ms:name}</a></h3>
+            <ul>
+                <li>
+                    <div class="price">
+                        最低零售价￥{productsearch[MarketPrice]}</div>
+                </li>
+                <div class="whole supersede-price">
+                    经销采购价￥{GetCustomerPrice(productsearch_member["WholeSalePrice"].ToString(), productsearch_member["id"].ToString())}</div>
+                <div class="whole supersede-price">
+                    代销采购价￥{GetCustomerPrice(productsearch_member["DistributionPrice"].ToString(), productsearch_member["id"].ToString())}</div>
+                <div class="inventory">
+                    库存：{productsearch[Stock]} 件</div>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+</div>

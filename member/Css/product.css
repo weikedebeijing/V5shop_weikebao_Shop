@@ -1,0 +1,188 @@
+@charset "utf-8"; 
+/* CSS Document */
+.detail-price strong, .detail-prop li.selected i, .detail-prop-size .size-look, .detail-btn-buy, .detail-btn-cart,.detail-btn-dis, .detail-btn-favorite, .detail-btn-favorite span, .detail-favorable h3, .detail-thumb a.prev-null, .detail-thumb a.prev, .detail-thumb a.next-null, .detail-thumb a.next, .detail-action-overlay i, .detail-action-overlay .close, .detail-btn-entry, .detail-btn-entry span, .detail-btn-continue, .detail-btn-continue span, .detail-arrival-notice .action .btn-submit, .collocation-price strong, .collocation-info .action .btn-buy-now, .detail-size-tips .detail-btn-confirm, .detail-size-tips .close, #detail s,.detail-pic .operate a,.detail-pic .share { background: url("../images/product/detail.png") no-repeat scroll 0 0 transparent;}
+#content01 { background: url("../images/product/bg_main.png") bottom repeat-x #FFF; position: relative; width: 100%; overflow:hidden}
+#content01 a.detail-prev-null, #content01 a.detail-prev, #content01 a.detail-next-null, #content01 a.detail-next { background: url("../images/product/detail-action.png") no-repeat scroll 0 0 transparent; cursor: pointer; display: block; height: 500px; overflow: hidden; position: absolute; top: 10px; width: 35px;}
+#content01 a.detail-prev { background-position: -35px 0; left: 0;}
+#content01 a.detail-prev:hover { background-position: 0 0; left: 0;}
+#content01 a.detail-next { background-position: -140px 0; right: 0;}
+#content01 a.detail-next:hover { background-position: -175px 0; right:}
+#detail { background: url("../images/product/detail-02.png") repeat-x scroll 0 0 #D8D1C6; margin-left: auto; margin-right: auto; position: relative; width: 960px;}
+#detail s {display: block; height: 6px; overflow: hidden; position: absolute; width: 6px;}
+#detail s.lt { background-position: -140px -35px; left: 0; top: 0;}
+#detail s.lb { background-position: -140px -41px; bottom: 0; left: 0;}
+#detail s.rt { background-position: -146px -35px; right: 0; top: 0;}
+#detail s.rb { background-position: -146px -41px; bottom: 0; right: 0;}
+.detail-info {  float: right; padding: 20px 12px 30px 0; width: 430px;}
+.detail-meta .wrap { float: left;}
+.detail-name { color: #FFF; font-family: "微软雅黑";font-size: 16px; font-weight: 400; height: 20px; line-height: 20px; overflow: hidden; vertical-align: middle;}
+.detail-num { color: #FA9393;  height: 30px; line-height: 30px;}
+.detail-grade { color: #fff; height: 14px; overflow: hidden; padding: 0 0 12px;}
+.detail-price { background: url("../images/product/detail-drop-bg.png") repeat-x scroll 0 100% transparent; padding: 5px 0 7px;}
+.detail-price li { color: #FA9393;  float: left;  line-height: 30px;  padding-right: 10px;}
+.detail-price li.compare { line-height: 22px; padding-right: 20px; padding-top: 8px;}
+.detail-price strong { background-position: -190px 10px; color: #fff; float: left; font-size: 24px; font-weight: 400; padding-left: 12px;}
+.tuan-time { padding: 5px 0;}
+.tuan-time .clock { background: url("../images/product/clock.png") no-repeat scroll 0 8px transparent; float: left; line-height: 30px; padding-left: 18px;}
+.tuan-time .time-bd { background: none repeat scroll 0 0 #A29376; float: left; font-family: "微软雅黑"; height: 30px; margin-left: 1px; position: relative;  width: 220px;}
+.tuan-time .radius { background: none repeat scroll 0 0 #A29376; float: left; height: 28px; left: -1px; line-height: 30px; overflow: hidden; position: absolute; top: 1px; width: 222px;}
+.tuan-time .bd-l { float: left; padding-left: 4px;}
+.tuan-time .time-bd span { color: #FFFFFF; font-family: arial; font-size: 24px; margin: 0 3px;}
+.tuan-time .bd-r { float: left;}
+.tuan-time .time-bd em { background: url("../images/product/sd.gif") no-repeat scroll -6px -1px transparent; display: inline-block; height: 24px; line-height: 22px; overflow: hidden; padding: 6px 0 0 20px;}
+.detail-style { background: url("../images/product/detail-drop-bg.png") repeat-x scroll 0 100% transparent; padding: 6px 0 8px;}
+.detail-style li { float: left; height: 20px; line-height: 20px; overflow: hidden; padding-right: 25px; width: 150px; color:#fff}
+.detail-prop dt { line-height: 21px; padding: 5px 0;}
+.detail-prop dt b { color:#FFF}.detail-prop dt em { color:#FF0}
+.detail-prop dd li { float: left; padding: 0 10px 10px 0; position: relative;}
+.detail-prop dd li a { border: 1px solid #999999; cursor: pointer; float: left; font-family: arial; height: 28px; position: relative;  text-align: center;}
+.detail-prop-color dd li a { background: none repeat scroll 0 0 #FFFFFF; height: 52px; padding: 2px;}
+.detail-prop-color dd li.selected a, .detail-prop-color dd li a:hover { background: none repeat scroll 0 0 #F60; border: 1px solid #F60;}
+.detail-prop .size-look { background-color: #000; background-position: -180px -29px; border: 1px solid #999999; float: right; height: 19px; overflow: hidden; padding-left: 22px;  width: 60px;}
+.detail-prop .size-look { color:#ccc}.detail-prop .size-look:hover { color:#fff}
+.detail-prop dd li .e {background: none repeat scroll 0 0 #FFFFFF; display: block; height: 16px; line-height: 16px; width: 48px;}
+.detail-prop dd li .n {background: none repeat scroll 0 0 #999999; color: #FFFFFF;  display: block; font-size: 10px; height: 12px; line-height: 12px; width: 48px;}
+.detail-prop-amount { background: url("../images/product/detail-drop-bg.png") repeat-x scroll 0 100% transparent;}
+.detail-prop-amount dt, .detail-prop-amount dd { float: left; height: 20px; line-height: 20px; color:#FFF}
+.detail-prop-amount dt, .detail-prop-amount dd { padding: 0 0 12px;}
+.detail-prop-size dd li.selected a, .detail-prop-size dd li a:hover { border: 1px solid #F60; text-decoration: none;}
+.detail-prop-size dd li.selected a .e, .detail-prop-size dd li a:hover .e { background: none repeat scroll 0 0 #FFFFFF;}
+.detail-prop-size dd li.selected a .n, .detail-prop-size dd li a:hover .n { background: none repeat scroll 0 0 #F60;}
+.detail-action { padding-top: 10px; position: relative; z-index: 10;}
+.detail-btn-favorite { background-position: 0 -192px; display: inline-block; float: left; height: 30px; position: relative; top: 5px; width: 102px;}
+.detail-btn-cart { background-position: -140px -157px; border: 0 none; cursor: pointer; float: left; height: 35px; margin-right: 10px; width: 141px;}
+.detail-btn-dis{ background-position: -140px -228px; border: 0 none; cursor: pointer; float: left; height: 35px; margin-right: 10px; width: 141px;}
+.detail-btn-buy { background-position: -140px -192px; border: 0 none; cursor: pointer; float: left; height: 35px; margin-right: 10px; width: 141px;}
+.detail-action-overlay { -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); background: -moz-linear-gradient(center top , #EDE5D1, #F5F5F5) repeat scroll 0 0 #EAF3F8; border: 3px solid #888888; display: none; height: 100px; left: 0; padding: 10px 0 20px 20px; position: absolute; top: -55px; width: 350px; z-index: 20;}
+
+.detail-gallery { float: left; padding: 20px 0 0 35px;}
+.detail-thumb { float: left; height: 358px;margin-top: 20px; position: relative; width: 58px;}
+.detail-thumb a.prev-null, .detail-thumb a.prev, .detail-thumb a.next-null, .detail-thumb a.next { height: 12px; left: 1px; overflow: hidden;  position: absolute; width: 54px;}
+.detail-thumb a.prev-null {background-position: -72px -133px; top: 0;}
+.detail-thumb a.next-null { background-position: -72px -145px; bottom: 0;}
+.detail-thumb a.prev { background-position: 18px -133px; top: 0;}
+.detail-thumb a.next {background-position: 18px -145px; bottom: 0;}
+.detail-thumb .bd { height: 325px;  overflow: hidden; padding: 19px 1px 0; width: 56px;}
+.detail-thumb li { background: none repeat scroll 0 0 #FFFFFF; float: left; font-size: 0; line-height: 0; margin-bottom: 10px; width: 56px;}
+.detail-thumb li a { border: 1px solid #E6E6E6; display: block; float: left; height: 50px; overflow: hidden; padding: 2px;}
+.detail-thumb li img { display: block; float: left;}
+.detail-thumb li a:hover, .detail-thumb .selected a { border: 1px solid #999999; position: relative;}
+.detail-pic { background: none repeat scroll 0 0 #FFFFFF; float: left; height: 427px; margin-left: 35px; padding: 4px; width: 356px; overflow:hidden}
+.detail-pic .operate { height:42px; position:absolute; top:364px; left:0; width:364px}
+.detail-pic .operate a { float:left; height:42px; display:block;}
+.detail-pic .operate a.collect { width:121px; background-position:0 -429px}.detail-pic .operate a.collect:hover { background-position:0 -387px}
+.detail-pic .operate a.zoom { width:121px; background-position:-121px -429px}.detail-pic .operate a.zoom:hover { background-position:-121px -387px}
+.detail-pic .operate a.commend { width:122px; background-position:-242px -429px}.detail-pic .operate a.commend:hover { background-position:-242px -387px}
+.detail-pic .share { height:24px; position:absolute; top:406px; left:0; width:350px; background-position:0 -471px; padding:5px 0 0 14px}
+
+.detailinfo .title,.detailinfo .title li a,.detailinfo .title li a span { background:url(../images/product/bg_infomation.gif) no-repeat scroll 0 0 transparent}
+.detailinfo .title { height:52px; position:relative; background-position:0 0}
+.detailinfo .title ul { height:50px; width:950px; border-bottom:4px #570000 solid; position:absolute; top:-4px; left:3px; padding-left:4px; overflow:hidden}
+.detailinfo .title ul li,.detailinfo .title ul li a,.detailinfo .title ul li a span {height:50px; float:left; color:#666; font-size:11px}
+.detailinfo .title ul li a { padding-left:30px; background-position:0 -102px; margin-right:5px}
+.detailinfo .title ul li a span { padding-right:30px; background-position:100% -102px; text-align:center; padding-top:10px; height:40px; line-height:18px}
+.detailinfo .title ul li a span b { color:#333; font-size:14px}
+.detailinfo .title ul li a:hover,.detailinfo .title ul li.current a { background-position:0 -52px}
+.detailinfo .title ul li a:hover span,.detailinfo .title ul li.current a span { background-position:100% -52px; color:#FFF; cursor:pointer}
+.detailinfo .title ul li a:hover span b,.detailinfo .title ul li a:hover span em,.detailinfo .title ul li.current a span b,.detailinfo .title ul li.current a span em { color:#FFF}
+
+.detailinfo .content { width:958px; border-bottom:1px #DCDCDC solid; border-left:1px #DCDCDC solid; border-right:1px #DCDCDC solid}
+.detailinfo .classcontent { width:936px; margin:0 auto; padding:20px 0; overflow:hidden}
+.detailinfo .attribute table { background:#F3E7E7}
+.detailinfo .attribute table td { text-align:left; background:#FAF2F2; color:#a10000; padding:4px 10px ; margin:400px}
+
+.classtitle { height:27px; background:#EDEDED; position:relative}
+.classtitle .titlename { float:left; height:27px}
+.classtitle .titlename .chinese,.classtitle .titlename .english { padding:0 25px; font-size:14px; color:#FFF; background:#570000; float:left; line-height:27px; float:left}
+.classtitle .titlename .chinese { background:#a10000; font-weight:bold;}
+.classtitle .titlename .arrow { float:left; background:url(../images/index/bg_label.gif); width:17px; height:27px}
+.classtitle .titlename .arrow2 { position:absolute; background:url(../images/product/bg_label2.gif); width:7px; height:32px; left:-7px; top:-5px}
+
+.NewCommentOne { border: 1px solid #CACACA; height: 136px; width: 930px;}
+.NewCommentOne h3 { background: url("../images/product/sprites1.png") repeat-x scroll left -284px transparent; border-bottom: 1px solid #CACACA; color: #333333;  font-size: 16px; height: 26px; line-height: 26px; width: 930px;}
+.NewCommentOne h3 em { color: #999999; display: inline-block; float: right; font-size: 12px;height: 26px; margin-right: 10px; text-align: center; width: auto;}
+.NewCommentOne h3 span { display: inline-block; float: left; font-size: 15px; font-weight: bold; padding-left: 7px;}
+.sprites { background-color: transparent; background-image: url("../images/product/sprites1.png"); background-repeat: no-repeat;}
+.titlepj { color: #333333; font-size: 12px;}
+.titlepj label { display: block; float: left; padding-right: 10px;}
+.SpriteStar { background-image: url("../images/product/sprites1.png"); display: inline-block; height: 13px; vertical-align: top; width: 14px;}
+.plGoodBad { height: 108px; margin: 0 auto; padding: 6px 0; width: 920px;}
+.plGoodBad ul { height: 108px; width: 920px;}
+.plGoodBad ul li { border-right: 1px solid #CFCFCF; float: left; height: 108px;}
+.plGoodBad ul .goodPing { color: #A10000; height: 78px; padding-top: 30px; text-align: center;  width: 110px;}
+.plGoodBad ul .goodPing .goodPLv { font-size: 35px; font-weight: bold;}
+.plGoodBad ul .haozhonghuai { width: 253px;}
+.plGoodBad ul .haozhonghuai dl { height: 95px; margin: 0 auto; width: 251px;}
+.plGoodBad ul .haozhonghuai dl dd { margin-top: 16px;}
+.plGoodBad ul .haozhonghuai span { background: none repeat scroll 0 0 #EFEFF1; border: 1px solid #C9C9C9; display: inline-block; height: 10px; margin: 0 5px; vertical-align: top;    width: 143px;}
+.plGoodBad ul .haozhonghuai span strong { background-image: url("../images/product/plbg.jpg"); display: inline-block; float: left; height: 10px;}
+.plGoodBad ul .haozhonghuai { width: 323px;}
+.plGoodBad ul .haozhonghuai dl dd em { display: inline-block; width: 60px;}
+.plGoodBad ul .haozhonghuai dl dd .SpriteStar { margin-right: 5px; vertical-align: -3px;}
+.plGoodBad ul .meGouMai { border: medium none; height: 78px; padding-top: 20px; text-align: center; width: 120px;}
+.plGoodBad ul .meGouMai .goumaiButton { background: url("../images/product/sprites1.png") no-repeat scroll -3342px 0 transparent; border: 0 none; cursor: pointer; display: block; height: 27px; margin-left: 12px; margin-top: 10px; width: 97px;}
+.NewCommentDetail {border-bottom: medium none; border-top: medium none; height: auto; overflow: hidden; width: 932px;}
+.plZCO { width: 932px;}
+.plContent { background: none repeat scroll 0 0 #F8F8F8; border: 1px solid #E2E2E2; float: left; width: 930px;}
+.plCinfo { background-color: #F8F8F8; color: #000000; float: left; font-size: 12px; overflow: hidden; padding-bottom: 15px; text-align: center; width: 161px;}
+.plConr { background: url("../images/product/sprites_liney.png") repeat-y scroll 0 0 #FFFFFF; float: left; overflow: hidden; padding-left: 0; width: 585px;}
+.plrfen { width:785px;}
+.plrfen_sp { color: #000000; display: block; float: left; line-height: 15px; padding-left: 14px;}
+.plrfen ul { list-style-type: none; margin: 0; padding: 0 0 0 14px;}
+.plrfen ul li { color: #404040; float: left; line-height: 22px; padding-right: 30px;}.plrfen ul li span { color: #7C7C7C;}
+.danpv2_linex { border-bottom: 1px dashed #D5D5D5; height: 1px; overflow: hidden;}
+.plTiBT { padding-left: 14px;}
+.plCoNR { color: #444444; padding-left: 14px; padding-top: 10px;}
+.plDYinfo { clear: both; overflow: hidden; padding-bottom: 20px; padding-left: 14px;}
+.plDYinfo span { color: #999999; display: block; float: left; line-height: 24px;}
+.plDYinfo strong { background: url("../images/product/sprites1.png") repeat-x scroll left -284px transparent; border: 1px solid #CFCFCF; color: #333333; cursor: pointer; float: left; height: 20px; line-height: 20px; margin-right: 15px; padding-top: 2px; text-align: center; width: 62px;}
+.plDYinfo label { background-image: url("../images/product/sprites1.png"); background-position: left -284px; background-repeat: repeat-x; border: 1px solid #EECFCF; color: #333333; cursor: pointer; float: left; height: 20px;line-height: 20px; margin-right: 49px; padding-top: 2px;  text-align: center; width: 82px;}
+.Sdanpyyimg { background: url("../images/product/sprites1.png") no-repeat scroll -3507px top transparent; height: 10px; width: 160px;}
+
+
+.area3Head {background: url("../images/product/sprites1.png") repeat-x scroll left -284px transparent; border-bottom: 1px solid #CFCFCF; height: 26px;}
+.area3Head span, .area3Head button { display: inline; line-height: 26px;}
+.area3Sp02, .area3Sp03 {color: #333333; font-size: 14px; font-weight: bold;}
+.buttonred {background-color: #9D031F;color: #FFFFFF;cursor: pointer; font-size: 14px; height: 26px; margin-left: 10px; padding-left: 12px; padding-right: 12px;}
+.area3Head select { height: 20px; margin-top: 3px; width: 90px;}
+
+.area3Con { padding: 10px;}
+.userQuesArea h4 {display: inline; float: left;}
+.userQuesArea h5 { display: inline; float: right;}
+.area3Con h6 { color: #666666; font-weight: bold; font-size:12px}
+.adminAsk {color: #666666; line-height: 20px; padding-right: 240px; text-indent: 2em;}
+.new-comment { color: #999999; height: 20px; line-height: 20px; margin: 10px 0 0 20px;}
+.thiscomment { display: inline; float: left;}
+.new-btn a { background: url("../images/product/sprites1.png") no-repeat scroll -2020px 0 transparent; display: inline; float: left; height: 22px; line-height: 22px;  margin: 0 7px; text-align: center; width: 64px;}
+.want-reply a:link, .want-reply a:visited, .want-reply a:hover { display: inline; float: left; text-decoration: underline;}
+.myAsk { color: #666666; text-align: right;}
+
+.consult-box { padding: 0 30px 20px;}
+.consult-box .mtitle { height: 40px; line-height: 40px; padding-left: 10px; color:#999}
+.consult-box .mtitle strong { color: #333; font-size:14px;}
+.consult-box .mcontent { border: 1px solid #EEEEEE; padding: 10px 0;}
+.consult-box .mcontent table { width: 100%;}
+.consult-box .mcontent td { padding: 10px 0;}
+.consult-box .mcontent .col01 { text-align: right; vertical-align: top; width: 100px;}
+.consult-box .mcontent .type { padding-right: 20px;}
+.consult-box .mcontent .type input { height: 13px; overflow: hidden; vertical-align: middle; width: 13px;}
+.consult-box .mcontent textarea { border: 1px solid #CCCCCC; height: 100px; padding: 2px; width: 500px;}
+.consult-box .mcontent .tips { padding-left: 10px;}
+.consult-box .mcontent em { font-family: Georgia,Tahoma,Arial; font-size: 18px; padding: 0 3px;}
+.star li .mhd, .comment .bd .size dt, .comment .mcontent .btn-comment, .consult-box .mcontent .btn-publish , .consult-box .mcontent .btn-comment { background: url("../images/product/detail03.png") no-repeat scroll 0 0 transparent;}
+.consult-box .mcontent .btn-publish { background-position: 0 -31px; border: 0 none; cursor: pointer; height: 31px; width: 99px;}
+.consult-box .mcontent .btn-comment { background-position: 0 0px; border: 0 none; cursor: pointer; height: 31px; width: 99px;}
+
+.recommend ul { width: 1000px;}
+.recommend li {background: none repeat scroll 0 0 #FFFFFF; float: left; margin: 10px 9px 0 0; width: 180px;}
+.recommend li .name { height: 20px; line-height: 20px; overflow: hidden; padding: 5px 5px 0;}
+.recommend li .price { font-family: arial; line-height: 20px; padding: 0 5px 5px;}
+
+/*评分*/
+.start01,.start02,.start03,.start04,.start05,.start06{ background:url(../images/product/start.gif) no-repeat; display:inline-block; height:20px; width:100px; vertical-align:middle;}
+.start01{ background-position:0 -7px;}
+.start02{ background-position:0 -40px;}
+.start03{ background-position:0 -70px;}
+.start04{ background-position:0 -100px;}
+.start05{ background-position:0 -130px;}
+.start06{ background-position:0 -160px;}

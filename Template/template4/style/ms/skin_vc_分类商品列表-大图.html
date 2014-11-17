@@ -1,0 +1,20 @@
+﻿<div class="pro-inner">
+<div class="pro-style">
+<div class="margin10">
+<div class="divimg">
+        <a class="img" href="[$syspath]product.aspx?id={ms:id}"><img src="{gettmpimg({productsearch[DefaultImageData]},160,160)}" title="{ms:name}" alt="{ms:name}"></a>
+</div>
+<div class="pro-summary">
+        <#if productsearch_member["name"].ToString().Length<18 #> 
+        <a  class="name" title="{productsearch[name]}" href="[$syspath]product.aspx?id={ms:id}">{productsearch_member["name"].ToString()}</a>
+        <#else#> 
+        <a  class="name" title="{productsearch[name]}" href="[$syspath]product.aspx?id={ms:id}">{productsearch_member["name"].ToString().Substring(0,18)}...</a>
+        <#/if#>
+        <#loop ProductDetailPrice,["+productsearch_member["id"].ToString()+"] 999#>
+        <span class="price">￥{ProductDetailPrice[SalesPrice]}
+        </span>
+        <#/loop#>
+</div>
+</div>
+</div>
+</div>

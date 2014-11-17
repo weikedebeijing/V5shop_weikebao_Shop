@@ -1,0 +1,87 @@
+﻿<div class="mainwidth mauto mt10 mb10">
+    <div class="layout pt10">
+        <div class="order-flow02">
+        </div>
+    </div>
+    <div id="OrderDiv" class="bxSty dingdan mb10" align="center">
+        <div class="dingdanHead">
+            <img src="images/cart/pic_gongxi.gif">
+        </div>
+        <div id="OrderList" class="dingdanList">
+            <div class="listHead">
+                <ul>
+                    <li class="liheight" style="border-left: 1px solid rgb(216, 216, 216);">订单号</li>
+                    <li id="dollarHead" class="liheight">需支付金额（元）</li>
+                    <li class="liheight">配送方式</li>
+                    <li class="liheight" style="border-right: 1px solid rgb(216, 216, 216);">支付方式</li>
+                </ul>
+            </div>
+            <div class="listHead listCon">
+                <ul>
+                    <li class="liheight" style="border-left: 1px solid rgb(216, 216, 216);">{orderid}</li>
+                    <li id="dollarBody0" class="liheight"><span>{orderprice}</span> 元 </li>
+                    <li class="liheight">{deliname}</li>
+                    <li class="liheight">{payname}</li>
+                </ul>
+            </div>
+        </div>
+        <span class="blank0"></span>
+        <div class="shopping_word" style="position: relative; z-index: 1;">
+           <!-- <p id="OrderWord" style="text-align: center;">
+                已选择付款方式：
+            </p>-->
+            <p class="t_c">
+               <a style="text-decoration: none; background: url(images/gb_btn_dot.png) repeat-x scroll left -260px transparent; display: inline-block; height: 26px; color: rgb(255, 255, 255); width: 100px;" href="javascript:void(0)" onclick="payClick()">立即付款</a>
+               <#if payState== "true"#>
+               {paystr}
+               <#/if#>
+            </p>
+            <p id="newSpanDes" style="float: left; text-align: left;">
+                <span>(未支付的订单将为您保留24小时，在收到全部订单金额后，我们将尽快安排发货)</span>
+            </p>
+            <div class="Online_payment" style="z-index: 2; display: none">
+                <h2 class="msgboxhead">
+                    <span>您正在进行的在线支付</span>
+                    <p class="msgboxhead_close">
+                        <a class="whiteff" onclick="HideOnlinepaymentDiv()" href="javascript:void(0);">
+                            <img src="https://sslimg.vancl.com/shopping/onlinepay/dpbox_06.gif">
+                            关闭 </a>
+                    </p>
+                </h2>
+                <p class="zftitleBg">
+                    请在新开的网银页面完成支付后选择：</p>
+                <div class="payment_PopupInfon">
+                    <span class="blank10"></span>
+                    <div class="zfsb_tipsinfo">
+                        <b style="font-weight: bold;">支付成功：</b>
+                        <ul>
+                            <li><a href="[$syspath]orderdetail.aspx?id={orderid}" target="_blank" class="reda10">
+                                订单详情</a><span class="fredline">|</span></li>
+                            <li><a href="[$syspath]index.aspx" target="_blank" class="reda10">继续购物</a></li>
+                        </ul>
+                    </div>
+                    <span class="blank10"></span>
+                    <div class="zfsb_tipsinfo">
+                        <b style="font-weight: bold;">支付失败：</b>
+                        <ul>
+                            <li><a id="repay" class="reda10" href="[$syspath]orderdetail.aspx?id={orderid}" target="_blank">
+                                重新支付</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <span class="blank10"></span>
+                </div>
+            </div>
+            <span class="clear"></span>
+        </div>
+        <div class="nowPayArea">
+            <div style="border-bottom: 1px solid rgb(227, 227, 227);">
+            </div>
+            <p style="font-size: 10.5pt; font-weight: bold; text-align: right; line-height: 50px;">
+                <a class="track" name="sp_cart_complete_order_details" target="_blank" href="[$syspath]member/useradmin/OrderDetail.aspx?id={orderid}">
+                    订单详情</a> | <a class="track" name="sp_cart_complete_go_on_shopping" target="_blank"
+                        href="[$syspath]index.aspx">继续采购</a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>{shoptitle}</title>
+    <script type="text/javascript" src="../Template/{path}/js/CssLoad.js?Item=base|common|v5"></script>
+    <link rel="stylesheet" type="text/css" href="../Template/{path}/css/slider.css">
+    <script src="../Template/{path}/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../Template/{path}/js/common.js" language="javascript" charset="gb2312"></script>
+        <script type="text/javascript" src="../Template/public/js/weixincommon.js" language="javascript"></script>
+    <script src="../Template/{path}/js/imageCommon.js" type='text/javascript'></script>
+    <script src="../Template/{path}/js/slider.js" type='text/javascript'></script>
+</head>
+<body>
+    <#PUBLIC attention#>
+    <!--head begin-->
+    <header class="topbar">
+    <div class="topbar-left">
+    <a href="index.aspx" class="i-back">asd</a>
+    <a href="index.aspx" class="logo">
+    <img src="{logo}" alt="logo">
+    </a>
+    </div>
+    <div class="topbar-right">
+    <a class="i-member" href="orderlist.aspx">会员</a>
+    <a href="cart.aspx" class="i-cart">&nbsp;  
+    <#if Convert.ToInt32(totalnum)>0#>
+    <span class="tips" id="countcart">{totalnum}</span>
+    <#else#>
+    <span class="tips" id="countcart" style=" display:none">0</span>
+    <#/if#>
+    </a>
+    </div>
+</header>
+    <!--head end-->
+
+        <!--main begin-->
+        <section>
+        <ul id="slider">
+             <#loop rollImages#> 
+                <li>
+                <#if {rollImages[Hyperlink]}==""#> 
+                <a href="javascript:void(0)">
+                <#else#>
+                 <a href="{rollImages[Hyperlink]}">
+                <#/if#> 
+                <img lazyload="{v5ImageGroupUrl2}{rollImages[ImageUrl]}" class="slider-img"/>
+                 </a>
+                 </li>
+            <#/loop#>
+          </ul>
+    </section>
+        <section class="hot">
+  <div class="title">
+      <h2 class="hot-title">热销商品</h2>
+      <a href="category.aspx" class="btn-allpro"><span class="name">全部商品</span><span class="icon">&gt;&gt;</span></a></div>
+   
+<div class="product">
+<#loop hotSaleProduct,8,2 999#>
+<div class="pro-inner" >
+<div class="pro-style">
+<div class="margin10">
+<div class="divimg">
+<a class="img" href="product.aspx?id={hotSaleProduct[ID]}"><img src="{v5ProductUrl}{hotSaleProduct[DefaultImageData]}"  alt="{hotSaleProduct[Name]}"></a>
+</div>
+<div class="pro-summary">
+<#if hotSaleProduct.Name.ToString().Length<18 #>
+<a class="name" href="product.aspx?id={hotSaleProduct[ID]}" title="{hotSaleProduct[Name]}">{hotSaleProduct[Name]}</a>
+<#else#>
+<a class="name" href="product.aspx?id={hotSaleProduct[ID]}" title="{hotSaleProduct[Name]}">{hotSaleProduct.Name.ToString().Substring(0,18)}...</a>
+<#/if#>
+<span class="price">
+<#loop channelPrice,{hotSaleProduct[ID]},3 999#>
+￥{GetCustomerPrice( channelPrice.SalesPrice.ToString() ,hotSaleProduct.ID.ToString())}
+<#/loop#>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<#/loop#>
+
+</div>
+</section>
+        <div class="clear">
+        </div>
+        <section class="hot">
+ <div class="title">
+    <h2 class="hot-title">推荐商品</h2>
+   </div>
+    <div class="product">
+<#loop newProduct,8,2 999#>
+<div class="pro-inner">
+<div class="pro-style">
+<div class="margin10">
+<div class="divimg">
+        <a class="img" href="product.aspx?id={newProduct[ID]}"><img src="{v5ProductUrl}{newProduct[DefaultImageData]}"  alt="{newProduct[Name]}"></a>
+</div>
+<div class="pro-summary">
+<#if newProduct.Name.ToString().Length<18 #>
+<a class="name" href="product.aspx?id={newProduct[ID]}" title="{newProduct[Name]}">{newProduct[Name]}</a>
+<#else#>
+<a class="name" href="product.aspx?id={newProduct[ID]}" title="{newProduct[Name]}">{newProduct.Name.ToString().Substring(0,18)}...</a>
+<#/if#>
+<span class="price">
+<#loop channelPrice,{newProduct[ID]},3 999#>
+￥{GetCustomerPrice( channelPrice.SalesPrice.ToString() ,newProduct.ID.ToString())}
+<#/loop#>
+</span>
+</div>
+</div>
+</div>
+</div>
+<#/loop#>
+</div>
+</section>
+     
+    <div class="clear">
+    </div>
+    {web_skin_vc_通用底部版权}
+
+</body>
+</html>

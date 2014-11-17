@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/yixun-purple/css/common.css">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/yixun-purple/font/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/yixun-purple/css/mall.css">
+ <link href="../../../member/Css/PreFoot.css" rel="stylesheet" />
+
+    <script language="javascript" src="../Template/{path}/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../Template/{path}/js/jscommon.js" language="javascript" charset="gb2312"></script>
+    <title>{shoptitle}</title>
+     <script src="../../../member/js/WeiXinShare.js"></script>
+      <script>
+          $(function () {
+              var title = "{OpenTitle}" + "{shoptitle}";
+              var desc = "{OpenDesc1}<br />{OpenDesc2}";
+              var url = $(this).attr("URL");
+             var img_url = "{logo}";
+              GetData(url, title, desc, img_url);
+              $(".share").click(function () {//分享加载icon三角形
+                  $(this).parent().find(".arrow").removeClass("arrow");
+                  $(this).parent().find("dd").removeClass("active");
+
+                  $(this).find("a").find("span").addClass("arrow");
+                  $(this).addClass("active");
+              });
+
+              $(".sub-nav dd").click(function () {
+                  if ($(this).attr("class").indexOf("share") < 0) {
+                      $(this).parent().find("dd").removeClass("active");
+                      $(this).parent().find(".arrow").removeClass("arrow");
+                      $(this).addClass("active");
+                  }
+              });
+          });
+        </script>
+</head>
+<body>
+    <!--mask begin-->
+    <div class="mask"></div>
+    <!--mask end-->
+    <#PUBLIC attention#>
+    <!--topbar begin-->
+    <section class="box" id="myorder">
+        <div class="user_index">
+            <div class="user_header" id="actionBar">
+                <span><a href="cart.aspx" class="shopping-cart">
+                     <i class="fa fa-shopping-cart"></i>
+                    <#if Convert.ToInt32(totalnum)>0#>
+      ({totalnum}) 
+                    <#/if#>                
+                </a></span>
+                <span><a href="member/MyOrderList.aspx">我的订单</a></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="box" id="banner">
+        {web_skin_vc_首页轮播图}
+    </section>
+    <section class="box" id="module">
+        <div>
+            <div class="user_nav clearfix">
+                <ul class="user_nav_list">
+                    <li  class="pro-class">
+                        <a href="javascript:void(0)" id="menu" class="icon-s1"><span class="fa fa-th"></span>所有商品</a>
+                        <div class="WX_cat_pop WX_cat_list J_smenu_list" id="menulist" style="display: none;">
+                            <i class="WX_cat_btn-arrow"></i>
+                             <#loop category,["+shopID+"] 999#> 
+                           
+                            <a href="index.aspx?cid={category[ID]}&name={category[Name]}" class="J_ytag WX_cat_sp">{category[Name]}</a>
+                            <#/loop#>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.aspx?cid=A" class="icon-s1"><span class="fa fa-clock-o"></span>新品上架</a>
+                    </li>
+                    <li>
+                        <a href="index.aspx?cid=B" class="icon-s1"><span class="fa fa-heart"></span>精选商品</a>
+                    </li>
+                    <li>
+                        <a href="index.aspx?cid=C" class="icon-s1"><span class="fa fa-tags"></span>特惠商品</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div style="clear: both;"></div>
+    <div class="user_itlist_nb">
+        <div class="title">
+            <h2>新品推荐</h2>
+            
+        </div>
+    </div>
+
+   
+    <section class="main_title" style="display: none" id="top2">
+
+        <h2 id="topname">{name}</h2>
+        <a href="index.aspx" data-type="back" class="go-back" pgv="[MERC].[PAGE].back"><span class="icons fa fa-angle-left" data-icon=""></span></a>
+
+    </section>
+    <div class="h30" id="h30" style="display: none"></div>
+    <script type="text/javascript">
+        var cid = request('cid');
+        var cname = request('name');
+        switch (cid) {
+            case "A":
+                $("#myorder").hide();
+                $("#banner").hide();
+                $("#module").hide();
+                $("#h30").show();
+                $("#topname").text("新品上架");
+                $("#top2").show();
+                break;
+            case "B":
+                $("#myorder").hide();
+                $("#banner").hide();
+                $("#module").hide();
+                $("#h30").show();
+                $("#topname").text("精选商品");
+                $("#top2").show();
+                break;
+            case "C":
+                $("#myorder").hide();
+                $("#banner").hide();
+                $("#module").hide();
+                $("#h30").show();
+                $("#topname").text("特惠商品");
+                $("#top2").show();
+                break;
+            case "":
+                break;
+            default:
+                $("#myorder").hide();
+                $("#banner").hide();
+                $("#module").hide();
+                $("#h30").show();
+                $("#topname").text(decodeURI(cname));
+                $("#top2").show();
+                break;
+
+        }
+        //        if (id != "") {
+        //           
+        //        }
+    </script>
+    <div class="WX_con" id="J_main">
+        <div class="jx">
+            <div class="jx_list">
+                <#loop categoryproduct,["+shopID+"],["+cid+"] 999#>
+                <div class="jx_g">
+                    <div class="jx_g_img">
+                        <a href="product.aspx?id={categoryproduct[ID]}" class="J_bi_product_item J_ytag"
+                            data-dap="" data-pid="561592">
+                            <img class="" src="{categoryproduct[DefaultImageData]}">
+                        </a>
+                    </div>
+                    <div class="jx_g_info">
+                        <p class="jx_g_title">
+                            <a href="product.aspx?id={categoryproduct[ID]}" class="J_bi_product_item J_ytag"
+                                data-dap="" data-pid="561592">{categoryproduct[ProductName]}</a>
+                        </p>
+                        <p class="jx_g_price">
+                            <span class="jx_g_price_wx">惊爆价<span><i>￥</i>{GetCustomerPrice(categoryproduct.SalesPrice.ToString(),categoryproduct.ID.ToString())}</span>
+                            </span><del class="jx_g_price_market">市场价￥{categoryproduct[OldPrice]}</del>
+                        </p>
+                        <a href="product.aspx?id={categoryproduct[ID]}" class="WX_btn jx_g_btn J_bi_product_item J_ytag"
+                            data-dap="" data-pid="561592">立即购买</a>
+                    </div>
+                </div>
+                <#/loop#>
+            </div>
+            <div class="jx_map">
+
+                <div class="jx_map_bd WX_cat_list">
+                    <#loop category,["+shopID+"] 999#> 
+                    <a href="index.aspx?cid={category[ID]}&name={category[Name]}"
+                        class="J_ytag WX_cat_sp">{category[Name]}</a><!--00101-00199 -->
+                    <#/loop#>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    {web_skin_vc_通用底部版权}
+    
+    <a href="javascript:void(0);" class="WX_backtop J_backTop J_ytag "
+        id="gotopbtn">返回顶部</a>
+    <script type="text/javascript">
+        //注册当点击返回顶部的时候，回到网页顶部  
+        $('#gotopbtn').click(function () {
+            $('body').scrollTop(0);
+            test();
+        });
+        //注册当页面发生滚动事件的时候，判断他有没有滚动条，如果有滚动条就显示“返回”，如果没有就不返回  
+        window.onscroll = test;
+        function test() {
+            if ($('body').scrollTop() == 0) {
+                $('#gotopbtn').removeClass("WX_backtop_active");
+            } else {
+                $('#gotopbtn').addClass("WX_backtop_active");
+            }
+        }
+        $('#menu').click(function () {
+            $('#menulist').toggle();
+        });
+    
+
+
+    </script>
+    <div class="h50"></div>
+
+      <div class="fixed bottom">
+     <#PUBLIC sharemore#>
+        <#PUBLIC bottomMenu#>
+           </div>
+    <#PUBLIC shareplug#>
+</body>
+</html>

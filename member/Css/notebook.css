@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+.notebook-title,.notebook-icon{ background:url(../images/web08-icon.png);}
+.notebook-title{ background-position:0 -617px; background-repeat:repeat-x; border:1px solid #e6e6e6; height:32px; line-height:32px; padding:0 12px;}
+.notebook-title div{height:32px; line-height:32px;}
+.notebook-cont{ background:#fff; border-bottom:1px solid #e6e6e6; border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6; padding:12px;}
+.notebook-icon{ background-position:0 -659px; display:block; width:14px; height:13px; margin-top:6px;}
+.notebook-cont dl{ margin:10px 0;}
+.notebook-cont dt,.notebook-cont dd{ float:left; line-height:25PX;}
+.notebook-cont dt{ width:30px}
+.notebook-cont dd{ width:850px;}
+.notebook-form h2{ font-weight:bold; font-size:16px; color:#333333;}
+.notebook-form ul{ margin:10px 0; padding:0}
+.notebook-form li{ padding:8px 0;}
+.notebook-form li .form-btn02{ cursor:pointer; border:0;}
+.notebook-form li .radio01{ margin-top:0;}

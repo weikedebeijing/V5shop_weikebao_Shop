@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.head1{ background:#f5f5f5; border-bottom:1px solid #ccc; height:30px;}
+.head1l {float:left; line-height:30px;}
+.head1r {float:right;}
+.head1r .top_member{margin:0; padding:0;}
+.head1r .top_member li{ float:right; padding:0px 15px; line-height:30px; background-position:right -388px;}
+.head1r .top_member li.line-r,.head1r .top_member li.cart p,.head1r .top_member li.cart p a,.head1r .top_member li.mydis a{ background:url(../images/navigation-icon.png)}
+.head1r .top_member li.line-r{background-position:right -388px;}
+.head1r .top_member li.cart{border:1px solid #ccc; background-color:#fff; padding:2px 5px; margin-top:4px; position:relative; z-index:10000; }
+.head1r .top_member li.current{border:1px solid #a10000; }
+.head1r .top_member li.current .Layer1{ display:block;}
+.head1r .top_member li.cart .number{ color:#711313; padding:0 3px;}
+.head1r .top_member li.cart p{ background-position:-12px -20px; }
+.head1r .top_member li.cart p a{ margin:0 0 0 18px; display:block; width:75px; background-position:50px -53px;height:17px; line-height:17px; overflow:hidden}
+*html .head1r .top_member li.cart p a{ line-height:19px;}
+.head1r .top_member li.mydis a{ display:block; width:65px; background-position:40px -53px;height:17px; line-height:17px; overflow:hidden; margin-top:6px; }
+.head2 .search-ul{ padding:0; margin-top:18px;}
+.head2 .search-ul li{ float:left;}
+/*.head2 .search-ul li.search-li{ border:6px solid #f0f0f0;}    FZedit*/  
+.head2 .search-ul li .search-input{ background:url(../images/navigation-icon.png) no-repeat;}
+.head2 .search-ul li .search-input{ background-position:-10px -71px; background-color:#fff; border:2px solid #9c0f0f; width:270px; height:28px; line-height:28px; margin:0; vertical-align:middle; padding-left:30px;}
+.head2 .search-ul li .search-btn{ background-color:#e54747; color:#fff; font-size:14px; border:0; width:60px; height:32px; line-height:32px; margin:0; vertical-align:middle;}
+.head2 .search-ul li a{ display:inline-block; margin:15px 10px; color:#666;}
+.head2 .search-ul li a:hover{ color:#a10000;}
+.head3{ background:#ab1515; height:38px;}
+.head3 .Menu-ul{ margin:5px 0 0 0; padding:0}
+.head3 .Menu-ul li,.head3 .Menu-ul li a,.head3 .Menu-ul li.current,.head3 .Menu-ul li.current a span,.head3 .tel{ background:url(../images/navigation-icon.png); background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/navigation-icon.png');}
+.head3 .Menu-ul li{ float:left; margin-top:0 15px; background-position:right -350px; line-height:25px; padding:0 20px;}
+.head3 .Menu-ul li a{color:#fff; font-size:14px; text-decoration:none;}
+.head3 .Menu-ul li.current{background-position:0 -248px; height:33px; font-weight:bold; padding:0 0 0 5px;}
+.head3 .Menu-ul li.current a{color:#550000;background-position:right -284px; height:33px; display:block; float:left; padding:0 20px 0 15px;}
+.head3 .tel{ background-position: -1px -121px; display:inline-block; width:170px; height:38px;}
+
+/*新添加的  FZedit*/
+.head4{ background:#f0f0f0; height:24px; line-height:24px;padding:5px;margin-top:10px;}

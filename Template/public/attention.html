@@ -1,0 +1,12 @@
+﻿<#if shopID!="C001" && IsShowMenu#>
+    <div class="contFloat">
+       <i class="icon-contHuman"></i>
+       <a href="{customerUrl}" target="_blank">联系店主</a>
+    </div>
+<#else#>
+    <#if IsShowMenu#>
+    <div class="contFloat">
+       <a href="{publicImgUrl}" target="_blank">关注公众号</a>
+    </div>
+    <#/if#>
+<#/if#>

@@ -1,0 +1,21 @@
+﻿<#loop productcategory,["+productcategoryid+"] 999#>
+<#if productcategory__loop__id%2!=0#>
+<dl>
+    <dt><a href="../../category.aspx?id={productcategory[id]}">{productcategory[name]}</a></dt>
+    <dd class="dl-white">
+        <#loop productcategorysub,["+productcategory_member["id"].ToString()+"] 999#> 
+           <a href="../../category.aspx?id={productcategorysub[id]}">{productcategorysub[name]}</a><br />
+        <#/loop#>
+    </dd>
+</dl>
+ <#else#>
+<dl>
+    <dt><a href="../../category.aspx?id={productcategory[id]}">{productcategory[name]}</a></dt>
+    <dd class="dl-white">
+        <#loop productcategorysub,["+productcategory_member["id"].ToString()+"] 999#> 
+           <a href="../../category.aspx?id={productcategorysub[id]}">{productcategorysub[name]}</a><br />
+        <#/loop#>
+    </dd>
+</dl>
+<#/if#>
+<#/loop#>

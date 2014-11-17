@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html class="page_index" lang="zh-CN">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=gbk">
+    <meta charset="gbk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="language" content="zh-CN" data-author="julying">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/tiantianguoyuan/css/common.css">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/tiantianguoyuan/css/index.css">
+    <title>{shoptitle}</title>
+</head>
+<body data-page-type="shop-category">
+    <div class="pfhlkd_frame1">
+        <div class="bd pfhlkd_bd_10">
+            <header class="wx_hd">
+                <div class="wx_hd_back"><a href="index.aspx">返回</a></div>
+                <div class="wx_hd_tit">全部分类</div>
+            </header>
+            <div class="wx_category">
+                <div class="item">
+                    <h3><a href="list.aspx?cid=0&name=所有商品">所有商品</a></h3>
+                </div>
+                <#loop category,["+shopID+"] 999#> 
+                         <div class="item">
+                             <h3><a href="list.aspx?cid={category[ID]}&name={category[Name]}">{category[Name]}</a></h3>
+                         </div>
+                <#/loop#>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

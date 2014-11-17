@@ -1,0 +1,42 @@
+﻿<!--<div class="article_2table">
+<form action="" method="get"><table width="100%" border="0" cellpadding="0">
+  <tr>
+    <td height="26" colspan="3" style="color:#c3c3c3">尊敬的客户,如果您对该文章有所评论,请在以下填写!</td>
+    </tr>
+  <tr>
+    <td width="10%" height="26" align="right">标题:</td>
+    <td width="69%" height="26"><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" /></td>
+    <td width="21%" height="26">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" align="right">星级:</td>
+    <td height="26" colspan="2"><input type="radio" name="radio" id="radio" value="radio" />
+      <img src="images/article/article_21.jpg" width="75" height="22" />  &nbsp;
+      <input type="radio" name="radio2" id="radio2" value="radio2" />
+      <label for="radio2"><img src="images/article/article_22.jpg" width="75" height="22" />&nbsp;&nbsp;&nbsp;</label>
+      <input type="radio" name="radio3" id="radio3" value="radio3" />
+      <label for="radio3"></label>
+      <img src="images/article/article_23.jpg" width="75" height="22" />&nbsp;
+      <input name="radio4" type="radio" id="radio4" value="radio4" checked="checked" />
+      <label for="radio4"></label>
+      <img src="images/article/article_24.jpg" width="75" height="22" />&nbsp;
+      <input type="radio" name="radio5" id="radio5" value="radio5" />
+      <label for="radio5"></label>
+      <img src="images/article/article_25.jpg" width="75" height="22" /></td>
+    </tr>
+  <tr>
+    <td height="26" align="right">内容:</td>
+    <td height="26"><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="45" rows="5"></textarea></td>
+    <td height="26" valign="bottom">你还可以输入200个字</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="3"><input type="image" name="imageField2" id="imageField2" src="images/article/article_11.gif" /></td>
+    </tr>
+</table></form>
+</div>-->
+
+<form method="post" onSubmit='this.action = ' name="pswbackform">
+    <input type="hidden" name="act" value="review" />评论标题:<input id="title" class="input" maxlength="30" size="100" name="title" type="text" />评 论 人:<input id="username" class="input" maxlength="20" size="100" name="username" type="text" />评论星级:<input type="radio" name="star" value="1" /><img alt="很差" src="images/products/star1.gif" /><input type="radio" name="star" value="2" /><img alt="不太好" src="images/products/star2.gif" /><input type="radio" name="star" value="3" /><img alt="一般" src="images/products/star3.gif" /><input type="radio" name="star" value="4" /><img alt="还不错" src="images/products/star4.gif" /><input checked="checked" type="radio" name="star" value="5" /><img alt="非常好" src="images/products/star5.gif" />评论内容:<textarea id="content" rows="5" cols="60" name="content"></textarea><input type="submit" onClick='return CheckReviewForm()' name="Submit2" value="我要发表" />
+</form>

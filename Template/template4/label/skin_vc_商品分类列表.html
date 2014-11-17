@@ -1,0 +1,19 @@
+﻿            <#loop FirstCategory,999#>
+            <dl>
+              <dt> 
+              <#if IsExistChildCategory({FirstCategory[ID]})#>
+              <span class="fold" id="first{FirstCategory[ID]}" title="展开"></span>
+              <#else#>
+               <span class="unfold" title="收起"></span> 
+              <#/if#>
+              <a href="[$syspath]category.aspx?id={FirstCategory[ID]}">{FirstCategory[Name]}</a> 
+              </dt>
+                  <dd id="secondAll{FirstCategory[ID]}" style="display:none;"> 
+                    <#loop SecondCategory,999,["+FirstCategory_member["ID"].ToString()+"] 999#>
+                        <a href="[$syspath]category.aspx?id={SecondCategory[ID]}" id="second{SecondCategory[ID]}" firstCat="{FirstCategory[ID]}">{SecondCategory[Name]}</a>
+                    <#/loop#>
+                  </dd>
+             </dl>
+             <#/loop#>   
+
+

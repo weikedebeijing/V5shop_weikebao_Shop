@@ -1,0 +1,25 @@
+﻿<dl class="sub-nav nav-b4">
+    <#if IsDRP #>  
+            <dd class="share"><a href="javascript:void(0);" id="share-a"><i class="icon-share"></i>分享店铺<span></span></a></dd>
+    <dd class="active"><a href="index.aspx"><i class="icon-store"></i>逛店铺</a></dd>
+    <#if IsMyShop #>  
+              <dd><a href="member/brokerage.aspx"><i class="icon-commision"></i>我的佣金</a></dd>
+    <#else#>
+           <dd><a href="../{MyShopID}/index.aspx"><i class="icon-commision"></i>我的微店</a></dd>
+    <#/if#>
+           <dd><a href="member/member.aspx"><i class="icon-member"></i>会员中心</a></dd>
+    <#else#>
+              <#if shopID=="C001" #>
+           <dd class="share"><a href="javascript:void(0);" id="share-a"><i class="icon-share"></i>分享店铺<span></span></a></dd>
+    <dd class="active"><a href="index.aspx"><i class="icon-store"></i>逛店铺</a></dd>
+    <!-- <dd><a href="member/AddStore.aspx"><i class="icon-distribusion"></i>我要分销</a></dd>-->
+    <dd ><a href="member/member.aspx"><i class="icon-member"></i>会员中心</a></dd>
+
+    <#else#>
+            <dd class="share"><a href="javascript:void(0);" id="share-a"><i class="icon-share"></i>分享店铺<span></span></a></dd>
+    <dd class="active"><a href="index.aspx"><i class="icon-store"></i>逛店铺</a></dd>
+    <dd><a href="cart.aspx"><i class="icon-distribusion"></i>购物车</a></dd>
+    <dd><a href="member/member.aspx"><i class="icon-member"></i>会员中心</a></dd>
+    <#/if#>
+             <#/if#>
+</dl>

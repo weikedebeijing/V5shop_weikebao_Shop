@@ -1,0 +1,73 @@
+﻿  <#cs#>pagetotal = int.Parse(productsearch_member["totalnum"].ToString());<#/cs#>
+        <#if this.CookieLoginID == ""#>
+            <dl class="no-login">
+        <#else#>
+            <dl>
+        <#/if#>
+      <dt><a href="[$syspath]product.aspx?id={ms:id}"><img width="186px" height="186px" src="{gettmpimg({productsearch[SrcDetail]},186,186)}" title="{ms:name}" alt="{ms:name}"></a></dt>
+      <dd>
+        <h3><a href="[$syspath]product.aspx?id={ms:id}">{ms:name}</a></h3>
+        <ul>
+          <li class="id">商品编号：{ms:Number}</li>
+          <li class="inventory">库存：{ms:Storage} 件</li>
+          <li class="price">{ms:Price}</li>
+          <li class="supersede-price">{ms:SupersedePrice}</li>
+          <li class="supersede-price">{ms:WholeSalePrice}</li>
+          <li class="gain-rate">{ms:GainRate}</li>
+
+          <li class="btn">
+          <a class="btn01" style="cursor:pointer;" id="A1" showDiv="{ms:id}"></a>
+          <a class="btn02" style="cursor:pointer;" name="Distribution" productId="{ms:id}"></a></li>
+        </ul>
+      </dd>
+      <dd class="sold">已销：<b>{ms:BuyCount}</b> 件</dd>
+    </dl>
+
+      <div class="list-position">
+                <div id="mini-set-product{ms:id}" class="layer-box01 alert-cart" style="display: none">
+            <form method="post" action="[$syspath]cart.aspx">
+                <input type="hidden" value="Purchase" name="act"  />
+                <input type="hidden" value="{cid}" name="id" />
+                <a closeDiv="{ms:id}" class="close"></a>
+                <div class="clear">
+                </div>
+                <h2>
+                    请输入采购数量</h2>
+                <div class="cont">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="web08-table01">
+                        <tr>
+                            <#loop productspec,["+productsearch_member["ID"].ToString()+"] 999#>
+                            <th align="center">{productspec[name]}</th>
+                            <#/loop#>
+                            <th align="center">
+                                采购价
+                            </th>
+                            <th align="center">
+                                库存
+                            </th>
+                            <th align="center">
+                                输入采购数量
+                            </th>
+                        </tr>
+                        <#cs#>int i = 1;<#/cs#>
+                        <#loop trueproductuser,["+productsearch_member["ID"].ToString()+"],["+base.LoginID+"] 999#>	
+                            <tr productid="{trueproductuser[id]}" class="">
+                            <#loop trueproductspec,["+trueproductuser_member["id"].ToString()+"] 999#>
+                                <td align="center">{trueproductspec[specvalue]}</td> 
+                            <#/loop#>
+                            <td align="center">￥{trueproductuser[price]}</td>
+                            <td align="center">{trueproductuser[store]}</td>
+                            <td align="center">
+                                <input type="text" class="form-input w100" name="PurchaseCount" value="" onblur="Contrast(this,{trueproductuser[store]},{i})" id="Count_{i}" />
+                                <input type="hidden" value="{trueproductuser[id]}" id="TrueProductVals" name="TrueProductVals" />
+                            </td>
+                            </tr>
+                            <#cs#>i++;<#/cs#>
+                        <#/loop#>
+                    </table>
+                </div>
+                <div class="div-btn">
+                    <input type="submit" id="PurchaseBuy" class="btn" onclick="return upperCaseAll({ms:StarCount},{i});" onmousemove="this.className='btn-mouseover'" onmouseout="this.className='btn'" value="" /></div>
+            </form>
+        </div>
+        </div>

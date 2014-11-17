@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html class="page_index" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <meta charset="gbk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="language" content="zh-CN" data-author="julying">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/tiantianguoyuan/css/common.css">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/tiantianguoyuan/css/index.css">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/mobile-template/tiantianguoyuan/css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="http://html.v5portal.com/distribution/css/PreFoot.css">
+    <script src="js/scroll.js"></script>
+    <title>{shoptitle}</title>
+</head>
+<body data-page-type="shop-home">
+    <header class="wx_hd">
+        <nav>
+            <h2 id="searchKeyWord">{name}</h2>
+            <a id="backBtn" class="btn_back" href="javascript:void(0)" onclick="window.history.go(-1)">返回</a>
+            <a id="categoryBtn" class="btn_category" href="category.aspx">分类</a>
+        </nav>
+    </header>
+    <div class="bd pfhlkd_bd_10">
+        <div class="wx_itemlist" data-lazyload="true">
+            <div class="mod_pic_1">
+                <#loop categoryproduct,["+shopID+"],["+cid+"] 999#>
+                    <div class="hproduct">
+                        <p class="cover">
+                            <a href="product.aspx?id={categoryproduct[ID]}">
+                                <img class="pp_init_img" src="{categoryproduct[DefaultImageData]}"></a>
+                        </p>
+                        <p class="prices">
+                            <strong><em>￥{GetCustomerPrice(categoryproduct.SalesPrice.ToString(),categoryproduct.ID.ToString())}</em><del>￥{categoryproduct[OldPrice]}</del></strong>
+                        </p>
+                        <p class="fn"><a href="product.aspx?id={categoryproduct[ID]}">{categoryproduct[ProductName]}</a></p>
+                    </div>
+                <#/loop#>
+            </div>
+        </div>
+
+    </div>
+
+    <!--common-->
+    <footer>
+        <span class="explain">技术支持：</span><img src="images/logo-cop.png" class="logo-cop" alt="v5shop">
+    </footer>
+
+    <a href="javascript:void(0);" class="WX_backtop J_backTop J_ytag WX_backtop_active" ytag="09999">返回顶部</a>
+
+    <!--common-->
+</body>
+</html>

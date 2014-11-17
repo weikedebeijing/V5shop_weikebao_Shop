@@ -1,0 +1,14 @@
+﻿<li>
+    <div class="pic ac">
+        <a href="{ms:mallurl}" target="_blank">
+            <img src="{ms:srcdetail}" /></a></div>
+    <div class="name">
+        <a href="{ms:mallurl}" target="_blank">{ms:name}</a></div>
+    <div class="price">
+    <#if this.CookieLoginID == ""#>
+        <span class="maincolor z10">￥{ms:marketprice}</span>
+    <#else#>
+        <span class="maincolor z10">￥{ms:memberprice}</span>
+    <#/if#>
+     </div>
+</li>

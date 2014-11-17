@@ -1,0 +1,866 @@
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140612163604130004支付完成111
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140612165968990005支付完成111
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140613100281410002支付完成111
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140613101902300004支付完成111
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140613102558450005支付完成111
+支付完成
+
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140617153450570001支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140617162044860002支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140617220022000004支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140617220656370005支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618042683350001支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618092538960002支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618120860260010支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618121593560012支付完成111
+支付完成
+
+进入else
+进入else
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618121915230013支付完成111
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618122115230014支付完成111
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618122265460015支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618124202480018支付完成111
+支付完成
+
+ 有参数
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618173069520024支付完成111
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618171360400022支付完成111
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618173737600025支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140618181138880026支付完成111
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140620113029980001支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140620132042570002支付完成111
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+进入else
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140623153296850002支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+进入else
+进入else
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+进入else
+ 有参数
+
+ trade_status=TRADE_FINISHED
+r
+ 订单支付:+Alipay_Wap
+进入
+
+ 订单支付结束
+/member/CallBack/ReturnPage_Alipay.aspx
+ OrderNumber140624105205850001支付完成111
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+ 有参数
+支付完成
+
+进入else
+ 有参数
+支付完成
+
+ 有参数
+支付完成
